@@ -12,3 +12,6 @@ C:\Users\lozan\Desktop\Mintic ciclo 3\Impresoras\Proyecto-CicloIII---MisionTIC\I
 C:\Users\lozan\Desktop\Mintic ciclo 3\Impresoras\Proyecto-CicloIII---MisionTIC\Impresoras3D.App\Impresoras3D.App.Persistencia\obj\Debug\net6.0\Impresoras3D.App.Persistencia.pdb
 C:\Users\lozan\Desktop\Mintic ciclo 3\Impresoras\Proyecto-CicloIII---MisionTIC\Impresoras3D.App\Impresoras3D.App.Persistencia\obj\Debug\net6.0\Impresoras3D.App.Persistencia.genruntimeconfig.cache
 C:\Users\lozan\Desktop\Mintic ciclo 3\Impresoras\Proyecto-CicloIII---MisionTIC\Impresoras3D.App\Impresoras3D.App.Persistencia\obj\Debug\net6.0\ref\Impresoras3D.App.Persistencia.dll
+C:\Users\lozan\Desktop\Mintic ciclo 3\Impresoras\Proyecto-CicloIII---MisionTIC\Impresoras3D.App\Impresoras3D.App.Persistencia\bin\Debug\net6.0\Impresoras3D.App.Dominio.dll
+C:\Users\lozan\Desktop\Mintic ciclo 3\Impresoras\Proyecto-CicloIII---MisionTIC\Impresoras3D.App\Impresoras3D.App.Persistencia\bin\Debug\net6.0\Impresoras3D.App.Dominio.pdb
+C:\Users\lozan\Desktop\Mintic ciclo 3\Impresoras\Proyecto-CicloIII---MisionTIC\Impresoras3D.App\Impresoras3D.App.Persistencia\obj\Debug\net6.0\Impresoras3D.App.Persistencia.csproj.CopyComplete

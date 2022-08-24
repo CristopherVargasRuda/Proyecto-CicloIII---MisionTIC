@@ -1,6 +1,6 @@
 using System;
 
-using Microsoft.EntityFrameWorkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace Impresoras3D.App.Persistencia
 {

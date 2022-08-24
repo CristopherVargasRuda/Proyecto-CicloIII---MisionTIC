@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Impresoras3D.App.Dominio/1.0.0": {
+        "runtime": {
+          "Impresoras3D.App.Dominio.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Impresoras3D.App.Dominio/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
