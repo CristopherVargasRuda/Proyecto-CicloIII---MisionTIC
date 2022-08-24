@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "rhYezxlyvRcTzx+Clg5vM/xyPQexop4i+DqFmekCMG5J1aDHZE+0aj4ZyLfoynlvszGrQ7EgRYTQ9eL5wv5gDg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\lozan\\Desktop\\Mintic ciclo 3\\Impresoras\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Servicios\\Impresoras3D.App.Servicios.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lozan\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\lozan\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\lozan\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\lozan\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\lozan\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\lozan\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
