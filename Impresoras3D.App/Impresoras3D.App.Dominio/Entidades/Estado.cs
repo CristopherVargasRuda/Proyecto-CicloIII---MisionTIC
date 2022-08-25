@@ -1,6 +1,3 @@
-using System;
-
-
 namespace Impresoras3D.App.Dominio
 {
     public class Estado

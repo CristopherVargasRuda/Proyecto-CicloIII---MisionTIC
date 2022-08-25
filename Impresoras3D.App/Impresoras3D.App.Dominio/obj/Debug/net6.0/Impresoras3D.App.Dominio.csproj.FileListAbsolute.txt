@@ -22,3 +22,15 @@ C:\Users\fabio\OneDrive\curso mintic\programacion 3\github\Proyecto-CicloIII---M
 C:\Users\fabio\OneDrive\curso mintic\programacion 3\github\Proyecto-CicloIII---MisionTIC\Impresoras3D.App\Impresoras3D.App.Dominio\obj\Debug\net6.0\refint\Impresoras3D.App.Dominio.dll
 C:\Users\fabio\OneDrive\curso mintic\programacion 3\github\Proyecto-CicloIII---MisionTIC\Impresoras3D.App\Impresoras3D.App.Dominio\obj\Debug\net6.0\Impresoras3D.App.Dominio.pdb
 C:\Users\fabio\OneDrive\curso mintic\programacion 3\github\Proyecto-CicloIII---MisionTIC\Impresoras3D.App\Impresoras3D.App.Dominio\obj\Debug\net6.0\ref\Impresoras3D.App.Dominio.dll
+C:\Users\PC\Desktop\Misión Tic\Ciclo III\Programación\Proyecto\Código\Proyecto-CicloIII---MisionTIC\Impresoras3D.App\Impresoras3D.App.Dominio\bin\Debug\net6.0\Impresoras3D.App.Dominio.deps.json
+C:\Users\PC\Desktop\Misión Tic\Ciclo III\Programación\Proyecto\Código\Proyecto-CicloIII---MisionTIC\Impresoras3D.App\Impresoras3D.App.Dominio\bin\Debug\net6.0\Impresoras3D.App.Dominio.dll
+C:\Users\PC\Desktop\Misión Tic\Ciclo III\Programación\Proyecto\Código\Proyecto-CicloIII---MisionTIC\Impresoras3D.App\Impresoras3D.App.Dominio\bin\Debug\net6.0\Impresoras3D.App.Dominio.pdb
+C:\Users\PC\Desktop\Misión Tic\Ciclo III\Programación\Proyecto\Código\Proyecto-CicloIII---MisionTIC\Impresoras3D.App\Impresoras3D.App.Dominio\obj\Debug\net6.0\Impresoras3D.App.Dominio.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\Misión Tic\Ciclo III\Programación\Proyecto\Código\Proyecto-CicloIII---MisionTIC\Impresoras3D.App\Impresoras3D.App.Dominio\obj\Debug\net6.0\Impresoras3D.App.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\Desktop\Misión Tic\Ciclo III\Programación\Proyecto\Código\Proyecto-CicloIII---MisionTIC\Impresoras3D.App\Impresoras3D.App.Dominio\obj\Debug\net6.0\Impresoras3D.App.Dominio.AssemblyInfoInputs.cache
+C:\Users\PC\Desktop\Misión Tic\Ciclo III\Programación\Proyecto\Código\Proyecto-CicloIII---MisionTIC\Impresoras3D.App\Impresoras3D.App.Dominio\obj\Debug\net6.0\Impresoras3D.App.Dominio.AssemblyInfo.cs
+C:\Users\PC\Desktop\Misión Tic\Ciclo III\Programación\Proyecto\Código\Proyecto-CicloIII---MisionTIC\Impresoras3D.App\Impresoras3D.App.Dominio\obj\Debug\net6.0\Impresoras3D.App.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\Misión Tic\Ciclo III\Programación\Proyecto\Código\Proyecto-CicloIII---MisionTIC\Impresoras3D.App\Impresoras3D.App.Dominio\obj\Debug\net6.0\Impresoras3D.App.Dominio.dll
+C:\Users\PC\Desktop\Misión Tic\Ciclo III\Programación\Proyecto\Código\Proyecto-CicloIII---MisionTIC\Impresoras3D.App\Impresoras3D.App.Dominio\obj\Debug\net6.0\refint\Impresoras3D.App.Dominio.dll
+C:\Users\PC\Desktop\Misión Tic\Ciclo III\Programación\Proyecto\Código\Proyecto-CicloIII---MisionTIC\Impresoras3D.App\Impresoras3D.App.Dominio\obj\Debug\net6.0\Impresoras3D.App.Dominio.pdb
+C:\Users\PC\Desktop\Misión Tic\Ciclo III\Programación\Proyecto\Código\Proyecto-CicloIII---MisionTIC\Impresoras3D.App\Impresoras3D.App.Dominio\obj\Debug\net6.0\ref\Impresoras3D.App.Dominio.dll
