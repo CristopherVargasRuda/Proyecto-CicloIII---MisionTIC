@@ -1,8 +1,11 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Impresoras3D.App.Dominio
 {
     public class Persona
     {
-        public int Documento { get; set; }
+        [Key]
+        public int Identificacion { get; set; }
         public string PrimerNombre { get; set; }
         public string SegundoNombre { get; set; }
         public string PrimerApellido { get; set; }

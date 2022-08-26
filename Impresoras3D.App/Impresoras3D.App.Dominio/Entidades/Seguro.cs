@@ -1,9 +1,18 @@
+//Se debe importar esto para especificar para usar Anotaciones de Atributos!
+using System.ComponentModel.DataAnnotations;
+
+//Se debe importar esto para anotaciones de la tabla!
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Impresoras3D.App.Dominio
 {
-    public class Seguro
+    [Table("Seguro")]
+    public partial class Seguro
     {
-        public int Id { get; set; }
-        public List<CompraSeguro> CompraSeguros { get; set; }
-        public List<SeguroYTipoSeguro> SegurosYTipoSeguros { get; set; }
+        [Key]
+        public int Identificacion { get; set; }
+
+        //public List<CompraSeguro> CompraSeguros { get; set; }
+        public List<SeguroYTipoCubrimiento> SegurosYTipoCubrimiento { get; set; }
     }
 }

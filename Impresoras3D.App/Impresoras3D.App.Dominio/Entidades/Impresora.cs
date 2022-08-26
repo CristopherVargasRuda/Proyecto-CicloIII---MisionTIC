@@ -1,8 +1,11 @@
+using System.ComponentModel.DataAnnotations;
 namespace Impresoras3D.App.Dominio
 {
     public class Impresora
     {
+        [Key]
         public string PlacaInventario { get; set; }
+
         public string Tipo { get; set; }
         public string Marca { get; set; }
         public int Modelo { get; set; }
