@@ -1,7 +1,12 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Impresoras3D.App.Dominio
 {
-    public class Operario : Persona
+
+    [Table("Operario")]
+    public partial class Operario : Persona
     {
-        public List<Impresora> Impresoras { get; set; }
+        //public List<Impresora> Impresoras { get; set; }
     }
 }

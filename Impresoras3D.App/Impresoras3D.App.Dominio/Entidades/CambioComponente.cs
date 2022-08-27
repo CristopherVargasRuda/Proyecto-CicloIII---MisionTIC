@@ -1,6 +1,10 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Impresoras3D.App.Dominio
 {
+
+    [Table("Cambio_componente")]
     public class CambioComponente
     {
         [Key]

@@ -6,14 +6,32 @@ using Impresoras3D.App.Dominio;
 
 namespace Impresoras3D.App.Persistencia
 {
+
     public class AppContext : DbContext
     {
-        public DbSet<Seguro> Seguros { get; set; }
+        //Seguros
+        public DbSet<Seguro> Seguro { get; set; }
 
-        public DbSet<TipoCubrimiento> TipoCubrimientos { get; set; }
+        public DbSet<TipoCubrimiento> TipoCubrimiento { get; set; }
 
-        public DbSet<SeguroYTipoCubrimiento> SeguroYTipoCubrimientos { get; set; }
+        public DbSet<SeguroYTipoCubrimiento> SeguroYTipoCubrimiento { get; set; }
 
+        public DbSet<CompraSeguro> CompraSeguro { get; set; }
+
+        //Personas (INCOMPLETO TECNICO Y OPERARIO!)
+
+        public DbSet<JefeOperaciones> JefeOperaciones { get; set; } 
+
+        public DbSet<Auxiliar> Auxiliar { get; set; } 
+
+        public DbSet<SocioEmpresa> SocioEmpresa { get; set; } 
+
+        public DbSet<Operario> Operario { get; set; } //La tabla de impresoras está comentada, cuando se agregue impresoras a la base de datos descomentar!
+
+        public DbSet<Tecnico> Tecnico { get; set; } //La tabla de impresoras y servicio tecnico estan comentadas de igual forma descomentar cuando esten disponibles en la base de datos!
+
+
+        //conexion base de datos
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)

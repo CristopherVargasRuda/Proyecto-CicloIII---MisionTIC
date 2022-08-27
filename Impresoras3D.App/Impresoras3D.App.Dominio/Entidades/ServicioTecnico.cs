@@ -1,5 +1,9 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Impresoras3D.App.Dominio
 {
+    [Table("Servicio_Tecnico")]
     public class ServicioTecnico
     {
         public int Id { get; set; }

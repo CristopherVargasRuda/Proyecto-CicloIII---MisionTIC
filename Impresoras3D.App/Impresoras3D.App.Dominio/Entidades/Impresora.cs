@@ -1,7 +1,10 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Impresoras3D.App.Dominio
 {
-    public class Impresora
+    [Table("Impresora")]
+    public partial class Impresora
     {
         [Key]
         public string PlacaInventario { get; set; }
