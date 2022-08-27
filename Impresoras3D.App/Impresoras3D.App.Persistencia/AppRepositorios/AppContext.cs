@@ -26,7 +26,7 @@ namespace Impresoras3D.App.Persistencia
 
         public DbSet<SocioEmpresa> SocioEmpresa { get; set; } 
 
-        public DbSet<Operario> Operario { get; set; } //La tabla de impresoras está comentada, cuando se agregue impresoras a la base de datos descomentar!
+        public DbSet<Operario> Operario { get; set; } //La tabla de impresoras está comentada, cuando se agregue impresoras a la base de datos descomentar!!
 
         public DbSet<Tecnico> Tecnico { get; set; } //La tabla de impresoras y servicio tecnico estan comentadas de igual forma descomentar cuando esten disponibles en la base de datos!
 
