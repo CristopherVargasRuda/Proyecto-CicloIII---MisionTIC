@@ -7,12 +7,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Impresoras3D.App.Dominio
 {
     [Table("Seguro")]
-    public partial class Seguro
+    public class Seguro
     {
         [Key]
         public int Identificacion { get; set; }
-
-        //public List<CompraSeguro> CompraSeguros { get; set; }
+        public List<CompraSeguro> CompraSeguros { get; set; }
         public List<SeguroYTipoCubrimiento> SegurosYTipoCubrimiento { get; set; }
     }
 }

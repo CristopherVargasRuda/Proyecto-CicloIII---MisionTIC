@@ -5,8 +5,8 @@ namespace Impresoras3D.App.Dominio
 {
 
     [Table("Operario")]
-    public partial class Operario : Persona
+    public class Operario : Persona
     {
-        //public List<Impresora> Impresoras { get; set; }
+        public List<Impresora> Impresoras { get; set; }
     }
 }

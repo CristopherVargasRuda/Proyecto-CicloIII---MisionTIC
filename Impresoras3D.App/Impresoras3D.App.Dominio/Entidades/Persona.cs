@@ -6,18 +6,16 @@ namespace Impresoras3D.App.Dominio
     public class Persona
     {
         [Key]
-        public int Identificacion { get; set; }
-        [Required, MaxLength(15)]
+        public int Documento { get; set; }
+        [Required]
         public string PrimerNombre { get; set; }
-        [Required, MaxLength(15)]
-        public string SegundoNombre { get; set; }
-        [Required, MaxLength(15)]
+        public string? SegundoNombre { get; set; }
+        [Required]
         public string PrimerApellido { get; set; }
-        [Required, MaxLength(15)]
-        public string SegundoApellido { get; set; }
+        public string? SegundoApellido { get; set; }
         [Required]
         public DateTime FechaNacimiento { get; set; }
-        [Required, MaxLength(20)]
+        [Required]
         public string telefono { get; set; }
     }
 }

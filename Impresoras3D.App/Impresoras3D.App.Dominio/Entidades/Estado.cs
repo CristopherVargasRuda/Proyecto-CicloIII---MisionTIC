@@ -7,7 +7,12 @@ namespace Impresoras3D.App.Dominio
     [Table("Estado")]
     public class Estado
     {
-        public int Id {get; set;}
-        public string Nombre {get; set;}
+        [Key]
+        public int Id { get; set; }
+        [Required]
+        public string Nombre { get; set; }
+        public List<Impresora> Impresoras { get; set; }
+        public List<ImpresoraComponente> ImpresoraComponentes { get; set; }
+        public List<Software> Softwares { get; set; }
     }
-} 
+}

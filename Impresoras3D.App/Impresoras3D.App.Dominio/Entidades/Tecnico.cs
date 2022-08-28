@@ -4,13 +4,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Impresoras3D.App.Dominio
 {
     [Table("Tecnico")]
-    public partial class Tecnico : Persona
+    public class Tecnico : Persona
     {
-        [Required, MaxLength(50)]
+        [Required]
         public string Direccion { get; set; }
-        [Required, MaxLength(30)]
+        [Required]
         public string NivelEstudios { get; set; }
-       // public List<Impresora> Impresoras { get; set; }
-        //public List<ServicioTecnico> ServiciosTecnicos { get; set; }
+        public List<Impresora> Impresoras { get; set; }
+        public List<ServicioTecnico> ServiciosTecnicos { get; set; }
     }
 }

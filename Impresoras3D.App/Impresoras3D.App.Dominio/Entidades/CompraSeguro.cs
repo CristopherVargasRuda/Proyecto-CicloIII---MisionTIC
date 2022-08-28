@@ -4,21 +4,19 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Impresoras3D.App.Dominio
 {
     [Table("Compra_seguro")]
-    public partial class CompraSeguro
+    public class CompraSeguro
     {
-        [Required]
+        [Key]
         public int Id { get; set; }
         [Required]
         public DateTime FechaCompra { get; set; }
         [Required]
         public DateTime FechaVencimiento { get; set; }
-        [Required, MaxLength(10)]
+        [Required]
         public string ImpresoraPlacaInventario { get; set; }
+        public Impresora Impresora { get; set; }
         [Required]
         public int SeguroId { get; set; }
         public Seguro Seguro { get; set; }
-        [Required]
-        public int SocioEmpresaDocumento { get; set; }
-        public SocioEmpresa SocioEmpresa { get; set; }
     }
 }
