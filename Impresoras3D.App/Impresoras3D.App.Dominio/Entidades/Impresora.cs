@@ -6,7 +6,7 @@ namespace Impresoras3D.App.Dominio
     [Table("Impresora")]
     public class Impresora
     {
-        [Key]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
         public string PlacaInventario { get; set; }
         public string Tipo { get; set; }
         public string Marca { get; set; }

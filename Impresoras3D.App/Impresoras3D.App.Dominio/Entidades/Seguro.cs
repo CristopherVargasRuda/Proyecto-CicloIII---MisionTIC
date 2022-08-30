@@ -10,7 +10,7 @@ namespace Impresoras3D.App.Dominio
     public class Seguro
     {
         [Key]
-        public int Identificacion { get; set; }
+        public int Id { get; set; }
         public List<CompraSeguro> CompraSeguros { get; set; }
         public List<SeguroYTipoCubrimiento> SegurosYTipoCubrimiento { get; set; }
     }

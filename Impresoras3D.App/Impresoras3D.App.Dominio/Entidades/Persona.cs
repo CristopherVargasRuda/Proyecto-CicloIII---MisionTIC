@@ -5,7 +5,7 @@ namespace Impresoras3D.App.Dominio
 {
     public class Persona
     {
-        [Key]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Documento { get; set; }
         [Required]
         public string PrimerNombre { get; set; }

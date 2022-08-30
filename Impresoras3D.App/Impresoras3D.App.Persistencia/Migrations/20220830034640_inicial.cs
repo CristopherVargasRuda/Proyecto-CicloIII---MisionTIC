@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Impresoras3D.App.Persistencia.Migrations
 {
-    public partial class Inicial : Migration
+    public partial class inicial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,18 +13,17 @@ namespace Impresoras3D.App.Persistencia.Migrations
                 name: "Auxiliar",
                 columns: table => new
                 {
-                    Identificacion = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Documento = table.Column<int>(type: "int", nullable: false),
                     PrimerNombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    SegundoNombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SegundoNombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PrimerApellido = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    SegundoApellido = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SegundoApellido = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     FechaNacimiento = table.Column<DateTime>(type: "datetime2", nullable: false),
                     telefono = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Auxiliar", x => x.Identificacion);
+                    table.PrimaryKey("PK_Auxiliar", x => x.Documento);
                 });
 
             migrationBuilder.CreateTable(
@@ -58,86 +57,82 @@ namespace Impresoras3D.App.Persistencia.Migrations
                 name: "Jefe_operaciones",
                 columns: table => new
                 {
-                    Identificacion = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Documento = table.Column<int>(type: "int", nullable: false),
                     PrimerNombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    SegundoNombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SegundoNombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PrimerApellido = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    SegundoApellido = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SegundoApellido = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     FechaNacimiento = table.Column<DateTime>(type: "datetime2", nullable: false),
                     telefono = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Jefe_operaciones", x => x.Identificacion);
+                    table.PrimaryKey("PK_Jefe_operaciones", x => x.Documento);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Operario",
                 columns: table => new
                 {
-                    Identificacion = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Documento = table.Column<int>(type: "int", nullable: false),
                     PrimerNombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    SegundoNombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SegundoNombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PrimerApellido = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    SegundoApellido = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SegundoApellido = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     FechaNacimiento = table.Column<DateTime>(type: "datetime2", nullable: false),
                     telefono = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Operario", x => x.Identificacion);
+                    table.PrimaryKey("PK_Operario", x => x.Documento);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Seguro",
                 columns: table => new
                 {
-                    Identificacion = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1")
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Seguro", x => x.Identificacion);
+                    table.PrimaryKey("PK_Seguro", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Socio_empresa",
                 columns: table => new
                 {
-                    Identificacion = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Documento = table.Column<int>(type: "int", nullable: false),
                     PrimerNombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    SegundoNombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SegundoNombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PrimerApellido = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    SegundoApellido = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SegundoApellido = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     FechaNacimiento = table.Column<DateTime>(type: "datetime2", nullable: false),
                     telefono = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Socio_empresa", x => x.Identificacion);
+                    table.PrimaryKey("PK_Socio_empresa", x => x.Documento);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Tecnico",
                 columns: table => new
                 {
-                    Identificacion = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Documento = table.Column<int>(type: "int", nullable: false),
                     Direccion = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     NivelEstudios = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PrimerNombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    SegundoNombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SegundoNombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PrimerApellido = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    SegundoApellido = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SegundoApellido = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     FechaNacimiento = table.Column<DateTime>(type: "datetime2", nullable: false),
                     telefono = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Tecnico", x => x.Identificacion);
+                    table.PrimaryKey("PK_Tecnico", x => x.Documento);
                 });
 
             migrationBuilder.CreateTable(
@@ -217,7 +212,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
                         name: "FK_Seguro_tipoCubrimiento_Seguro_SeguroId",
                         column: x => x.SeguroId,
                         principalTable: "Seguro",
-                        principalColumn: "Identificacion",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Seguro_tipoCubrimiento_Tipo_cubrimiento_TipoCubrimientoId",
@@ -241,10 +236,8 @@ namespace Impresoras3D.App.Persistencia.Migrations
                     VolumenImpresionZ = table.Column<int>(type: "int", nullable: false),
                     PaisOrigen = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     EstadoID = table.Column<int>(type: "int", nullable: false),
-                    OperarioDocumento = table.Column<int>(type: "int", nullable: true),
-                    OperarioIdentificacion = table.Column<int>(type: "int", nullable: false),
-                    TecnicoDocumento = table.Column<int>(type: "int", nullable: true),
-                    TecnicoIdentificacion = table.Column<int>(type: "int", nullable: false),
+                    OperarioDocumento = table.Column<int>(type: "int", nullable: false),
+                    TecnicoDocumento = table.Column<int>(type: "int", nullable: false),
                     SoftwareId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -257,10 +250,10 @@ namespace Impresoras3D.App.Persistencia.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Impresora_Operario_OperarioIdentificacion",
-                        column: x => x.OperarioIdentificacion,
+                        name: "FK_Impresora_Operario_OperarioDocumento",
+                        column: x => x.OperarioDocumento,
                         principalTable: "Operario",
-                        principalColumn: "Identificacion",
+                        principalColumn: "Documento",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Impresora_Software_SoftwareId",
@@ -269,10 +262,10 @@ namespace Impresoras3D.App.Persistencia.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Impresora_Tecnico_TecnicoIdentificacion",
-                        column: x => x.TecnicoIdentificacion,
+                        name: "FK_Impresora_Tecnico_TecnicoDocumento",
+                        column: x => x.TecnicoDocumento,
                         principalTable: "Tecnico",
-                        principalColumn: "Identificacion",
+                        principalColumn: "Documento",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -285,9 +278,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
                     FechaCompra = table.Column<DateTime>(type: "datetime2", nullable: false),
                     FechaVencimiento = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ImpresoraPlacaInventario = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    SeguroId = table.Column<int>(type: "int", nullable: false),
-                    SocioEmpresaDocumento = table.Column<int>(type: "int", nullable: false),
-                    SocioEmpresaIdentificacion = table.Column<int>(type: "int", nullable: false)
+                    SeguroId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -302,13 +293,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
                         name: "FK_Compra_seguro_Seguro_SeguroId",
                         column: x => x.SeguroId,
                         principalTable: "Seguro",
-                        principalColumn: "Identificacion",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Compra_seguro_Socio_empresa_SocioEmpresaIdentificacion",
-                        column: x => x.SocioEmpresaIdentificacion,
-                        principalTable: "Socio_empresa",
-                        principalColumn: "Identificacion",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -320,9 +305,8 @@ namespace Impresoras3D.App.Persistencia.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Fecha = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ImpresoraPlacaInventario = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    SoftwareId = table.Column<int>(type: "int", nullable: true),
-                    TecnicoDocumento = table.Column<int>(type: "int", nullable: false),
-                    TecnicoIdentificacion = table.Column<int>(type: "int", nullable: false)
+                    SoftwareId = table.Column<int>(type: "int", nullable: false),
+                    TecnicoDocumento = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -337,12 +321,13 @@ namespace Impresoras3D.App.Persistencia.Migrations
                         name: "FK_Servicio_Tecnico_Software_SoftwareId",
                         column: x => x.SoftwareId,
                         principalTable: "Software",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Servicio_Tecnico_Tecnico_TecnicoIdentificacion",
-                        column: x => x.TecnicoIdentificacion,
+                        name: "FK_Servicio_Tecnico_Tecnico_TecnicoDocumento",
+                        column: x => x.TecnicoDocumento,
                         principalTable: "Tecnico",
-                        principalColumn: "Identificacion",
+                        principalColumn: "Documento",
                         onDelete: ReferentialAction.Restrict);
                 });
 
@@ -410,19 +395,14 @@ namespace Impresoras3D.App.Persistencia.Migrations
                 column: "SeguroId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Compra_seguro_SocioEmpresaIdentificacion",
-                table: "Compra_seguro",
-                column: "SocioEmpresaIdentificacion");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Impresora_EstadoID",
                 table: "Impresora",
                 column: "EstadoID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Impresora_OperarioIdentificacion",
+                name: "IX_Impresora_OperarioDocumento",
                 table: "Impresora",
-                column: "OperarioIdentificacion");
+                column: "OperarioDocumento");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Impresora_SoftwareId",
@@ -430,9 +410,9 @@ namespace Impresoras3D.App.Persistencia.Migrations
                 column: "SoftwareId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Impresora_TecnicoIdentificacion",
+                name: "IX_Impresora_TecnicoDocumento",
                 table: "Impresora",
-                column: "TecnicoIdentificacion");
+                column: "TecnicoDocumento");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Impresora_componente_ComponenteId",
@@ -465,9 +445,9 @@ namespace Impresoras3D.App.Persistencia.Migrations
                 column: "SoftwareId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Servicio_Tecnico_TecnicoIdentificacion",
+                name: "IX_Servicio_Tecnico_TecnicoDocumento",
                 table: "Servicio_Tecnico",
-                column: "TecnicoIdentificacion");
+                column: "TecnicoDocumento");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Software_EstadoId",
