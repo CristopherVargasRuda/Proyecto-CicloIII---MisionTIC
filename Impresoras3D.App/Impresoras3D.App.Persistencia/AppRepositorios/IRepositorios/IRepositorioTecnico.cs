@@ -12,7 +12,7 @@ namespace Impresoras3D.App.Persistencia
 
         public void DeleteTecnico (int documentoTecnico);
 
-        public Operario getTecnico (int documentoTecnico);
+        public Tecnico getTecnico (int documentoTecnico);
 
         public IEnumerable <Tecnico> GetAllTecnico();
 

@@ -4,11 +4,8 @@ using Impresoras3D.App.Dominio;
 
 namespace Impresoras3D.App.Persistencia
 {
-
     public class RepositorioTecnico : IRepositorioTecnico
     {
-
-
         private readonly AppContext _appContext;
 
         public RepositorioTecnico(AppContext appContext)
@@ -16,10 +13,8 @@ namespace Impresoras3D.App.Persistencia
             this._appContext = appContext;
         }
 
-
-        public Tecnico AddTecnico (Tecnico tecnico)
+        public Tecnico AddTecnico(Tecnico tecnico)
         {
-
             var tecnicoAdicionado = this._appContext.Tecnicos.Add(tecnico);
 
             this._appContext.SaveChanges();
@@ -27,49 +22,43 @@ namespace Impresoras3D.App.Persistencia
             return tecnicoAdicionado.Entity;
         }
 
-        public void DeleteTecnico (int documentoTecnico)
+        public void DeleteTecnico(int documentoTecnico)
         {
+            var tecnico = this._appContext.Tecnicos.FirstOrDefault(
+                t => t.Documento == documentoTecnico
+            );
 
-          
-            var tecnico = this._appContext.Tecnicos.FirstOrDefault ( t => t.Documento == documentoTecnico);
-
-
-            if(tecnico == null)
+            if (tecnico == null)
             {
                 return;
             }
 
-
-           
             this._appContext.Tecnicos.Remove(tecnico);
-
 
             this._appContext.SaveChanges();
         }
 
-
-        public Tecnico getTecnico ( int documentoTecnico)
+        public Tecnico getTecnico(int documentoTecnico)
         {
-
-            var tecnico = this._appContext.Tecnicos.FirstOrDefault ( t => t.Documento == documentoTecnico);
+            var tecnico = this._appContext.Tecnicos.FirstOrDefault(
+                t => t.Documento == documentoTecnico
+            );
 
             return tecnico;
         }
-
 
         public IEnumerable<Tecnico> GetAllTecnico()
         {
             return this._appContext.Tecnicos;
         }
 
-
-        public Tecnico UpdateTecnico (Tecnico tecnico)
+        public Tecnico UpdateTecnico(Tecnico tecnico)
         {
+            var tecnicoEncontrado = this._appContext.Tecnicos.FirstOrDefault(
+                t => t.Documento == tecnico.Documento
+            );
 
-            var tecnicoEncontrado = this._appContext.Tecnicos.FirstOrDefault( t => t.Documento == tecnico.Documento);
-
-
-            if( tecnicoEncontrado !=null)
+            if (tecnicoEncontrado != null)
             {
                 tecnicoEncontrado.PrimerNombre = tecnico.PrimerNombre;
 
@@ -83,25 +72,18 @@ namespace Impresoras3D.App.Persistencia
 
                 tecnicoEncontrado.telefono = tecnico.telefono;
 
-		        tecnicoEncontrado.NivelEstudios = tecnico.NivelEstudios;
+                tecnicoEncontrado.Direccion = tecnico.Direccion;
 
-		        tecnicoEncontrado.Impresoras = tecnico.Impresoras;
+                tecnicoEncontrado.NivelEstudios = tecnico.NivelEstudios;
 
-		    tecnicoEncontrado.ServiciosTecnicos = tecnico.ServiciosTecnicos;
+                tecnicoEncontrado.Impresoras = tecnico.Impresoras;
+
+                tecnicoEncontrado.ServiciosTecnicos = tecnico.ServiciosTecnicos;
 
                 this._appContext.SaveChanges();
-
-                
             }
 
             return tecnicoEncontrado;
         }
-
-
-
-
-
     }
-
-
 }
