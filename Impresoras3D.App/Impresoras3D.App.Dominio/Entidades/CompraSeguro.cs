@@ -13,7 +13,7 @@ namespace Impresoras3D.App.Dominio
         [Required]
         public DateTime FechaVencimiento { get; set; }
         [Required]
-        public string ImpresoraPlacaInventario { get; set; }
+        public string ImpresoraId { get; set; }
         public Impresora Impresora { get; set; }
         [Required]
         public int SeguroId { get; set; }

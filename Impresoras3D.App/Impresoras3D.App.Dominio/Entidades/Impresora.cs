@@ -6,7 +6,11 @@ namespace Impresoras3D.App.Dominio
     [Table("Impresora")]
     public class Impresora
     {
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
+
+        [Key]
+        public int Id { get; set; }
+
+        [Required]
         public string PlacaInventario { get; set; }
         public string Tipo { get; set; }
         public string Marca { get; set; }
@@ -20,9 +24,9 @@ namespace Impresoras3D.App.Dominio
         public int EstadoID { get; set; }
         public Estado Estado { get; set; }
         public List<CompraSeguro> CompraSeguros { get; set; }
-        public int OperarioDocumento { get; set; }
+        public int OperarioId { get; set; }
         public Operario Operario { get; set; }
-        public int TecnicoDocumento { get; set; }
+        public int TecnicoId { get; set; }
         public Tecnico Tecnico { get; set; }
         public int SoftwareId { get; set; }
         public Software Software { get; set; }

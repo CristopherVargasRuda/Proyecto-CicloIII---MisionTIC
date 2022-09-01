@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Impresoras3D.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20220830034640_inicial")]
-    partial class inicial
+    [Migration("20220901024307_segundo")]
+    partial class segundo
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,6 +26,12 @@ namespace Impresoras3D.App.Persistencia.Migrations
 
             modelBuilder.Entity("Impresoras3D.App.Dominio.Auxiliar", b =>
                 {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
                     b.Property<int>("Documento")
                         .HasColumnType("int");
 
@@ -50,7 +56,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Documento");
+                    b.HasKey("Id");
 
                     b.ToTable("Auxiliar");
                 });
@@ -105,16 +111,19 @@ namespace Impresoras3D.App.Persistencia.Migrations
                     b.Property<DateTime>("FechaVencimiento")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("ImpresoraPlacaInventario")
+                    b.Property<string>("ImpresoraId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ImpresoraId1")
+                        .HasColumnType("int");
 
                     b.Property<int>("SeguroId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ImpresoraPlacaInventario");
+                    b.HasIndex("ImpresoraId1");
 
                     b.HasIndex("SeguroId");
 
@@ -140,8 +149,11 @@ namespace Impresoras3D.App.Persistencia.Migrations
 
             modelBuilder.Entity("Impresoras3D.App.Dominio.Impresora", b =>
                 {
-                    b.Property<string>("PlacaInventario")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int>("EstadoID")
                         .HasColumnType("int");
@@ -153,17 +165,21 @@ namespace Impresoras3D.App.Persistencia.Migrations
                     b.Property<int>("Modelo")
                         .HasColumnType("int");
 
-                    b.Property<int>("OperarioDocumento")
+                    b.Property<int>("OperarioId")
                         .HasColumnType("int");
 
                     b.Property<string>("PaisOrigen")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("PlacaInventario")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("SoftwareId")
                         .HasColumnType("int");
 
-                    b.Property<int>("TecnicoDocumento")
+                    b.Property<int>("TecnicoId")
                         .HasColumnType("int");
 
                     b.Property<string>("Tipo")
@@ -182,15 +198,15 @@ namespace Impresoras3D.App.Persistencia.Migrations
                     b.Property<int>("VolumenImpresionZ")
                         .HasColumnType("int");
 
-                    b.HasKey("PlacaInventario");
+                    b.HasKey("Id");
 
                     b.HasIndex("EstadoID");
 
-                    b.HasIndex("OperarioDocumento");
+                    b.HasIndex("OperarioId");
 
                     b.HasIndex("SoftwareId");
 
-                    b.HasIndex("TecnicoDocumento");
+                    b.HasIndex("TecnicoId");
 
                     b.ToTable("Impresora");
                 });
@@ -209,7 +225,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
                     b.Property<int>("EstadoId")
                         .HasColumnType("int");
 
-                    b.Property<string>("ImpresoraPlacaInventario")
+                    b.Property<string>("ImpresoraId")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -224,6 +240,12 @@ namespace Impresoras3D.App.Persistencia.Migrations
 
             modelBuilder.Entity("Impresoras3D.App.Dominio.JefeOperaciones", b =>
                 {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
                     b.Property<int>("Documento")
                         .HasColumnType("int");
 
@@ -248,7 +270,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Documento");
+                    b.HasKey("Id");
 
                     b.ToTable("Jefe_operaciones");
                 });
@@ -270,6 +292,12 @@ namespace Impresoras3D.App.Persistencia.Migrations
 
             modelBuilder.Entity("Impresoras3D.App.Dominio.Operario", b =>
                 {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
                     b.Property<int>("Documento")
                         .HasColumnType("int");
 
@@ -294,7 +322,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Documento");
+                    b.HasKey("Id");
 
                     b.ToTable("Operario");
                 });
@@ -306,6 +334,10 @@ namespace Impresoras3D.App.Persistencia.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Aseguradora")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -338,29 +370,38 @@ namespace Impresoras3D.App.Persistencia.Migrations
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("ImpresoraPlacaInventario")
+                    b.Property<string>("ImpresoraId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ImpresoraId1")
+                        .HasColumnType("int");
 
                     b.Property<int>("SoftwareId")
                         .HasColumnType("int");
 
-                    b.Property<int>("TecnicoDocumento")
+                    b.Property<int>("TecnicoId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ImpresoraPlacaInventario");
+                    b.HasIndex("ImpresoraId1");
 
                     b.HasIndex("SoftwareId");
 
-                    b.HasIndex("TecnicoDocumento");
+                    b.HasIndex("TecnicoId");
 
                     b.ToTable("Servicio_Tecnico");
                 });
 
             modelBuilder.Entity("Impresoras3D.App.Dominio.SocioEmpresa", b =>
                 {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
                     b.Property<int>("Documento")
                         .HasColumnType("int");
 
@@ -385,7 +426,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Documento");
+                    b.HasKey("Id");
 
                     b.ToTable("Socio_empresa");
                 });
@@ -422,12 +463,18 @@ namespace Impresoras3D.App.Persistencia.Migrations
 
             modelBuilder.Entity("Impresoras3D.App.Dominio.Tecnico", b =>
                 {
-                    b.Property<int>("Documento")
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Direccion")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Documento")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("FechaNacimiento")
                         .HasColumnType("datetime2");
@@ -454,7 +501,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Documento");
+                    b.HasKey("Id");
 
                     b.ToTable("Tecnico");
                 });
@@ -503,7 +550,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
                 {
                     b.HasOne("Impresoras3D.App.Dominio.Impresora", "Impresora")
                         .WithMany("CompraSeguros")
-                        .HasForeignKey("ImpresoraPlacaInventario")
+                        .HasForeignKey("ImpresoraId1")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -528,7 +575,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
 
                     b.HasOne("Impresoras3D.App.Dominio.Operario", "Operario")
                         .WithMany("Impresoras")
-                        .HasForeignKey("OperarioDocumento")
+                        .HasForeignKey("OperarioId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -540,7 +587,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
 
                     b.HasOne("Impresoras3D.App.Dominio.Tecnico", "Tecnico")
                         .WithMany("Impresoras")
-                        .HasForeignKey("TecnicoDocumento")
+                        .HasForeignKey("TecnicoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -614,7 +661,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
                 {
                     b.HasOne("Impresoras3D.App.Dominio.Impresora", "Impresora")
                         .WithMany("ServiciosTecnicos")
-                        .HasForeignKey("ImpresoraPlacaInventario")
+                        .HasForeignKey("ImpresoraId1")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -626,7 +673,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
 
                     b.HasOne("Impresoras3D.App.Dominio.Tecnico", "Tecnico")
                         .WithMany("ServiciosTecnicos")
-                        .HasForeignKey("TecnicoDocumento")
+                        .HasForeignKey("TecnicoId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 

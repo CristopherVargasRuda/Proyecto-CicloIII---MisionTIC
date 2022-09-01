@@ -22,11 +22,9 @@ namespace Impresoras3D.App.Persistencia
             return operarioAdicionado.Entity;
         }
 
-        public void DeleteOperario(int documentoOperario)
+        public void DeleteOperario(int idOperario)
         {
-            var operario = this._appContext.Operarios.FirstOrDefault(
-                o => o.Documento == documentoOperario
-            );
+            var operario = this._appContext.Operarios.FirstOrDefault(o => o.Id == idOperario);
 
             if (operario == null)
             {
@@ -38,11 +36,9 @@ namespace Impresoras3D.App.Persistencia
             this._appContext.SaveChanges();
         }
 
-        public Operario getOperario(int documentoOperario)
+        public Operario getOperario(int idOperario)
         {
-            var operario = this._appContext.Operarios.FirstOrDefault(
-                o => o.Documento == documentoOperario
-            );
+            var operario = this._appContext.Operarios.FirstOrDefault(o => o.Id == idOperario);
 
             return operario;
         }
@@ -55,11 +51,13 @@ namespace Impresoras3D.App.Persistencia
         public Operario UpdateOperario(Operario operario)
         {
             var operarioEncontrado = this._appContext.Operarios.FirstOrDefault(
-                o => o.Documento == operario.Documento
+                o => o.Id == operario.Id
             );
 
             if (operarioEncontrado != null)
             {
+                operarioEncontrado.Documento = operario.Documento;
+
                 operarioEncontrado.PrimerNombre = operario.PrimerNombre;
 
                 operarioEncontrado.SegundoNombre = operario.SegundoNombre;

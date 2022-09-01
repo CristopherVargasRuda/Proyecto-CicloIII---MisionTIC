@@ -29,12 +29,12 @@ namespace Impresoras3D.App.Persistencia
             return auxiliarAdicionado.Entity;
         }
 
-        public void DeleteAuxiliar (int documentoAuxiliar)
+        public void DeleteAuxiliar (int idAuxiliar)
         {
 
             //buscamos el auxiliar en la base de datos segun su id que es el documento
 
-            var auxiliar = this._appContext.Auxiliares.FirstOrDefault ( a => a.Documento == documentoAuxiliar);
+            var auxiliar = this._appContext.Auxiliares.FirstOrDefault ( a => a.Id == idAuxiliar);
 
             //se confirma que no es nula la variable
 
@@ -53,10 +53,10 @@ namespace Impresoras3D.App.Persistencia
         }
 
 
-        public Auxiliar getAuxiliar ( int documentoAuxiliar)
+        public Auxiliar getAuxiliar ( int idAuxiliar)
         {
 
-            var auxiliar = this._appContext.Auxiliares.FirstOrDefault ( a => a.Documento == documentoAuxiliar);
+            var auxiliar = this._appContext.Auxiliares.FirstOrDefault ( a => a.Id == idAuxiliar);
 
             return auxiliar;
         }
@@ -73,12 +73,15 @@ namespace Impresoras3D.App.Persistencia
 
             // se conecta a la base de datos y se busca el usuario
 
-            var auxiliarEncontrado = this._appContext.Auxiliares.FirstOrDefault( a => a.Documento == auxiliar.Documento);
+            var auxiliarEncontrado = this._appContext.Auxiliares.FirstOrDefault( a => a.Id == auxiliar.Id);
 
             //Si no esta vacio cabiammos los valores
 
             if( auxiliarEncontrado !=null)
             {
+
+                auxiliarEncontrado.Documento = auxiliar.Documento;
+
                 auxiliarEncontrado.PrimerNombre = auxiliar.PrimerNombre;
 
                 auxiliarEncontrado.SegundoNombre = auxiliar.SegundoNombre;

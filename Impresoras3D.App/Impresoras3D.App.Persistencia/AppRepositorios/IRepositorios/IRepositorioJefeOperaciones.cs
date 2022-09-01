@@ -9,9 +9,9 @@ namespace Impresoras3D.App.Persistencia
     {
         public JefeOperaciones AddJefeOperaciones(JefeOperaciones JefeOperaciones);
 
-        public void DeleteJefeOperaciones (int documentoJefeOperaciones);
+        public void DeleteJefeOperaciones (int idJefeOperaciones);
 
-        public JefeOperaciones getJefeOperaciones (int documentoJefeOperaciones);
+        public JefeOperaciones getJefeOperaciones (int idJefeOperaciones);
 
         public IEnumerable <JefeOperaciones> GetAllJefeOperaciones();
 

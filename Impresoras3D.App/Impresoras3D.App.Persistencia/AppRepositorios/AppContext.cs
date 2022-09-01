@@ -52,7 +52,7 @@ namespace Impresoras3D.App.Persistencia
                 .HasKey(m => new { m.ServicioTecnicoId, m.ImpresoraComponenteId });
 
           
-            //Inactivamos borrado entre reserva y reservahabitacion
+            
 
             modelBuilder.Entity<ServicioTecnico>()
             .HasMany(s => s.CambioComponentes)

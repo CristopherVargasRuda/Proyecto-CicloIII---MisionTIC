@@ -64,7 +64,7 @@ namespace Impresoras3D.App.Persistencia
 
                 compraSeguroEncontrado.FechaVencimiento = compraSeguro.FechaVencimiento;
 
-                compraSeguroEncontrado.ImpresoraPlacaInventario = compraSeguro.ImpresoraPlacaInventario;
+                compraSeguroEncontrado.ImpresoraId= compraSeguro.ImpresoraId;
 
                 compraSeguroEncontrado.SeguroId = compraSeguro.SeguroId;
 

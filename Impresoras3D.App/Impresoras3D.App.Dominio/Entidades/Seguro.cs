@@ -11,6 +11,9 @@ namespace Impresoras3D.App.Dominio
     {
         [Key]
         public int Id { get; set; }
+
+        [Required]
+        public string Aseguradora { get; set; }
         public List<CompraSeguro> CompraSeguros { get; set; }
         public List<SeguroYTipoCubrimiento> SegurosYTipoCubrimiento { get; set; }
     }

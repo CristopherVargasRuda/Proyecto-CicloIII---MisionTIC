@@ -10,9 +10,9 @@ namespace Impresoras3D.App.Persistencia
 
         public SocioEmpresa AddSocioEmpresa(SocioEmpresa SocioEmpresa);
 
-        public void DeleteSocioEmpresa (int documentoSocioEmpresa);
+        public void DeleteSocioEmpresa (int idSocioEmpresa);
 
-        public SocioEmpresa getSocioEmpresa (int documentoSocioEmpresa);
+        public SocioEmpresa getSocioEmpresa (int idSocioEmpresa);
 
         public IEnumerable <SocioEmpresa> GetAllSocioEmpresa();
 

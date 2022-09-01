@@ -10,9 +10,9 @@ namespace Impresoras3D.App.Persistencia
 
         public Operario AddOperario(Operario Operario);
 
-        public void DeleteOperario (int documentoOperario);
+        public void DeleteOperario (int idOperario);
 
-        public Operario getOperario (int documentoOperario);
+        public Operario getOperario (int idOperario);
 
         public IEnumerable <Operario> GetAllOperario();
 

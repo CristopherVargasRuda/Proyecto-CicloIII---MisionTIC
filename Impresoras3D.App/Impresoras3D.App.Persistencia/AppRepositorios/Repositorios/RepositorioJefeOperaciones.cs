@@ -22,10 +22,10 @@ namespace Impresoras3D.App.Persistencia
             return jefeOperacionesAdicionado.Entity;
         }
 
-        public void DeleteJefeOperaciones(int documentoJefeOperaciones)
+        public void DeleteJefeOperaciones(int idJefeOperaciones)
         {
             var jefeOperaciones = this._appContext.JefeOperaciones.FirstOrDefault(
-                j => j.Documento == documentoJefeOperaciones
+                j => j.Id == idJefeOperaciones
             );
 
             if (jefeOperaciones == null)
@@ -38,29 +38,30 @@ namespace Impresoras3D.App.Persistencia
             this._appContext.SaveChanges();
         }
 
-        public JefeOperaciones getJefeOperaciones(int documentoJefeOperaciones)
+        public JefeOperaciones getJefeOperaciones(int idJefeOperaciones)
         {
-            var jefeOperaciones = this._appContext.JefeOperaciones.FirstOrDefault ( j => j.Documento == documentoJefeOperaciones);
+            var jefeOperaciones = this._appContext.JefeOperaciones.FirstOrDefault(
+                j => j.Id == idJefeOperaciones
+            );
 
             return jefeOperaciones;
         }
 
-        public IEnumerable <JefeOperaciones> GetAllJefeOperaciones()
+        public IEnumerable<JefeOperaciones> GetAllJefeOperaciones()
         {
             return this._appContext.JefeOperaciones;
         }
 
-
-
         public JefeOperaciones UpdateJefeOperaciones(JefeOperaciones jefeOperaciones)
         {
+            var jefeOperacionesEncontrado = this._appContext.JefeOperaciones.FirstOrDefault(
+                a => a.Id == jefeOperaciones.Id
+            );
 
-
-            var jefeOperacionesEncontrado = this._appContext.JefeOperaciones.FirstOrDefault( a => a.Documento == jefeOperaciones.Documento);
-
-
-            if( jefeOperacionesEncontrado !=null)
+            if (jefeOperacionesEncontrado != null)
             {
+                jefeOperacionesEncontrado.Documento = jefeOperaciones.Documento;
+
                 jefeOperacionesEncontrado.PrimerNombre = jefeOperaciones.PrimerNombre;
 
                 jefeOperacionesEncontrado.SegundoNombre = jefeOperaciones.SegundoNombre;
@@ -74,13 +75,9 @@ namespace Impresoras3D.App.Persistencia
                 jefeOperacionesEncontrado.telefono = jefeOperaciones.telefono;
 
                 this._appContext.SaveChanges();
-
-                
             }
 
             return jefeOperacionesEncontrado;
         }
-
-
     }
 }

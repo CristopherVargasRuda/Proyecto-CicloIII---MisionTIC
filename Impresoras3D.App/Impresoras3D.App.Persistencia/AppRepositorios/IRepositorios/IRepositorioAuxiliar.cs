@@ -9,9 +9,9 @@ namespace Impresoras3D.App.Persistencia
     {
         public Auxiliar AddAuxiliar(Auxiliar Auxiliar);
 
-        public void DeleteAuxiliar (int documentoAuxiliar);
+        public void DeleteAuxiliar (int idAuxiliar);
 
-        public Auxiliar getAuxiliar (int documentoAuxiliar);
+        public Auxiliar getAuxiliar (int idAuxiliar);
 
         public IEnumerable <Auxiliar> GetAllAuxiliar();
 

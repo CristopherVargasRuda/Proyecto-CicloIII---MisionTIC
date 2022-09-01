@@ -22,9 +22,9 @@ namespace Impresoras3D.App.Persistencia
             return socioEmpresaAdicionado.Entity;
         }
 
-        public void DeleteSocioEmpresa(int documentoSocioEmpresa)
+        public void DeleteSocioEmpresa(int idSocioEmpresa)
         {
-            var socioEmpresa = this._appContext.SocioEmpresas.FirstOrDefault(s => s.Documento == documentoSocioEmpresa);
+            var socioEmpresa = this._appContext.SocioEmpresas.FirstOrDefault(s => s.Id == idSocioEmpresa);
 
             if (socioEmpresa == null)
             {
@@ -36,9 +36,9 @@ namespace Impresoras3D.App.Persistencia
             this._appContext.SaveChanges();
         }
 
-        public SocioEmpresa getSocioEmpresa(int documentoSocioEmpresa)
+        public SocioEmpresa getSocioEmpresa(int idSocioEmpresa)
         {
-            var socioEmpresa = this._appContext.SocioEmpresas.FirstOrDefault ( s => s.Documento == documentoSocioEmpresa);
+            var socioEmpresa = this._appContext.SocioEmpresas.FirstOrDefault ( s => s.Id == idSocioEmpresa);
 
             return socioEmpresa;
         }
@@ -54,11 +54,14 @@ namespace Impresoras3D.App.Persistencia
         {
 
 
-            var socioEmpresaEncontrado = this._appContext.SocioEmpresas.FirstOrDefault( s => s.Documento == socioEmpresa.Documento);
+            var socioEmpresaEncontrado = this._appContext.SocioEmpresas.FirstOrDefault( s => s.Id == socioEmpresa.Id);
 
 
             if( socioEmpresaEncontrado !=null)
             {
+
+                socioEmpresaEncontrado.Documento = socioEmpresa.Documento;
+
                 socioEmpresaEncontrado.PrimerNombre = socioEmpresa.PrimerNombre;
 
                 socioEmpresaEncontrado.SegundoNombre = socioEmpresa.SegundoNombre;
@@ -80,7 +83,6 @@ namespace Impresoras3D.App.Persistencia
 
             return socioEmpresaEncontrado;
         }
-
 
     }
 }

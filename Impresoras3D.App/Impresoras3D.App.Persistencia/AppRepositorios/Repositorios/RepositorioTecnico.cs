@@ -22,11 +22,9 @@ namespace Impresoras3D.App.Persistencia
             return tecnicoAdicionado.Entity;
         }
 
-        public void DeleteTecnico(int documentoTecnico)
+        public void DeleteTecnico(int idTecnico)
         {
-            var tecnico = this._appContext.Tecnicos.FirstOrDefault(
-                t => t.Documento == documentoTecnico
-            );
+            var tecnico = this._appContext.Tecnicos.FirstOrDefault(t => t.Id == idTecnico);
 
             if (tecnico == null)
             {
@@ -38,11 +36,9 @@ namespace Impresoras3D.App.Persistencia
             this._appContext.SaveChanges();
         }
 
-        public Tecnico getTecnico(int documentoTecnico)
+        public Tecnico getTecnico(int idTecnico)
         {
-            var tecnico = this._appContext.Tecnicos.FirstOrDefault(
-                t => t.Documento == documentoTecnico
-            );
+            var tecnico = this._appContext.Tecnicos.FirstOrDefault(t => t.Id == idTecnico);
 
             return tecnico;
         }
@@ -55,11 +51,14 @@ namespace Impresoras3D.App.Persistencia
         public Tecnico UpdateTecnico(Tecnico tecnico)
         {
             var tecnicoEncontrado = this._appContext.Tecnicos.FirstOrDefault(
-                t => t.Documento == tecnico.Documento
+                t => t.Id == tecnico.Id
             );
 
             if (tecnicoEncontrado != null)
             {
+                
+                tecnicoEncontrado.Documento = tecnico.Documento;
+
                 tecnicoEncontrado.PrimerNombre = tecnico.PrimerNombre;
 
                 tecnicoEncontrado.SegundoNombre = tecnico.SegundoNombre;
