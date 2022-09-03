@@ -1,5 +1,4 @@
 using System;
-
 using Impresoras3D.App.Dominio;
 
 namespace Impresoras3D.App.Persistencia
@@ -16,9 +15,7 @@ namespace Impresoras3D.App.Persistencia
         public CompraSeguro AddCompraSeguro(CompraSeguro compraSeguro)
         {
             var compraSeguroAdicionado = this._appContext.CompraSeguros.Add(compraSeguro);
-
             this._appContext.SaveChanges();
-
             return compraSeguroAdicionado.Entity;
         }
 
@@ -32,9 +29,7 @@ namespace Impresoras3D.App.Persistencia
             {
                 return;
             }
-
             this._appContext.CompraSeguros.Remove(compraSeguro);
-
             this._appContext.SaveChanges();
         }
 
@@ -43,7 +38,6 @@ namespace Impresoras3D.App.Persistencia
             var compraSeguro = this._appContext.CompraSeguros.FirstOrDefault(
                 c => c.Id == idCompraSeguro
             );
-
             return compraSeguro;
         }
 
@@ -61,18 +55,11 @@ namespace Impresoras3D.App.Persistencia
             if (compraSeguroEncontrado != null)
             {
                 compraSeguroEncontrado.FechaCompra = compraSeguro.FechaCompra;
-
                 compraSeguroEncontrado.FechaVencimiento = compraSeguro.FechaVencimiento;
-
-                compraSeguroEncontrado.ImpresoraId= compraSeguro.ImpresoraId;
-
+                compraSeguroEncontrado.ImpresoraId = compraSeguro.ImpresoraId;
                 compraSeguroEncontrado.SeguroId = compraSeguro.SeguroId;
-
-
-
                 this._appContext.SaveChanges();
             }
-
             return compraSeguroEncontrado;
         }
     }
