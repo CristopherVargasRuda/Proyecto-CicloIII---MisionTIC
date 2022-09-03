@@ -161,33 +161,6 @@ namespace Impresoras3D.App.Persistencia.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Impresora_componente",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    ImpresoraId = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ComponenteId = table.Column<int>(type: "int", nullable: false),
-                    EstadoId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Impresora_componente", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Impresora_componente_Componente_ComponenteId",
-                        column: x => x.ComponenteId,
-                        principalTable: "Componente",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Impresora_componente_Estado_EstadoId",
-                        column: x => x.EstadoId,
-                        principalTable: "Estado",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Software",
                 columns: table => new
                 {
@@ -309,6 +282,40 @@ namespace Impresoras3D.App.Persistencia.Migrations
                         principalTable: "Seguro",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Impresora_componente",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ImpresoraId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ComponenteId = table.Column<int>(type: "int", nullable: false),
+                    ImpresoraId1 = table.Column<int>(type: "int", nullable: false),
+                    EstadoId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Impresora_componente", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Impresora_componente_Componente_ComponenteId",
+                        column: x => x.ComponenteId,
+                        principalTable: "Componente",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Impresora_componente_Estado_EstadoId",
+                        column: x => x.EstadoId,
+                        principalTable: "Estado",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Impresora_componente_Impresora_ImpresoraId1",
+                        column: x => x.ImpresoraId1,
+                        principalTable: "Impresora",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -438,6 +445,11 @@ namespace Impresoras3D.App.Persistencia.Migrations
                 name: "IX_Impresora_componente_EstadoId",
                 table: "Impresora_componente",
                 column: "EstadoId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Impresora_componente_ImpresoraId1",
+                table: "Impresora_componente",
+                column: "ImpresoraId1");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Mantenimiento_componente_ImpresoraComponenteId",

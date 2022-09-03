@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Impresoras3D.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20220901024307_segundo")]
-    partial class segundo
+    [Migration("20220903154225_Inicial")]
+    partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -229,11 +229,16 @@ namespace Impresoras3D.App.Persistencia.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("ImpresoraId1")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("ComponenteId");
 
                     b.HasIndex("EstadoId");
+
+                    b.HasIndex("ImpresoraId1");
 
                     b.ToTable("Impresora_componente");
                 });
@@ -614,9 +619,17 @@ namespace Impresoras3D.App.Persistencia.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Impresoras3D.App.Dominio.Impresora", "Impresora")
+                        .WithMany("ImpresoraComponentes")
+                        .HasForeignKey("ImpresoraId1")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.Navigation("Componente");
 
                     b.Navigation("Estado");
+
+                    b.Navigation("Impresora");
                 });
 
             modelBuilder.Entity("Impresoras3D.App.Dominio.MantenimientoComponente", b =>
@@ -712,6 +725,8 @@ namespace Impresoras3D.App.Persistencia.Migrations
             modelBuilder.Entity("Impresoras3D.App.Dominio.Impresora", b =>
                 {
                     b.Navigation("CompraSeguros");
+
+                    b.Navigation("ImpresoraComponentes");
 
                     b.Navigation("ServiciosTecnicos");
                 });

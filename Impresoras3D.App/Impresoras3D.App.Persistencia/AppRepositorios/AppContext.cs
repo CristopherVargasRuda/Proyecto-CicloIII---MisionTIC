@@ -49,10 +49,7 @@ namespace Impresoras3D.App.Persistencia
                 .HasKey(c => new { c.ServicioTecnicoId, c.ImpresoraComponenteId });
             modelBuilder
                 .Entity<MantenimientoComponente>()
-                .HasKey(m => new { m.ServicioTecnicoId, m.ImpresoraComponenteId });
-
-          
-            
+                .HasKey(m => new { m.ServicioTecnicoId, m.ImpresoraComponenteId }); 
 
             modelBuilder.Entity<ServicioTecnico>()
             .HasMany(s => s.CambioComponentes)
@@ -77,6 +74,16 @@ namespace Impresoras3D.App.Persistencia
             modelBuilder.Entity<Software>()
             .HasMany(s => s.ServiciosTecnicos)
             .WithOne(st => st.Software)
+            .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Software>()
+            .HasMany(s => s.ServiciosTecnicos)
+            .WithOne(st => st.Software)
+            .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Impresora>()
+            .HasMany(i => i.ImpresoraComponentes)
+            .WithOne(ic => ic.Impresora)
             .OnDelete(DeleteBehavior.Restrict);
         }
     }
