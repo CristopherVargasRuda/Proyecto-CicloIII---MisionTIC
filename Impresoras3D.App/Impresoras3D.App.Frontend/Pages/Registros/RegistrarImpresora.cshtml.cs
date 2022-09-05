@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Impresoras3D.App.Dominio;
+using Impresoras3D.App.Persistencia;
 
 namespace Impresoras3D.App.Frontend.Pages
 {
@@ -33,7 +35,6 @@ namespace Impresoras3D.App.Frontend.Pages
                 Impresora impresoraObtenida = _repositorioImpresora.AddImpresora(this.Impresora);
                 this.Estados = _repositorioEstado.GetImpresoraEstados();
                 this.Softwares = _repositorioSoftware.GetAllSoftware();
-                Console.Out.WriteLine("12");
                 return Page();
             }
             catch (System.Exception e)
