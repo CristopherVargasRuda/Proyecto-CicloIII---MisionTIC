@@ -5,8 +5,8 @@ namespace Impresoras3D.App.Frontend.Pages
 {
     public class LogueoJefeOperacionesModel : PageModel
     {
-        public void OnGet()
-        {
-        }
+        public LogueoJefeOperacionesModel() { }
+
+        public void OnGet() { }
     }
 }

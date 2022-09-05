@@ -1,4 +1,32 @@
 ﻿@page
 @model Impresoras3D.App.Frontend.Pages.ConsultarImpresorasModel
 @{
+    ViewData["Title"] = "Consultar Impresoras";
 }
+
+<div class = "text-center">
+
+    <br>
+    <h1>Consultar Impresoras</h1>
+    <br>
+    <br>
+</div>
+
+<form method="POST">
+    <div asp-validation-summary="ModelOnly" class=text-danger></div>
+    <div class="form-group">
+        <label asp-for="Impresora.PlacaInventario" class="form-lable" style = "float: left; margin-left = auto;">Placa Inventario: </label>
+        <input asp-for="Impresora.PlacaInventario" type="text"  id="PlacaInventario" 
+        placeholder="Ingrese la placa de la Impresora" style="height:45px; width:400px; float:left; margin-left = auto">
+        <span asp-validation-for="Impresora.PlacaInventario" class="text-danger"></span>
+        <button type="submit" class="btn btn-primary" style="height:40px; width:200px; float: left; margin-left = auto;
+        ">Buscar</button>
+    </div>
+</form>
+
+
+
+
+
+
+

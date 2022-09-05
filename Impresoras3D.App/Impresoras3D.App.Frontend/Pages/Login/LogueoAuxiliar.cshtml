@@ -4,76 +4,91 @@
     ViewData["Title"] = "Auxiliar";
 }
 
+
 <div class = "text-center">
     <br>
     <h1>Auxiliar</h1>
     <br>
     <h4>Bienvenido nuevamente</h4>
     <br>
-    <div class="card" style="width: 420px; height:300 px; float: left; margin-right: 10px; margin-bottom: 10px;">
-        <div class="card-body">
-            <h5 class="card-title">Registrar Impresora</h5>
-            <p class="card-text">Agregar una nueva impresora con su respectiva información.</p>
-            <a asp-page="../Registros/RegistrarImpresora" class="btn btn-primary" style="height:40px; width:100px;" >Ir</a>
+
+    <div class = "row">
+        <div class = "col-sm-4">
+            <div class="card" style="width: 33 %; height:20 %; float: left; margin-right: 10px; margin-bottom: 10px;">
+                <div class="card-body">
+                    <h5 class="card-title">Registrar Impresora</h5>
+                    <p class="card-text">Agregar una nueva impresora con su respectiva información.</p>
+                    <a asp-page="../Registros/RegistrarImpresora" class="btn btn-primary" style="height:40px; width:100px;" >Ir</a>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <div class="card" style="width: 420px; height:300 px; float: left; margin-right: 10px; margin-bottom: 10px;">
-        <div class="card-body">
-            <h5 class="card-title">Consultar Impresoras</h5>
-            <p class="card-text">Revisar toda la informacion de las impresoras de las empresas.</p>
-            <a asp-page="../Registros/RegistrarImpresora" class="btn btn-primary" style="height:40px; width:100px;" >Ir</a>
+        <div class = "col-sm-4">
+            <div class="card" style="width: 33 %; height:20 %; float: left; margin-right: 10px; margin-bottom: 10px;">
+                <div class="card-body">
+                    <h5 class="card-title">Consultar Impresoras</h5>
+                    <p class="card-text">Revisar toda la informacion de las impresoras de las empresas.</p>
+                    <a asp-page="../Consultas/ConsultarImpresoras" class="btn btn-primary" style="height:40px; width:100px;" >Ir</a>
+                </div>
+            </div>
         </div>
-    </div>
 
-
-    <div class="card" style="width: 420px; height:300 px; float: left; margin-right: 10px; margin-bottom: 10px;">
-        <div class="card-body">
-            <h5 class="card-title">Registrar Tecnico</h5>
-            <p class="card-text">Agregar la informacion actualizada de un nuevo tecnico, para que esté en la lista oficial de la empresa.</p>
-            <a asp-page="../Registros/RegistrarTecnico" class="btn btn-primary" style="height:40px; width:100px;" >Ir</a>
+        <div class = "col-sm-4">
+            <div class="card" style="width: 33 %; height:20 %; float: left; margin-right: 10px; margin-bottom: 10px;">
+                <div class="card-body">
+                    <h5 class="card-title">Registrar Tecnico</h5>
+                    <p class="card-text">Agregar la informacion actualizada de un nuevo tecnico, para que quede un registro en el sistema.</p>
+                    <a asp-page="../Registros/RegistrarTecnico" class="btn btn-primary" style="height:40px; width:100px;" >Ir</a>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    
-    <div class="card" style="width: 420px; height:300 px; float: left; margin-right: 10px; margin-bottom: 10px;">
-        <div class="card-body">
-            <h5 class="card-title">Asignar Tecnico</h5>
-            <p class="card-text">Asignarle un tecnico a una impresora para que ejerza sus respectivas revisiones.</p>
-            <a asp-page="../Registros/RegistrarTecnico" class="btn btn-primary" style="height:40px; width:100px;" >Ir</a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class = "col-sm-4">
+            <div class="card" style="width: 33 %; height:20 %; float: left; margin-right: 10px; margin-bottom: 10px;">
+                <div class="card-body">
+                    <h5 class="card-title">Asignar Tecnico</h5>
+                    <p class="card-text">Asignarle un tecnico a una impresora para que ejerza sus respectivas revisiones.</p>
+                    <a asp-page="../Asignaciones/AsignarTecnico" class="btn btn-primary" style="height:40px; width:100px;" >Ir</a>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <div class="card" style="width: 420px; height:300 px; float: left; margin-right: 10px; margin-bottom: 10px;">
-        <div class="card-body">
-            <h5 class="card-title">Registrar Socio de la Empresa</h5>
-            <p class="card-text">Agregar la informacion actualizada de un nuevo Socio, para que quede un registro en el sistema</p>
-            <a asp-page="../Registros/RegistrarSocio" class="btn btn-primary" style="height:40px; width:100px;" >Ir</a>
+        <div class = "col-sm-4">
+            <div class="card" style="width: 33 %; height:20 %; float: left; margin-right: 10px; margin-bottom: 10px;">
+                <div class="card-body">
+                    <h5 class="card-title">Registrar Socio de la Empresa</h5>
+                    <p class="card-text">Agregar la informacion actualizada de un nuevo Socio, para que quede un registro en el sistema</p>
+                    <a asp-page="../Registros/RegistrarSocio" class="btn btn-primary" style="height:40px; width:100px;" >Ir</a>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <div class="card" style="width: 420px; height:300 px; float: left; margin-right: 10px; margin-bottom: 10px;">
-        <div class="card-body">
-            <h5 class="card-title">Asignar Operario</h5>
-            <p class="card-text">Asignar una impresora a un operario para que tenga registro de ella en el sistema.</p>
-            <a asp-page="../Registros/RegistrarOperario" class="btn btn-primary" style="height:40px; width:100px;" >Ir</a>
+        <div class = "col-sm-4">
+            <div class="card" style="width: 33 %; height:20 %; float: left; margin-right: 10px; margin-bottom: 10px;">
+                <div class="card-body">
+                    <h5 class="card-title">Asignar Operario</h5>
+                    <p class="card-text">Asignar una impresora a un operario para que tenga registro de ella en el sistema.</p>
+                    <a asp-page="../Asignaciones/AsignarOperario" class="btn btn-primary" style="height:40px; width:100px;" >Ir</a>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <br>
-
-    <div class="card" style="width: 420px; height:300 px; position: absolute; top: 62%; left: 39.5%; margin-right: 10px; margin-bottom: 10px;">
-        <div class="card-body">
-            <h5 class="card-title">Registrar Operario</h5>
-            <p class="card-text">Agregar la informacion actualizada de un nuevo operario, para que esté en la lista oficial de la empresa.</p>
-            <a asp-page="../Registros/RegistrarOperario" class="btn btn-primary" style="height:40px; width:100px;" >Ir</a>
+        <br>
+        <div class = "col-sm-4"></div>
+        <div class = "col-sm-4">
+            <div class="card" style="width: 33 %; height:20 %; float: left; margin-right: 10px; margin-bottom: 10px;">
+                <div class="card-body">
+                    <h5 class="card-title">Registrar Operario</h5>
+                    <p class="card-text">Agregar la informacion actualizada de un nuevo operario, para que esté en la lista oficial de la empresa.</p>
+                    <a asp-page="../Registros/RegistrarOperario" class="btn btn-primary" style="height:40px; width:100px;" >Ir</a>
+                </div>
+            </div>
         </div>
+
     </div>
-
-
 
 </div>
