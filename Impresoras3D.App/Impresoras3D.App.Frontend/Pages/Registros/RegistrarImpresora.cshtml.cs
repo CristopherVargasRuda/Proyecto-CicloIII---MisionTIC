@@ -5,6 +5,8 @@ namespace Impresoras3D.App.Frontend.Pages
 {
     public class RegistrarImpresoraModel : PageModel
     {
+        public RegistrarImpresoraModel(){
+        }
         public void OnGet()
         {
         }

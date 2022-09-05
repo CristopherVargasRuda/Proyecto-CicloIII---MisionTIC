@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Impresoras3D.App.Persistencia.Migrations
 {
-    public partial class Inicial : Migration
+    public partial class Inincial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

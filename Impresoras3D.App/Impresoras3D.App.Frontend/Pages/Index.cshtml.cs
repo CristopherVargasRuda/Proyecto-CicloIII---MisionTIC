@@ -9,11 +9,20 @@ namespace Impresoras3D.App.Frontend.Pages;
 public class IndexModel : PageModel
 {
     private readonly ILogger<IndexModel> _logger;
-    private static IRepositorioAuxiliar _repositorioAuxiliar = new RepositorioAuxiliar(new Impresoras3D.App.Persistencia.AppContext());
-    private static IRepositorioJefeOperaciones _repositorioJefeOperaciones = new RepositorioJefeOperaciones(new Impresoras3D.App.Persistencia.AppContext());
-    private static IRepositorioOperario _repositorioOperario = new RepositorioOperario(new Impresoras3D.App.Persistencia.AppContext());
-    private static IRepositorioSocioEmpresa _repositorioSocioEmpresa = new RepositorioSocioEmpresa(new Impresoras3D.App.Persistencia.AppContext());
-    private static IRepositorioTecnico _repositorioTecnico = new RepositorioTecnico(new Impresoras3D.App.Persistencia.AppContext());
+    private static IRepositorioAuxiliar _repositorioAuxiliar = new RepositorioAuxiliar(
+        new Impresoras3D.App.Persistencia.AppContext()
+    );
+    private static IRepositorioJefeOperaciones _repositorioJefeOperaciones =
+        new RepositorioJefeOperaciones(new Impresoras3D.App.Persistencia.AppContext());
+    private static IRepositorioOperario _repositorioOperario = new RepositorioOperario(
+        new Impresoras3D.App.Persistencia.AppContext()
+    );
+    private static IRepositorioSocioEmpresa _repositorioSocioEmpresa = new RepositorioSocioEmpresa(
+        new Impresoras3D.App.Persistencia.AppContext()
+    );
+    private static IRepositorioTecnico _repositorioTecnico = new RepositorioTecnico(
+        new Impresoras3D.App.Persistencia.AppContext()
+    );
 
     [BindProperty] //Asocia al usuario
     public Persona Persona { get; set; }
@@ -39,7 +48,9 @@ public class IndexModel : PageModel
             }
             else
             {
-                JefeOperaciones jefeOperaciones = _repositorioJefeOperaciones.getByDocument(Persona.Documento);
+                JefeOperaciones jefeOperaciones = _repositorioJefeOperaciones.getByDocument(
+                    Persona.Documento
+                );
                 if (jefeOperaciones != null)
                 {
                     return RedirectToPage("./Login/LogueoJefeOperaciones");
@@ -53,7 +64,9 @@ public class IndexModel : PageModel
                     }
                     else
                     {
-                        SocioEmpresa socioEmpresa = _repositorioSocioEmpresa.getByDocument(Persona.Documento);
+                        SocioEmpresa socioEmpresa = _repositorioSocioEmpresa.getByDocument(
+                            Persona.Documento
+                        );
                         if (socioEmpresa != null)
                         {
                             return RedirectToPage("./Login/LogueoSocioEmpresa");
@@ -63,12 +76,7 @@ public class IndexModel : PageModel
                             Tecnico tecnico = _repositorioTecnico.getByDocument(Persona.Documento);
                             if (tecnico != null)
                             {
-                                //Console.Out.WriteLine("Tecnico: " + tecnico.PrimerNombre);
                                 return RedirectToPage("./Login/LogueoTecnico");
-                            }
-                            else
-                            {
-                                Console.Out.WriteLine("mera lok");
                             }
                         }
                     }
@@ -82,5 +90,4 @@ public class IndexModel : PageModel
             return Page();
         }
     }
-
 }

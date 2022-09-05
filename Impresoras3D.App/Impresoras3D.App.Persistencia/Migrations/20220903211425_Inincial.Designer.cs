@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Impresoras3D.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20220903154225_Inicial")]
-    partial class Inicial
+    [Migration("20220903211425_Inincial")]
+    partial class Inincial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

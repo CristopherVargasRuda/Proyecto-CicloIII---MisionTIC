@@ -5,6 +5,8 @@ namespace Impresoras3D.App.Frontend.Pages
 {
     public class LogueoAuxiliarModel : PageModel
     {
+        public LogueoAuxiliarModel() {}
+
         public void OnGet()
         {
         }

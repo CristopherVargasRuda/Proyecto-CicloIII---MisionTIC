@@ -12,16 +12,19 @@
     <br>
     <h3>Logueate</h3>
     <br>
+    <br>
     <form method="POST">
         <div asp-validation-summary="ModelOnly" class=text-danger></div>
         <div class="form-group">
-            <label asp-for="Persona.Documento" class="form-lable">Documento</label>
-            <input asp-for="Persona.Documento" type="text" class="form-control" id="Documento" placeholder="Ingrese su documento">
+            <label asp-for="Persona.Documento" class="form-lable" style = "position: absolute; left: 34.4%; top: 35.7%">Documento</label>
+            <input asp-for="Persona.Documento" type="text"  id="Documento" 
+            placeholder="Ingrese su documento" style="height:60px; width:400px;">
             <span asp-validation-for="Persona.Documento" class="text-danger"></span>
         </div>
         <br>
         <div class="form-group col-md-6">
-            <button type="submit" class="btn btn-primary">Confirmar</button>
+            <button type="submit" class="btn btn-primary" style="height:40px; width:200px; position:absolute;
+        left: 44%;">Confirmar</button>
         </div>
     </form>
 </div>
