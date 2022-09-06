@@ -2,3 +2,38 @@
 @model Impresoras3D.App.Frontend.Pages.AsignarTecnicoModel
 @{
 }
+
+<h1>Asignar Tecnico</h1>
+<br>
+<h3>@ViewData["Error"]</h3>
+<div class="text-center">
+    <form method="POST">
+        <div asp-validation-summary="ModelOnly" class=text-danger></div>
+        <br>
+        <div class="form-row">
+            <div class="form-group col-md-8">
+                <label asp-for="Impresora.Id">Impresora</label>
+                <select asp-for="Impresora.Id" id="Impresora" class="form-control">
+                    @foreach (var impresora in Model.Impresoras)
+                    {
+                        <option value="@impresora.Id">@impresora.PlacaInventario - @impresora.Tipo</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <br>
+        <div class="form-row">
+            <div class="form-group col-md-8">
+                <label asp-for="Tecnico.Id">Tecnico</label>
+                <select asp-for="Tecnico.Id" id="Tecnico" class="form-control">
+                    @foreach (var tecnico in Model.Tecnicos)
+                    {
+                        <option value="@tecnico.Id">@tecnico.Documento - @tecnico.PrimerNombre @tecnico.PrimerApellido</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Confirmar</button>
+    </form>
+</div>

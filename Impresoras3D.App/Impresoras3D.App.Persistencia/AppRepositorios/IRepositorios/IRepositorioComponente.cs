@@ -10,5 +10,9 @@ namespace Impresoras3D.App.Persistencia
         public Componente getComponente(int idComponente);
         public IEnumerable<Componente> GetAllComponente();
         public Componente UpdateComponente(Componente Componente);
+        public IEnumerable<Componente> getCabezarComponentes();
+        public IEnumerable<Componente> getExtrusorComponentes();
+        public IEnumerable<Componente> getCamaComponentes();
+        public IEnumerable<Componente> getFuenteComponentes();
     }
 }

@@ -1,6 +1,7 @@
 using System;
-
 using Impresoras3D.App.Dominio;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 
 namespace Impresoras3D.App.Persistencia
 {
@@ -50,7 +51,7 @@ namespace Impresoras3D.App.Persistencia
 
         public Componente UpdateComponente(Componente componente)
         {
-            var componenteEncontrado= this._appContext.Componentes.FirstOrDefault(
+            var componenteEncontrado = this._appContext.Componentes.FirstOrDefault(
                 c => c.Id == componente.Id
             );
 
@@ -66,6 +67,34 @@ namespace Impresoras3D.App.Persistencia
             }
 
             return componenteEncontrado;
+        }
+        public IEnumerable<Componente> getCabezarComponentes()
+        {
+            var componentesObtenidos = this._appContext.Componentes.FromSqlRaw(
+                    @"select * from dbo.Componente c WHERE LOWER(c.Nombre) like  '%cabezal%'"
+                    ).ToList();
+            return componentesObtenidos;
+        }
+        public IEnumerable<Componente> getExtrusorComponentes()
+        {
+            var componentesObtenidos = this._appContext.Componentes.FromSqlRaw(
+                    @"select * from dbo.Componente c WHERE LOWER(c.Nombre) like  '%extrusor%'"
+                    ).ToList();
+            return componentesObtenidos;
+        }
+        public IEnumerable<Componente> getCamaComponentes()
+        {
+            var componentesObtenidos = this._appContext.Componentes.FromSqlRaw(
+                    @"select * from dbo.Componente c WHERE LOWER(c.Nombre) like  '%cama%'"
+                    ).ToList();
+            return componentesObtenidos;
+        }
+        public IEnumerable<Componente> getFuenteComponentes()
+        {
+            var componentesObtenidos = this._appContext.Componentes.FromSqlRaw(
+                    @"select * from dbo.Componente c WHERE LOWER(c.Nombre) like  '%fuente%'"
+                    ).ToList();
+            return componentesObtenidos;
         }
     }
 }
