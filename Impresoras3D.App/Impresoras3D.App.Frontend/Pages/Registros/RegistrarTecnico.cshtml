@@ -1,76 +1,77 @@
 ﻿@page
 @model Impresoras3D.App.Frontend.Pages.RegistrarTecnicoModel
 @{
+    ViewData["Title"] = "Registrar Tecnico";
 }
-<h1>Registrar Técnico</h1>
-<br>
-<h3>@ViewData["Error"]</h3>
 <div class="text-center">
+    <h1>Registrar Técnico</h1>
+    <h3>@ViewData["Error"]</h3>
+    <br>
     <form method="POST">
         <div asp-validation-summary="ModelOnly" class=text-danger></div>
         <br>
-        <div class="form-row">
-            <div class="form-group col-md-4">
+        <div class="row">
+            <div class="col-md-4">
                 <label asp-for="Tecnico.Documento">Documento</label>
                 <input asp-for="Tecnico.Documento" type="number" class="form-control" id="Documento"
                     placeholder="Documento">
                 <span asp-validation-for="Tecnico.Documento" class="text-danger"></span>
             </div>
-            <div class="form-group col-md-4">
+            <div class="col-md-4">
                 <label asp-for="Tecnico.FechaNacimiento">Fecha de Nacimiento</label>
                 <input asp-for="Tecnico.FechaNacimiento" type="date" class="form-control" id="FechaNacimiento">
                 <span asp-validation-for="Tecnico.FechaNacimiento" class="text-danger"></span>
             </div>
-            <div class="form-group col-md-4">
+            <div class="col-md-4">
                 <label asp-for="Tecnico.telefono">Telefono</label>
                 <input asp-for="Tecnico.telefono" type="number" class="form-control" id="telefono"
                     placeholder="Telefono">
                 <span asp-validation-for="Tecnico.telefono" class="text-danger"></span>
             </div>
         </div>
-        <div class="form-row">
-            <div class="form-group col-md-6">
+        <div class="row">
+            <div class="col-md-6">
                 <label asp-for="Tecnico.PrimerNombre">Primer Nombre</label>
                 <input asp-for="Tecnico.PrimerNombre" type="text" class="form-control" id="PrimerNombre"
                     placeholder="Primer Nombre">
                 <span asp-validation-for="Tecnico.PrimerNombre" class="text-danger"></span>
             </div>
-            <div class="form-group col-md-6">
+            <div class="col-md-6">
                 <label asp-for="Tecnico.SegundoNombre">Segundo Nombre</label>
                 <input asp-for="Tecnico.SegundoNombre" type="text" class="form-control" id="SegundoNombre"
                     placeholder="Segundo Nombre">
                 <span asp-validation-for="Tecnico.SegundoNombre" class="text-danger"></span>
             </div>
         </div>
-        <div class="form-row">
-            <div class="form-group col-md-6">
+        <div class="row">
+            <div class="col-md-6">
                 <label asp-for="Tecnico.PrimerApellido">Primer Appelido</label>
                 <input asp-for="Tecnico.PrimerApellido" type="text" class="form-control" id="PrimerApellido"
                     placeholder="Primer Appelido">
                 <span asp-validation-for="Tecnico.PrimerApellido" class="text-danger"></span>
             </div>
-            <div class="form-group col-md-6">
+            <div class="col-md-6">
                 <label asp-for="Tecnico.SegundoApellido">Segundo Appelido</label>
                 <input asp-for="Tecnico.SegundoApellido" type="text" class="form-control" id="SegundoApellido"
                     placeholder="Segundo Appelido">
                 <span asp-validation-for="Tecnico.SegundoApellido" class="text-danger"></span>
             </div>
         </div>
-        <div class="form-row">
-            <div class="form-group col-md-6">
+        <div class="row">
+            <div class="col-md-6">
                 <label asp-for="Tecnico.Direccion">Direccion</label>
                 <input asp-for="Tecnico.Direccion" type="text" class="form-control" id="Direccion"
                     placeholder="Direccion">
                 <span asp-validation-for="Tecnico.Direccion" class="text-danger"></span>
             </div>
-            <div class="form-group col-md-6">
+            <div class="col-md-6">
                 <label asp-for="Tecnico.NivelEstudios">Nivel de Estudios</label>
                 <select asp-for="Tecnico.NivelEstudios" id="NivelEstudios" class="form-control">
                     <option selected value="Bachiller">Bachiller</option>
                     <option value="Técnico">Técnico</option>
                     <option value="Tecnólogo">Tecnólogo</option>
                 </select>
-            </div>            
+            </div>
         </div>
         <br>
         <button type="submit" class="btn btn-primary">Registrar</button>

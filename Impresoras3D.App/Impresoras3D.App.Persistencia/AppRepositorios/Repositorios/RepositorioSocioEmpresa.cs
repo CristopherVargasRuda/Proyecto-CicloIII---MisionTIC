@@ -63,7 +63,7 @@ namespace Impresoras3D.App.Persistencia
         public SocioEmpresa getByDocument(int document)
         {
             var socioEmpresaEncontrado = this._appContext.SocioEmpresas.FromSqlRaw(
-                @"SELECT * FROM dbo.Socio_empresa WHERE documento = {0}", document
+                @"SELECT Id, Documento, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, FechaNacimiento, telefono FROM dbo.Socio_empresa WHERE documento = {0}", document
                 ).FirstOrDefault();
             return socioEmpresaEncontrado;
         }

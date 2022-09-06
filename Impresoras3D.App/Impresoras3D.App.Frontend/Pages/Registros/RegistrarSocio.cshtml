@@ -1,4 +1,63 @@
 ﻿@page
 @model Impresoras3D.App.Frontend.Pages.RegistrarSocioModel
 @{
+    ViewData["Title"] = "Registrar Socio";
 }
+<div class="text-center">
+    <h1>Registrar Socio de Empresa</h1>
+    <h3>@ViewData["Error"]</h3>
+    <br>
+    <form method="POST">
+        <div asp-validation-summary="ModelOnly" class=text-danger></div>
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <label asp-for="SocioEmpresa.Documento">Documento</label>
+                <input asp-for="SocioEmpresa.Documento" type="number" class="form-control" id="Documento"
+                    placeholder="Documento">
+                <span asp-validation-for="SocioEmpresa.Documento" class="text-danger"></span>
+            </div>
+            <div class="col-md-4">
+                <label asp-for="SocioEmpresa.FechaNacimiento">Fecha de Nacimiento</label>
+                <input asp-for="SocioEmpresa.FechaNacimiento" type="date" class="form-control" id="FechaNacimiento">
+                <span asp-validation-for="SocioEmpresa.FechaNacimiento" class="text-danger"></span>
+            </div>
+            <div class="col-md-4">
+                <label asp-for="SocioEmpresa.telefono">Telefono</label>
+                <input asp-for="SocioEmpresa.telefono" type="number" class="form-control" id="telefono"
+                    placeholder="Telefono">
+                <span asp-validation-for="SocioEmpresa.telefono" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label asp-for="SocioEmpresa.PrimerNombre">Primer Nombre</label>
+                <input asp-for="SocioEmpresa.PrimerNombre" type="text" class="form-control" id="PrimerNombre"
+                    placeholder="Primer Nombre">
+                <span asp-validation-for="SocioEmpresa.PrimerNombre" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="SocioEmpresa.SegundoNombre">Segundo Nombre</label>
+                <input asp-for="SocioEmpresa.SegundoNombre" type="text" class="form-control" id="SegundoNombre"
+                    placeholder="Segundo Nombre">
+                <span asp-validation-for="SocioEmpresa.SegundoNombre" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label asp-for="SocioEmpresa.PrimerApellido">Primer Appelido</label>
+                <input asp-for="SocioEmpresa.PrimerApellido" type="text" class="form-control" id="PrimerApellido"
+                    placeholder="Primer Appelido">
+                <span asp-validation-for="SocioEmpresa.PrimerApellido" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="SocioEmpresa.SegundoApellido">Segundo Appelido</label>
+                <input asp-for="SocioEmpresa.SegundoApellido" type="text" class="form-control" id="SegundoApellido"
+                    placeholder="Segundo Appelido">
+                <span asp-validation-for="SocioEmpresa.SegundoApellido" class="text-danger"></span>
+            </div>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Registrar</button>
+    </form>
+</div>

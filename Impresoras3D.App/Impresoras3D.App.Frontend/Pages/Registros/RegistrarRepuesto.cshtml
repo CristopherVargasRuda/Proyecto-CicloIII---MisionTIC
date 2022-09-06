@@ -1,4 +1,42 @@
 ﻿@page
 @model Impresoras3D.App.Frontend.Pages.RegistrarRepuestoModel
 @{
+    ViewData["Title"] = "Registrar Componente - Repuesto";
 }
+<div class="text-center">
+    <h1>Registrar Componente/Repuesto</h1>
+    <h3>@ViewData["Error"]</h3>
+    <br>
+    <form method="POST">
+        <div asp-validation-summary="ModelOnly" class=text-danger></div>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <label asp-for="TipoRepuesto">TipoRepuesto</label>
+                <select asp-for="TipoRepuesto" id="TipoRepuesto" class="form-control">
+                    <option selected value="Cabezal">Cabezal</option>
+                    <option value="Extrusor">Extrusor</option>
+                    <option value="Fuente de Alimentación">Fuente de Alimentación</option>
+                    <option value="Cama Alineadora">Cama Alineadora</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="Componente.Nombre">Nombre Componente</label>
+                <input asp-for="Componente.Nombre" type="text" class="form-control" id="Nombre"
+                    placeholder="Nombre Componente">
+                <span asp-validation-for="Componente.Nombre" class="text-danger"></span>
+            </div>            
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <label asp-for="Componente.Descripcion">Descripcion Componente</label>
+                <input asp-for="Componente.Descripcion" type="text" class="form-control" id="Descripcion"
+                    placeholder="Descripcion Componente">
+                <span asp-validation-for="Componente.Descripcion" class="text-danger"></span>
+            </div>            
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Registrar</button>
+    </form>
+</div>
