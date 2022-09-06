@@ -9,7 +9,7 @@ namespace Impresoras3D.App.Dominio
         [Key]
         public int Id { get; set; }
         [Required]
-        public string ImpresoraId { get; set; }
+        public int ImpresoraId { get; set; }
         [Required]
         public int ComponenteId { get; set; }
         public Componente Componente { get; set; }

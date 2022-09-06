@@ -109,11 +109,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
                     b.Property<DateTime>("FechaVencimiento")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("ImpresoraId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("ImpresoraId1")
+                    b.Property<int>("ImpresoraId")
                         .HasColumnType("int");
 
                     b.Property<int>("SeguroId")
@@ -121,7 +117,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ImpresoraId1");
+                    b.HasIndex("ImpresoraId");
 
                     b.HasIndex("SeguroId");
 
@@ -223,11 +219,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
                     b.Property<int?>("EstadoId")
                         .HasColumnType("int");
 
-                    b.Property<string>("ImpresoraId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("ImpresoraId1")
+                    b.Property<int>("ImpresoraId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -236,7 +228,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
 
                     b.HasIndex("EstadoId");
 
-                    b.HasIndex("ImpresoraId1");
+                    b.HasIndex("ImpresoraId");
 
                     b.ToTable("Impresora_componente");
                 });
@@ -373,11 +365,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("ImpresoraId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("ImpresoraId1")
+                    b.Property<int>("ImpresoraId")
                         .HasColumnType("int");
 
                     b.Property<int>("SoftwareId")
@@ -388,7 +376,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ImpresoraId1");
+                    b.HasIndex("ImpresoraId");
 
                     b.HasIndex("SoftwareId");
 
@@ -553,7 +541,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
                 {
                     b.HasOne("Impresoras3D.App.Dominio.Impresora", "Impresora")
                         .WithMany("CompraSeguros")
-                        .HasForeignKey("ImpresoraId1")
+                        .HasForeignKey("ImpresoraId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -610,7 +598,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
 
                     b.HasOne("Impresoras3D.App.Dominio.Impresora", "Impresora")
                         .WithMany("ImpresoraComponentes")
-                        .HasForeignKey("ImpresoraId1")
+                        .HasForeignKey("ImpresoraId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
@@ -663,7 +651,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
                 {
                     b.HasOne("Impresoras3D.App.Dominio.Impresora", "Impresora")
                         .WithMany("ServiciosTecnicos")
-                        .HasForeignKey("ImpresoraId1")
+                        .HasForeignKey("ImpresoraId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

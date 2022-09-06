@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Impresoras3D.App.Persistencia.Migrations
 {
-    public partial class Inincial : Migration
+    public partial class Inicial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -169,7 +169,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
                     Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Version = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Licencia = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    EstadoId = table.Column<int>(type: "int", nullable: false)
+                    EstadoId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -178,8 +178,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
                         name: "FK_Software_Estado_EstadoId",
                         column: x => x.EstadoId,
                         principalTable: "Estado",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -221,10 +220,10 @@ namespace Impresoras3D.App.Persistencia.Migrations
                     VolumenImpresionY = table.Column<int>(type: "int", nullable: false),
                     VolumenImpresionZ = table.Column<int>(type: "int", nullable: false),
                     PaisOrigen = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    EstadoID = table.Column<int>(type: "int", nullable: false),
-                    OperarioId = table.Column<int>(type: "int", nullable: false),
-                    TecnicoId = table.Column<int>(type: "int", nullable: false),
-                    SoftwareId = table.Column<int>(type: "int", nullable: false)
+                    EstadoID = table.Column<int>(type: "int", nullable: true),
+                    OperarioId = table.Column<int>(type: "int", nullable: true),
+                    TecnicoId = table.Column<int>(type: "int", nullable: true),
+                    SoftwareId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -233,14 +232,12 @@ namespace Impresoras3D.App.Persistencia.Migrations
                         name: "FK_Impresora_Estado_EstadoID",
                         column: x => x.EstadoID,
                         principalTable: "Estado",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Impresora_Operario_OperarioId",
                         column: x => x.OperarioId,
                         principalTable: "Operario",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Impresora_Software_SoftwareId",
                         column: x => x.SoftwareId,
@@ -251,8 +248,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
                         name: "FK_Impresora_Tecnico_TecnicoId",
                         column: x => x.TecnicoId,
                         principalTable: "Tecnico",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -263,16 +259,15 @@ namespace Impresoras3D.App.Persistencia.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FechaCompra = table.Column<DateTime>(type: "datetime2", nullable: false),
                     FechaVencimiento = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ImpresoraId = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ImpresoraId1 = table.Column<int>(type: "int", nullable: false),
+                    ImpresoraId = table.Column<int>(type: "int", nullable: false),
                     SeguroId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Compra_seguro", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Compra_seguro_Impresora_ImpresoraId1",
-                        column: x => x.ImpresoraId1,
+                        name: "FK_Compra_seguro_Impresora_ImpresoraId",
+                        column: x => x.ImpresoraId,
                         principalTable: "Impresora",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -290,10 +285,9 @@ namespace Impresoras3D.App.Persistencia.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ImpresoraId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ImpresoraId = table.Column<int>(type: "int", nullable: false),
                     ComponenteId = table.Column<int>(type: "int", nullable: false),
-                    ImpresoraId1 = table.Column<int>(type: "int", nullable: false),
-                    EstadoId = table.Column<int>(type: "int", nullable: false)
+                    EstadoId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -308,11 +302,10 @@ namespace Impresoras3D.App.Persistencia.Migrations
                         name: "FK_Impresora_componente_Estado_EstadoId",
                         column: x => x.EstadoId,
                         principalTable: "Estado",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_Impresora_componente_Impresora_ImpresoraId1",
-                        column: x => x.ImpresoraId1,
+                        name: "FK_Impresora_componente_Impresora_ImpresoraId",
+                        column: x => x.ImpresoraId,
                         principalTable: "Impresora",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
@@ -325,8 +318,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Fecha = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ImpresoraId = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ImpresoraId1 = table.Column<int>(type: "int", nullable: false),
+                    ImpresoraId = table.Column<int>(type: "int", nullable: false),
                     SoftwareId = table.Column<int>(type: "int", nullable: false),
                     TecnicoId = table.Column<int>(type: "int", nullable: false)
                 },
@@ -334,8 +326,8 @@ namespace Impresoras3D.App.Persistencia.Migrations
                 {
                     table.PrimaryKey("PK_Servicio_Tecnico", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Servicio_Tecnico_Impresora_ImpresoraId1",
-                        column: x => x.ImpresoraId1,
+                        name: "FK_Servicio_Tecnico_Impresora_ImpresoraId",
+                        column: x => x.ImpresoraId,
                         principalTable: "Impresora",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -407,9 +399,9 @@ namespace Impresoras3D.App.Persistencia.Migrations
                 column: "ImpresoraComponenteId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Compra_seguro_ImpresoraId1",
+                name: "IX_Compra_seguro_ImpresoraId",
                 table: "Compra_seguro",
-                column: "ImpresoraId1");
+                column: "ImpresoraId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Compra_seguro_SeguroId",
@@ -447,9 +439,9 @@ namespace Impresoras3D.App.Persistencia.Migrations
                 column: "EstadoId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Impresora_componente_ImpresoraId1",
+                name: "IX_Impresora_componente_ImpresoraId",
                 table: "Impresora_componente",
-                column: "ImpresoraId1");
+                column: "ImpresoraId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Mantenimiento_componente_ImpresoraComponenteId",
@@ -462,9 +454,9 @@ namespace Impresoras3D.App.Persistencia.Migrations
                 column: "TipoCubrimientoId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Servicio_Tecnico_ImpresoraId1",
+                name: "IX_Servicio_Tecnico_ImpresoraId",
                 table: "Servicio_Tecnico",
-                column: "ImpresoraId1");
+                column: "ImpresoraId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Servicio_Tecnico_SoftwareId",

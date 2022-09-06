@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lozan\\Desktop\\Mintic ciclo 3\\Impresoras\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Consola\\Impresoras3D.App.Consola.csproj": {}
+    "C:\\Users\\PC\\Desktop\\Misión Tic\\Ciclo III\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Consola\\Impresoras3D.App.Consola.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lozan\\Desktop\\Mintic ciclo 3\\Impresoras\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Consola\\Impresoras3D.App.Consola.csproj": {
+    "C:\\Users\\PC\\Desktop\\Misión Tic\\Ciclo III\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Consola\\Impresoras3D.App.Consola.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lozan\\Desktop\\Mintic ciclo 3\\Impresoras\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Consola\\Impresoras3D.App.Consola.csproj",
+        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Misión Tic\\Ciclo III\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Consola\\Impresoras3D.App.Consola.csproj",
         "projectName": "Impresoras3D.App.Consola",
-        "projectPath": "C:\\Users\\lozan\\Desktop\\Mintic ciclo 3\\Impresoras\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Consola\\Impresoras3D.App.Consola.csproj",
-        "packagesPath": "C:\\Users\\lozan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lozan\\Desktop\\Mintic ciclo 3\\Impresoras\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Consola\\obj\\",
+        "projectPath": "C:\\Users\\PC\\Desktop\\Misión Tic\\Ciclo III\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Consola\\Impresoras3D.App.Consola.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PC\\Desktop\\Misión Tic\\Ciclo III\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Consola\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lozan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -26,8 +26,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\lozan\\Desktop\\Mintic ciclo 3\\Impresoras\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Persistencia\\Impresoras3D.App.Persistencia.csproj": {
-                "projectPath": "C:\\Users\\lozan\\Desktop\\Mintic ciclo 3\\Impresoras\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Persistencia\\Impresoras3D.App.Persistencia.csproj"
+              "C:\\Users\\PC\\Desktop\\Misión Tic\\Ciclo III\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Persistencia\\Impresoras3D.App.Persistencia.csproj": {
+                "projectPath": "C:\\Users\\PC\\Desktop\\Misión Tic\\Ciclo III\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Persistencia\\Impresoras3D.App.Persistencia.csproj"
               }
             }
           }
@@ -69,17 +69,17 @@
         }
       }
     },
-    "C:\\Users\\lozan\\Desktop\\Mintic ciclo 3\\Impresoras\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Dominio\\Impresoras3D.App.Dominio.csproj": {
+    "C:\\Users\\PC\\Desktop\\Misión Tic\\Ciclo III\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Dominio\\Impresoras3D.App.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lozan\\Desktop\\Mintic ciclo 3\\Impresoras\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Dominio\\Impresoras3D.App.Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Misión Tic\\Ciclo III\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Dominio\\Impresoras3D.App.Dominio.csproj",
         "projectName": "Impresoras3D.App.Dominio",
-        "projectPath": "C:\\Users\\lozan\\Desktop\\Mintic ciclo 3\\Impresoras\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Dominio\\Impresoras3D.App.Dominio.csproj",
-        "packagesPath": "C:\\Users\\lozan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lozan\\Desktop\\Mintic ciclo 3\\Impresoras\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Dominio\\obj\\",
+        "projectPath": "C:\\Users\\PC\\Desktop\\Misión Tic\\Ciclo III\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Dominio\\Impresoras3D.App.Dominio.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PC\\Desktop\\Misión Tic\\Ciclo III\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lozan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -122,17 +122,17 @@
         }
       }
     },
-    "C:\\Users\\lozan\\Desktop\\Mintic ciclo 3\\Impresoras\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Persistencia\\Impresoras3D.App.Persistencia.csproj": {
+    "C:\\Users\\PC\\Desktop\\Misión Tic\\Ciclo III\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Persistencia\\Impresoras3D.App.Persistencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lozan\\Desktop\\Mintic ciclo 3\\Impresoras\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Persistencia\\Impresoras3D.App.Persistencia.csproj",
+        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Misión Tic\\Ciclo III\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Persistencia\\Impresoras3D.App.Persistencia.csproj",
         "projectName": "Impresoras3D.App.Persistencia",
-        "projectPath": "C:\\Users\\lozan\\Desktop\\Mintic ciclo 3\\Impresoras\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Persistencia\\Impresoras3D.App.Persistencia.csproj",
-        "packagesPath": "C:\\Users\\lozan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lozan\\Desktop\\Mintic ciclo 3\\Impresoras\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Persistencia\\obj\\",
+        "projectPath": "C:\\Users\\PC\\Desktop\\Misión Tic\\Ciclo III\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Persistencia\\Impresoras3D.App.Persistencia.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PC\\Desktop\\Misión Tic\\Ciclo III\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Persistencia\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lozan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -144,8 +144,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\lozan\\Desktop\\Mintic ciclo 3\\Impresoras\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Dominio\\Impresoras3D.App.Dominio.csproj": {
-                "projectPath": "C:\\Users\\lozan\\Desktop\\Mintic ciclo 3\\Impresoras\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Dominio\\Impresoras3D.App.Dominio.csproj"
+              "C:\\Users\\PC\\Desktop\\Misión Tic\\Ciclo III\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Dominio\\Impresoras3D.App.Dominio.csproj": {
+                "projectPath": "C:\\Users\\PC\\Desktop\\Misión Tic\\Ciclo III\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Dominio\\Impresoras3D.App.Dominio.csproj"
               }
             }
           }
