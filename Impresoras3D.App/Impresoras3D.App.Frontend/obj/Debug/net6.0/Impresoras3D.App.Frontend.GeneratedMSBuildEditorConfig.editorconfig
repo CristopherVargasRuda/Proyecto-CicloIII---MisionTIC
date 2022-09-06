@@ -8,101 +8,101 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Impresoras3D.App.Frontend
 build_property.RootNamespace = Impresoras3D.App.Frontend
-build_property.ProjectDir = C:\Users\PC\Desktop\Misión Tic\Ciclo III\Programación\Proyecto\Código\Proyecto-CicloIII---MisionTIC\Impresoras3D.App\Impresoras3D.App.Frontend\
+build_property.ProjectDir = C:\Users\lozan\Desktop\Mintic ciclo 3\Impresoras\Proyecto-CicloIII---MisionTIC\Impresoras3D.App\Impresoras3D.App.Frontend\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\PC\Desktop\Misión Tic\Ciclo III\Programación\Proyecto\Código\Proyecto-CicloIII---MisionTIC\Impresoras3D.App\Impresoras3D.App.Frontend
+build_property.MSBuildProjectDirectory = C:\Users\lozan\Desktop\Mintic ciclo 3\Impresoras\Proyecto-CicloIII---MisionTIC\Impresoras3D.App\Impresoras3D.App.Frontend
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Asignaciones/AsignarOperario.cshtml]
+[C:/Users/lozan/Desktop/Mintic ciclo 3/Impresoras/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Asignaciones/AsignarOperario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXNpZ25hY2lvbmVzXEFzaWduYXJPcGVyYXJpby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Asignaciones/AsignarTecnico.cshtml]
+[C:/Users/lozan/Desktop/Mintic ciclo 3/Impresoras/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Asignaciones/AsignarTecnico.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXNpZ25hY2lvbmVzXEFzaWduYXJUZWNuaWNvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Consultas/ConsultarFechasSeguro.cshtml]
+[C:/Users/lozan/Desktop/Mintic ciclo 3/Impresoras/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Consultas/ConsultarFechasSeguro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uc3VsdGFzXENvbnN1bHRhckZlY2hhc1NlZ3Vyby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Consultas/ConsultarImpresoras.cshtml]
+[C:/Users/lozan/Desktop/Mintic ciclo 3/Impresoras/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Consultas/ConsultarImpresoras.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uc3VsdGFzXENvbnN1bHRhckltcHJlc29yYXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Consultas/ConsultarRevisiones.cshtml]
+[C:/Users/lozan/Desktop/Mintic ciclo 3/Impresoras/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Consultas/ConsultarRevisiones.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uc3VsdGFzXENvbnN1bHRhclJldmlzaW9uZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Error.cshtml]
+[C:/Users/lozan/Desktop/Mintic ciclo 3/Impresoras/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Index.cshtml]
+[C:/Users/lozan/Desktop/Mintic ciclo 3/Impresoras/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Login/LogueoAuxiliar.cshtml]
+[C:/Users/lozan/Desktop/Mintic ciclo 3/Impresoras/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Login/LogueoAuxiliar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5cTG9ndWVvQXV4aWxpYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Login/LogueoJefeOperaciones.cshtml]
+[C:/Users/lozan/Desktop/Mintic ciclo 3/Impresoras/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Login/LogueoJefeOperaciones.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5cTG9ndWVvSmVmZU9wZXJhY2lvbmVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Login/LogueoOperario.cshtml]
+[C:/Users/lozan/Desktop/Mintic ciclo 3/Impresoras/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Login/LogueoOperario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5cTG9ndWVvT3BlcmFyaW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Login/LogueoSocioEmpresa.cshtml]
+[C:/Users/lozan/Desktop/Mintic ciclo 3/Impresoras/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Login/LogueoSocioEmpresa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5cTG9ndWVvU29jaW9FbXByZXNhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Login/LogueoTecnico.cshtml]
+[C:/Users/lozan/Desktop/Mintic ciclo 3/Impresoras/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Login/LogueoTecnico.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5cTG9ndWVvVGVjbmljby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Privacy.cshtml]
+[C:/Users/lozan/Desktop/Mintic ciclo 3/Impresoras/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Registros/RegistrarImpresora.cshtml]
+[C:/Users/lozan/Desktop/Mintic ciclo 3/Impresoras/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Registros/RegistrarImpresora.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0cm9zXFJlZ2lzdHJhckltcHJlc29yYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Registros/RegistrarOperario.cshtml]
+[C:/Users/lozan/Desktop/Mintic ciclo 3/Impresoras/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Registros/RegistrarOperario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0cm9zXFJlZ2lzdHJhck9wZXJhcmlvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Registros/RegistrarRepuesto.cshtml]
+[C:/Users/lozan/Desktop/Mintic ciclo 3/Impresoras/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Registros/RegistrarRepuesto.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0cm9zXFJlZ2lzdHJhclJlcHVlc3RvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Registros/RegistrarRevision.cshtml]
+[C:/Users/lozan/Desktop/Mintic ciclo 3/Impresoras/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Registros/RegistrarRevision.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0cm9zXFJlZ2lzdHJhclJldmlzaW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Registros/RegistrarSocio.cshtml]
+[C:/Users/lozan/Desktop/Mintic ciclo 3/Impresoras/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Registros/RegistrarSocio.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0cm9zXFJlZ2lzdHJhclNvY2lvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Registros/RegistrarTecnico.cshtml]
+[C:/Users/lozan/Desktop/Mintic ciclo 3/Impresoras/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Registros/RegistrarTecnico.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0cm9zXFJlZ2lzdHJhclRlY25pY28uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/lozan/Desktop/Mintic ciclo 3/Impresoras/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/_ViewImports.cshtml]
+[C:/Users/lozan/Desktop/Mintic ciclo 3/Impresoras/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/_ViewStart.cshtml]
+[C:/Users/lozan/Desktop/Mintic ciclo 3/Impresoras/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Shared/_Layout.cshtml]
+[C:/Users/lozan/Desktop/Mintic ciclo 3/Impresoras/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-giz5tohkwj

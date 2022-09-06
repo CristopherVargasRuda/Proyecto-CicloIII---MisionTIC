@@ -4,26 +4,95 @@
     ViewData["Title"] = "Consultar Impresoras";
 }
 
-<div class = "text-center">
+<body style = "background-color: #D6FDFE" >
+    <div class = "text-center">
 
-    <br>
-    <h1>Consultar Impresoras</h1>
-    <br>
-    <br>
-</div>
-
-<form method="POST">
-    <div asp-validation-summary="ModelOnly" class=text-danger></div>
-    <div class="form-group">
-        <label asp-for="Impresora.PlacaInventario" class="form-lable" style = "float: left; margin-left = auto;">Placa Inventario: </label>
-        <input asp-for="Impresora.PlacaInventario" type="text"  id="PlacaInventario" 
-        placeholder="Ingrese la placa de la Impresora" style="height:45px; width:400px; float:left; margin-left = auto">
-        <span asp-validation-for="Impresora.PlacaInventario" class="text-danger"></span>
-        <button type="submit" class="btn btn-primary" style="height:40px; width:200px; float: left; margin-left = auto;
-        ">Buscar</button>
+        <br>
+        <h1>Consultar Impresoras</h1>
+        <br>
+        <br>
     </div>
-</form>
 
+    <form method="POST">
+        <div asp-validation-summary="ModelOnly" class=text-danger></div>
+        <div class="form-group">
+            <div class = "row">
+                <div class = "col-sm-1.5">
+                    <label  class="form-lable" style = "float: left; margin-left = auto;">Placa Inventario: </label>
+                </div>
+                <div class = "col-sm-4">
+                    <input asp-for="Impresora.PlacaInventario" type="text"  id="PlacaInventario" 
+                    placeholder="Ingrese la placa de la Impresora" style="height:45px; width:400px; float:left; margin-left = auto">
+                    <span asp-validation-for="Impresora.PlacaInventario" class="text-danger"></span>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary" style="height:40px; width:200px; float: left; margin-left = auto;
+                ">Buscar</button>
+            </div>
+        </div>
+    </form>
+    <br>
+    <br>
+    @if(Model.impresoraObtenida != null)
+    {
+        
+        <div class = "text-center; row">
+            <div class = "col-sm-4">
+                <div class="card" style="width: 100%;">
+                    <div class="card-header">
+                        <h5 class="card-title">Informacion Impresora</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Placa Inventario: @Model.impresoraObtenida.PlacaInventario </li>
+                        <li class="list-group-item">Tipo: @Model.impresoraObtenida.Tipo </li>
+                        <li class="list-group-item">Marca: @Model.impresoraObtenida.Marca </li>
+                        <li class="list-group-item">Modelo: @Model.impresoraObtenida.Modelo</li>
+                        <li class="list-group-item">Pais de origen: @Model.impresoraObtenida.PaisOrigen </li>
+                        <li class="list-group-item">Estado: @Model.estadoImpresoraObtenida.Nombre </li>
+                        <li class="list-group-item">Documento Operario: @Model.impresoraObtenida.OperarioId </li>
+                        <li class="list-group-item">Documento Tecnico: @Model.impresoraObtenida.TecnicoId </li>
+                        <li class="list-group-item">Velocidad Impresion: @Model.impresoraObtenida.VelocidaImpresion </li>
+                        <li class="list-group-item">Volumen Impresion X: @Model.impresoraObtenida.VolumenImpresionX </li>
+                        <li class="list-group-item">Volumen Impresion Y: @Model.impresoraObtenida.VolumenImpresionY</li>
+                        <li class="list-group-item">Volumen Impresion Z: @Model.impresoraObtenida.VolumenImpresionZ</li>
+                    </ul>
+                </div>
+            </div>
+            <div class = "col-sm-4">
+                <div class = "text-center">
+                    <div class="card" style="width: 100%;">
+                        <div class="card-header">
+                            <h5 class="card-title">Software Impresora</h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Nombre Software: @Model.softwareObtenido.Nombre </li>
+                            <li class="list-group-item">Version Software: @Model.softwareObtenido.Version </li>
+                            <li class="list-group-item">Licencia Software: @Model.softwareObtenido.Licencia </li>
+                            <li class="list-group-item">Estado: @Model.estadoSoftwareObtenido.Nombre </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "col-sm-4">
+                <div class = "text-center">
+                    <div class="card" style="width: 100%;">
+                        <div class="card-header">
+                            <h5 class="card-title">Componentes</h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Nombre Software: @Model.softwareObtenido.Nombre </li>
+                            <li class="list-group-item">Version Software: @Model.softwareObtenido.Version </li>
+                            <li class="list-group-item">Licencia Software: @Model.softwareObtenido.Licencia </li>
+                            <li class="list-group-item">Estado: @Model.estadoSoftwareObtenido.Nombre </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    }
+</body>
 
 
 
