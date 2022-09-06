@@ -20,11 +20,13 @@
             <input asp-for="Persona.Documento" type="text"  id="Documento" 
             placeholder="Ingrese su documento" style="height:60px; width:400px;">
             <span asp-validation-for="Persona.Documento" class="text-danger"></span>
+            <h4>@ViewData["Error"]</h4>
         </div>
         <br>
         <div class="form-group col-md-6">
             <button type="submit" class="btn btn-primary" style="height:40px; width:200px; position:absolute;
         left: 44%;">Confirmar</button>
         </div>
+
     </form>
 </div>

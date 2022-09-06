@@ -77,6 +77,10 @@ public class IndexModel : PageModel
                             if (tecnico != null)
                             {
                                 return RedirectToPage("./Login/LogueoTecnico");
+                            }else
+                            {
+                                ViewData["Error"] = "Usuario No valido!";
+                                return Page();
                             }
                         }
                     }

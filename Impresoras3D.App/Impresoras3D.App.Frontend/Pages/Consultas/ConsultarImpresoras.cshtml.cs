@@ -57,12 +57,15 @@ namespace Impresoras3D.App.Frontend.Pages
                 this. estadoImpresoraObtenida = _repositorioEstado.getEstado(3); //REVISAR!!
 
                 this.estadoSoftwareObtenido = _repositorioEstado.getEstado(8); //REVISAR!!
+
+                return Page();
             }
             catch (System.Exception e)
             {
-                ViewData["Error"] = e.Message;
-                Console.Out.WriteLine(Impresora.PlacaInventario);
+                
             }
+
+            @ViewData["Error"] = "Impresora no encontrada";
 
             return Page();
         }

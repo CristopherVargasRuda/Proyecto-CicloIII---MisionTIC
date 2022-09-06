@@ -25,10 +25,16 @@
                     placeholder="Ingrese la placa de la Impresora" style="height:45px; width:400px; float:left; margin-left = auto">
                     <span asp-validation-for="Impresora.PlacaInventario" class="text-danger"></span>
                 </div>
+                
                 <br>
                 <button type="submit" class="btn btn-primary" style="height:40px; width:200px; float: left; margin-left = auto;
                 ">Buscar</button>
+                <br>
+            </div> 
+            <div class = "col-sm-4">
+                <h4>@ViewData["Error"]
             </div>
+            
         </div>
     </form>
     <br>
