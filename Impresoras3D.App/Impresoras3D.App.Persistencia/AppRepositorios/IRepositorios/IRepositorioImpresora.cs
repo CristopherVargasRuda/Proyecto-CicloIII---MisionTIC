@@ -15,5 +15,7 @@ namespace Impresoras3D.App.Persistencia
         public IEnumerable<Impresora> GetAllImpresora();
 
         public Impresora UpdateImpresora(Impresora Impresora);
+
+        public Impresora getByPlaca (string PlacaImpresora);
     }
 }

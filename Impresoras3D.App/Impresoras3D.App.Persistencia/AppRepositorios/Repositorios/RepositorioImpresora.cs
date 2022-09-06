@@ -1,6 +1,7 @@
 using System;
-
 using Impresoras3D.App.Dominio;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 
 namespace Impresoras3D.App.Persistencia
 {
@@ -94,7 +95,17 @@ namespace Impresoras3D.App.Persistencia
 
                 this._appContext.SaveChanges();
             }
+            return impresoraEncontrada;
+        }
 
+        public Impresora getByPlaca(string placaImpresora)
+        {
+            var impresoraEncontrada = this._appContext.Impresoras
+                .FromSqlRaw(
+                    @"SELECT * FROM dbo.Impresora i WHERE i.PlacaInventario = {0}",
+                    placaImpresora
+                )
+                .FirstOrDefault();
             return impresoraEncontrada;
         }
     }
