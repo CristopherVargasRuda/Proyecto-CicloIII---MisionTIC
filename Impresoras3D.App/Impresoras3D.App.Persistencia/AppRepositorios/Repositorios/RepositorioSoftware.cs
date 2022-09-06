@@ -36,7 +36,7 @@ namespace Impresoras3D.App.Persistencia
             this._appContext.SaveChanges();
         }
 
-        public Software getSoftware(int idSoftware)
+        public Software getSoftware(int? idSoftware)
         {
             var software = this._appContext.Softwares.FirstOrDefault(s => s.Id == idSoftware);
 

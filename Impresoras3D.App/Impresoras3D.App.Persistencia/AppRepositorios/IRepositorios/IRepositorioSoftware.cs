@@ -10,7 +10,7 @@ namespace Impresoras3D.App.Persistencia
 
         public void DeleteSoftware(int idSoftware);
 
-        public Software getSoftware(int idSoftware);
+        public Software getSoftware(int? idSoftware);
 
         public IEnumerable<Software> GetAllSoftware();
 
