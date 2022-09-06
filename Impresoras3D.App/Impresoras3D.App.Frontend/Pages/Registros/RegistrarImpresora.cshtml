@@ -95,6 +95,44 @@
                     }
                 </select>
             </div>
+            <div class="form-group col-md-4">
+                <label asp-for="Cabecera.Id">Cabecera</label>
+                <select asp-for="Cabecera.Id" id="Cabecera" class="form-control">
+                    @foreach (var cabecera in Model.Cabeceras)
+                    {
+                        <option value="@cabecera.Id">@cabecera.Nombre</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label asp-for="Cama.Id">Alineación de la cama</label>
+                <select asp-for="Cama.Id" id="Cama" class="form-control">
+                    @foreach (var cama in Model.Camas)
+                    {
+                        <option value="@cama.Id">@cama.Nombre</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="Extrusor.Id">Extrusor</label>
+                <select asp-for="Extrusor.Id" id="Extrusor" class="form-control">
+                    @foreach (var extrusor in Model.Extrusores)
+                    {
+                        <option value="@extrusor.Id">@extrusor.Nombre</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="Fuente.Id">Fuente</label>
+                <select asp-for="Fuente.Id" id="Fuente" class="form-control">
+                    @foreach (var fuente in Model.Fuentes)
+                    {
+                        <option value="@fuente.Id">@fuente.Nombre</option>
+                    }
+                </select>
+            </div>
         </div>
         <br>
         <button type="submit" class="btn btn-primary">Registrar</button>
