@@ -1,23 +1,23 @@
 ﻿@page
 @model Impresoras3D.App.Frontend.Pages.RegistrarImpresoraModel
 @{
-    ViewData["Title"] = "Registrar Imresora";
+    ViewData["Title"] = "Registrar Impresora";
 }
-<h1>Registrar Impresora</h1>
-<br>
-<h3>@ViewData["Error"]</h3>
 <div class="text-center">
+    <h1>Registrar Impresora</h1>
+    <h3>@ViewData["Error"]</h3>
+    <br>
     <form method="POST">
         <div asp-validation-summary="ModelOnly" class=text-danger></div>
         <br>
-        <div class="form-row">
-            <div class="form-group col-md-6">
+        <div class="row">
+            <div class="col-md-6">
                 <label asp-for="Impresora.PlacaInventario">Placa Inventario</label>
                 <input asp-for="Impresora.PlacaInventario" type="text" class="form-control" id="PlacaInventario"
                     placeholder="Placa Inventario">
                 <span asp-validation-for="Impresora.PlacaInventario" class="text-danger"></span>
             </div>
-            <div class="form-group col-md-6">
+            <div class="col-md-6">
                 <label asp-for="Impresora.Tipo">Tipo de Impresora</label>
                 <select asp-for="Impresora.Tipo" id="Impresora.Tipo" class="form-control">
                     <option selected value="Cartesina">Cartesina</option>
@@ -27,13 +27,13 @@
             </div>
         </div>
         <br>
-        <div class="form-row">
-            <div class="form-group col-md-6">
+        <div class="row">
+            <div class="col-md-6">
                 <label asp-for="Impresora.Marca">Marca</label>
                 <input asp-for="Impresora.Marca" type="text" class="form-control" id="Marca" placeholder="Marca">
                 <span asp-validation-for="Impresora.Marca" class="text-danger"></span>
             </div>
-            <div class="form-group col-md-6">
+            <div class="col-md-6">
                 <label asp-for="Impresora.Modelo">Modelo / (Año)</label>
                 <input asp-for="Impresora.Modelo" type="number" class="form-control" id="Modelo"
                     placeholder="Modelo / (Año)">
@@ -41,14 +41,14 @@
             </div>
         </div>
         <br>
-        <div class="form-row">
-            <div class="form-group col-md-6">
+        <div class="row">
+            <div class="col-md-6">
                 <label asp-for="Impresora.PaisOrigen">Pais de Origen</label>
                 <input asp-for="Impresora.PaisOrigen" type="text" class="form-control" id="PaisOrigen"
                     placeholder="Pais de Origen">
                 <span asp-validation-for="Impresora.PaisOrigen" class="text-danger"></span>
             </div>
-            <div class="form-group col-md-6">
+            <div class="col-md-6">
                 <label asp-for="Impresora.VelocidaImpresion">Velocidad Impresion</label>
                 <input asp-for="Impresora.VelocidaImpresion" type="number" class="form-control" id="VelocidaImpresion"
                     placeholder="Velocidad Impresion">
@@ -56,28 +56,29 @@
             </div>
         </div>
         <br>
-        <div class="form-row">
-            <div class="form-group col-md-4">
+        <div class="row">
+            <div class="col-md-4">
                 <label asp-for="Impresora.VolumenImpresionX">Volumen Impresion X</label>
                 <input asp-for="Impresora.VolumenImpresionX" type="number" class="form-control" id="VolumenImpresionX"
                     placeholder="Velocidad Impresion X">
                 <span asp-validation-for="Impresora.VolumenImpresionX" class="text-danger"></span>
             </div>
-            <div class="form-group col-md-4">
+            <div class="col-md-4">
                 <label asp-for="Impresora.VolumenImpresionY">Volumen Impresion Y</label>
                 <input asp-for="Impresora.VolumenImpresionY" type="number" class="form-control" id="VolumenImpresionY"
                     placeholder="Velocidad Impresion Y">
                 <span asp-validation-for="Impresora.VolumenImpresionY" class="text-danger"></span>
             </div>
-            <div class="form-group col-md-4">
+            <div class="col-md-4">
                 <label asp-for="Impresora.VolumenImpresionZ">Volumen Impresion Z</label>
                 <input asp-for="Impresora.VolumenImpresionZ" type="number" class="form-control" id="VolumenImpresionZ"
                     placeholder="Velocidad Impresion Z">
                 <span asp-validation-for="Impresora.VolumenImpresionZ" class="text-danger"></span>
             </div>
         </div>
-        <div class="form-row">
-            <div class="form-group col-md-4">
+        <br>
+        <div class="row">
+            <div class="col-md-4">
                 <label asp-for="Impresora.EstadoID">Estado de Impresora</label>
                 <select asp-for="Impresora.EstadoID" id="EstadoID" class="form-control">
                     @foreach (var estado in Model.Estados)
@@ -86,7 +87,7 @@
                     }
                 </select>
             </div>
-            <div class="form-group col-md-4">
+            <div class="col-md-4">
                 <label asp-for="Impresora.SoftwareId">Sfotware de Impresora</label>
                 <select asp-for="Impresora.SoftwareId" id="SoftwareId" class="form-control">
                     @foreach (var software in Model.Softwares)
@@ -95,7 +96,7 @@
                     }
                 </select>
             </div>
-            <div class="form-group col-md-4">
+            <div class="col-md-4">
                 <label asp-for="Cabecera.Id">Cabecera</label>
                 <select asp-for="Cabecera.Id" id="Cabecera" class="form-control">
                     @foreach (var cabecera in Model.Cabeceras)
@@ -105,8 +106,9 @@
                 </select>
             </div>
         </div>
-        <div class="form-row">
-            <div class="form-group col-md-4">
+        <br>
+        <div class="row">
+            <div class="col-md-4">
                 <label asp-for="Cama.Id">Alineación de la cama</label>
                 <select asp-for="Cama.Id" id="Cama" class="form-control">
                     @foreach (var cama in Model.Camas)
@@ -115,7 +117,7 @@
                     }
                 </select>
             </div>
-            <div class="form-group col-md-4">
+            <div class="col-md-4">
                 <label asp-for="Extrusor.Id">Extrusor</label>
                 <select asp-for="Extrusor.Id" id="Extrusor" class="form-control">
                     @foreach (var extrusor in Model.Extrusores)
@@ -124,7 +126,7 @@
                     }
                 </select>
             </div>
-            <div class="form-group col-md-4">
+            <div class="col-md-4">
                 <label asp-for="Fuente.Id">Fuente</label>
                 <select asp-for="Fuente.Id" id="Fuente" class="form-control">
                     @foreach (var fuente in Model.Fuentes)

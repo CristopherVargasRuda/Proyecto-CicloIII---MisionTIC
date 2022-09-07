@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices.ComTypes;
 using System;
 using Impresoras3D.App.Dominio;
 
@@ -14,5 +15,6 @@ namespace Impresoras3D.App.Persistencia
         public IEnumerable<Componente> getExtrusorComponentes();
         public IEnumerable<Componente> getCamaComponentes();
         public IEnumerable<Componente> getFuenteComponentes();
+        public IEnumerable<Componente> getComponentesByImpresoraId(int impresoraId);
     }
 }

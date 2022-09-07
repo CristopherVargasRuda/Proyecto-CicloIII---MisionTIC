@@ -63,7 +63,7 @@ namespace Impresoras3D.App.Persistencia
         public Operario getByDocument(int document)
         {
             var auxiliarOperario = this._appContext.Operarios.FromSqlRaw(
-                @"SELECT * FROM dbo.Operario WHERE documento = {0}", document
+                @"SELECT Id, Documento, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, FechaNacimiento, telefono FROM dbo.Operario WHERE documento = {0}", document
                 ).FirstOrDefault();
             return auxiliarOperario;
         }

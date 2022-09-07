@@ -102,10 +102,31 @@ namespace Impresoras3D.App.Persistencia
         {
             var impresoraEncontrada = this._appContext.Impresoras
                 .FromSqlRaw(
-                    @"SELECT * FROM dbo.Impresora i WHERE i.PlacaInventario = {0}",
+                    @"SELECT Id, PlacaInventario, Tipo, Marca, Modelo, VelocidaImpresion, VolumenImpresionX, VolumenImpresionY, VolumenImpresionZ, PaisOrigen, EstadoID, OperarioId, TecnicoId, SoftwareId FROM dbo.Impresora i WHERE i.PlacaInventario = {0}",
                     placaImpresora
                 )
                 .FirstOrDefault();
+            return impresoraEncontrada;
+        }
+        public IEnumerable<Impresora> getImpresorasByTecnico(int tecnicoId)
+        {
+            var impresoraEncontrada = this._appContext.Impresoras
+                            .FromSqlRaw(
+                                @"SELECT i.Id, i.PlacaInventario, i.Tipo, i.Marca, i.Modelo, i.VelocidaImpresion, i.VolumenImpresionX, i.VolumenImpresionY, i.VolumenImpresionZ, i.PaisOrigen, i.EstadoID, i.OperarioId, i.TecnicoId, i.SoftwareId FROM dbo.Impresora i WHERE i.TecnicoId = {0}",
+                                tecnicoId
+                            )
+                            .ToList();
+            return impresoraEncontrada;
+        }
+
+        public IEnumerable<Impresora> getImpresorasByOperario(int operarioId)
+        {
+            var impresoraEncontrada = this._appContext.Impresoras
+                            .FromSqlRaw(
+                                @"SELECT i.Id, i.PlacaInventario, i.Tipo, i.Marca, i.Modelo, i.VelocidaImpresion, i.VolumenImpresionX, i.VolumenImpresionY, i.VolumenImpresionZ, i.PaisOrigen, i.EstadoID, i.OperarioId, i.TecnicoId, i.SoftwareId FROM dbo.Impresora i WHERE i.OperarioId = {0}",
+                                operarioId
+                            )
+                            .ToList();
             return impresoraEncontrada;
         }
     }

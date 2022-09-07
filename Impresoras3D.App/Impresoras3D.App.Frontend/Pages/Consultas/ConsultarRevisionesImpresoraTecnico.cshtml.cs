@@ -5,7 +5,7 @@ using Impresoras3D.App.Persistencia;
 
 namespace Impresoras3D.App.Frontend.Pages
 {
-    public class ConsultarRevisionesModel : PageModel
+    public class ConsultarRevisionesImpresoraTecnicoModel : PageModel
     {
         public void OnGet()
         {

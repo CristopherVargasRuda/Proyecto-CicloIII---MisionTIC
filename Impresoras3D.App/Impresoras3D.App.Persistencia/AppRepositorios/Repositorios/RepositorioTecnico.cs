@@ -69,7 +69,7 @@ namespace Impresoras3D.App.Persistencia
         public Tecnico getByDocument(int document)
         {
             var tecnicoEncontrado = this._appContext.Tecnicos.FromSqlRaw(
-                @"SELECT * FROM dbo.Tecnico WHERE documento = {0}", document
+                @"SELECT Id, Documento, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, FechaNacimiento, telefono, Direccion, NivelEstudios FROM dbo.Tecnico WHERE documento = {0}", document
                 ).FirstOrDefault();
             return tecnicoEncontrado;
         }

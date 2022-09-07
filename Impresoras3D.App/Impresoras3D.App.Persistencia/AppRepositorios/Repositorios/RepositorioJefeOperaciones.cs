@@ -69,7 +69,7 @@ namespace Impresoras3D.App.Persistencia
         public JefeOperaciones getByDocument(int document)
         {
             var JefeOperacionesEncontrado = this._appContext.JefeOperaciones.FromSqlRaw(
-                @"SELECT * FROM dbo.Jefe_operaciones WHERE documento = {0}", document
+                @"SELECT Id, Documento, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, FechaNacimiento, telefono FROM dbo.Jefe_operaciones WHERE documento = {0}", document
                 ).FirstOrDefault();
             return JefeOperacionesEncontrado;
         }

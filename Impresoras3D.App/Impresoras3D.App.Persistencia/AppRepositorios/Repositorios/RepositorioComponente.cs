@@ -71,28 +71,35 @@ namespace Impresoras3D.App.Persistencia
         public IEnumerable<Componente> getCabezarComponentes()
         {
             var componentesObtenidos = this._appContext.Componentes.FromSqlRaw(
-                    @"select * from dbo.Componente c WHERE LOWER(c.Nombre) like  '%cabezal%'"
+                    @"SELECT Id, Nombre, Descripcion FROM dbo.Componente c WHERE LOWER(c.Nombre) like  '%cabezal%'"
                     ).ToList();
             return componentesObtenidos;
         }
         public IEnumerable<Componente> getExtrusorComponentes()
         {
             var componentesObtenidos = this._appContext.Componentes.FromSqlRaw(
-                    @"select * from dbo.Componente c WHERE LOWER(c.Nombre) like  '%extrusor%'"
+                    @"SELECT Id, Nombre, Descripcion FROM dbo.Componente c WHERE LOWER(c.Nombre) like  '%extrusor%'"
                     ).ToList();
             return componentesObtenidos;
         }
         public IEnumerable<Componente> getCamaComponentes()
         {
             var componentesObtenidos = this._appContext.Componentes.FromSqlRaw(
-                    @"select * from dbo.Componente c WHERE LOWER(c.Nombre) like  '%cama%'"
+                    @"SELECT Id, Nombre, Descripcion FROM dbo.Componente c WHERE LOWER(c.Nombre) like  '%cama%'"
                     ).ToList();
             return componentesObtenidos;
         }
         public IEnumerable<Componente> getFuenteComponentes()
         {
             var componentesObtenidos = this._appContext.Componentes.FromSqlRaw(
-                    @"select * from dbo.Componente c WHERE LOWER(c.Nombre) like  '%fuente%'"
+                    @"SELECT Id, Nombre, Descripcion FROM dbo.Componente c WHERE LOWER(c.Nombre) like  '%fuente%'"
+                    ).ToList();
+            return componentesObtenidos;
+        }
+
+        public IEnumerable<Componente> getComponentesByImpresoraId(int impresoraId) {
+            var componentesObtenidos = this._appContext.Componentes.FromSqlRaw(
+                    @"SELECT c.Id, c.Nombre, c.Descripcion FROM dbo.Componente c, dbo.Impresora i, dbo.Impresora_componente ic WHERE c.Id = ic.ComponenteId AND i.Id = ic.ImpresoraId AND i.Id = {0} ORDER BY ic.Id DESC;", impresoraId
                     ).ToList();
             return componentesObtenidos;
         }

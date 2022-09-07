@@ -1,0 +1,32 @@
+﻿@page
+@model Impresoras3D.App.Frontend.Pages.ConsultarImpresorasAuxiliarModel
+@{
+    ViewData["Title"] = "Consultar Listado de Impresoras";
+}
+
+<div class="text-center">
+    <h1>Listado de Impresoras</h1>
+    <h3>@ViewData["Error"]</h3>
+    <br>
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr class="bg-primary">
+                <th scope="col">Id</th>
+                <th scope="col">Placa Inventario</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Detalles</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var impresora in Model.Impresoras)
+            {
+                <tr>
+                    <th scope="row">@impresora.Id</th>
+                    <td>@impresora.PlacaInventario</td>
+                    <td>@impresora.Tipo</td>
+                    <td><a asp-page="ConsultarDetallesImpresora" asp-route-id="@impresora.Id">Detalles</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
