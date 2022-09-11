@@ -73,5 +73,12 @@ namespace Impresoras3D.App.Persistencia
                 ).FirstOrDefault();
             return JefeOperacionesEncontrado;
         }
+        public JefeOperaciones getByLogin(int document, string pass)
+        {
+            var JefeOperacionesEncontrado = this._appContext.JefeOperaciones.FromSqlRaw(
+                @"SELECT * FROM dbo.Jefe_operaciones WHERE Password = '" + pass + "' AND Documento = {0}", document
+                ).FirstOrDefault();
+            return JefeOperacionesEncontrado;
+        }
     }
 }

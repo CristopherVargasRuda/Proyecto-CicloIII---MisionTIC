@@ -28,7 +28,7 @@ namespace Impresoras3D.App.Dominio
         [Required]
         public string PaisOrigen { get; set; }
         public List<ServicioTecnico> ServiciosTecnicos { get; set; }
-        public int? EstadoID { get; set; }
+        public int EstadoID { get; set; }
         public Estado Estado { get; set; }
         public List<CompraSeguro> CompraSeguros { get; set; }
         public List<ImpresoraComponente> ImpresoraComponentes { get; set; }

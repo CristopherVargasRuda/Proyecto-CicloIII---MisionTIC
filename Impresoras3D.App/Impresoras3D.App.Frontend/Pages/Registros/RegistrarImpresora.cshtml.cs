@@ -73,7 +73,7 @@ namespace Impresoras3D.App.Frontend.Pages
                 impresoraComponenteFuente.ComponenteId = Fuente.Id;
                 impresoraComponenteFuente.EstadoId = 1;
                 _repositorioImpresoraComponente.AddImpresoraComponente(impresoraComponenteFuente);
-                return RedirectToPage("./RegistrarImpresora");
+                return RedirectToPage("../Index");
             }
             catch (System.Exception e)
             {

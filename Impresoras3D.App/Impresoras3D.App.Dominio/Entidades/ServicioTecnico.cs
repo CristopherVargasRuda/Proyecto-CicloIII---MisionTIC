@@ -16,7 +16,7 @@ namespace Impresoras3D.App.Dominio
         public int ImpresoraId { get; set; }
         public Impresora Impresora { get; set; }
         [Required]
-        public int SoftwareId { get; set; }
+        public int? SoftwareId { get; set; }
         public Software Software { get; set; }
         [Required]
         public int TecnicoId { get; set; }

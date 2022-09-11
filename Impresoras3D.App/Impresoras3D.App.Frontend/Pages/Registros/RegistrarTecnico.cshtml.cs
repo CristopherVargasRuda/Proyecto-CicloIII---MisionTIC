@@ -22,7 +22,7 @@ namespace Impresoras3D.App.Frontend.Pages
             try
             {
                 Tecnico tecnicoRegistrado = _repositorioTecnico.AddTecnico(this.Tecnico);
-                return Page();
+                return RedirectToPage("../Index");
             }
             catch (System.Exception e)
             {

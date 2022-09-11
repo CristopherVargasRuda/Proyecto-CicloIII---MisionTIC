@@ -14,7 +14,7 @@ namespace Impresoras3D.App.Frontend.Pages
         { }
         public ActionResult OnGet()
         {
-            this.Impresoras = _repositorioImpresora.getImpresorasByOperario(3);
+            this.Impresoras = _repositorioImpresora.getImpresorasByOperario(1);
             return Page();
         }
     }

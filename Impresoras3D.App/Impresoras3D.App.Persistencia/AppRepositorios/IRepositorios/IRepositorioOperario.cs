@@ -12,5 +12,6 @@ namespace Impresoras3D.App.Persistencia
         public IEnumerable<Operario> GetAllOperario();
         public Operario UpdateOperario(Operario Operario);
         public Operario getByDocument(int document);
+        public Operario getByLogin(int document, string pass);
     }
 }

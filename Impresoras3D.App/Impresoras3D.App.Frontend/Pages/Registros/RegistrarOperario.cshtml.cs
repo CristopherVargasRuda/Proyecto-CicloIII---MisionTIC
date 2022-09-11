@@ -22,7 +22,7 @@ namespace Impresoras3D.App.Frontend.Pages
             try
             {
                 Operario operarioRegistrado = _repositorioOperario.AddOperario(this.Operario);
-                return Page();
+                return RedirectToPage("../Index");
             }
             catch (System.Exception e)
             {

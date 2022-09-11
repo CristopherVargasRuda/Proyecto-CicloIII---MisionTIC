@@ -4,8 +4,28 @@
     ViewData["Title"] = "Consultar Revisiones";
 }
 
-<div class="text-center">
-    <h1>Revisiones</h1>
+@* <div class="text-center">
+    <h1>Revisiones de la impresora @Model.Impresora</h1>
     <h3>@ViewData["Error"]</h3>
     <br>
-</div>
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr class="bg-primary">
+                <th scope="col">Placa Inventario</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Detalles</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var impresora in Model.Impresoras)
+            {
+                <tr>
+                    <th scope="row">@impresora.PlacaInventario</th>
+                    <td></td>
+                    <td>@impresora.Tipo</td>
+                    <td><a asp-page="ConsultarDetallesImpresora" asp-route-id="@impresora.Id">Detalles</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div> *@

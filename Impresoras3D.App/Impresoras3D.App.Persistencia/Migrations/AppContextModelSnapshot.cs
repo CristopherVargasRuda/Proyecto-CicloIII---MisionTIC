@@ -36,6 +36,10 @@ namespace Impresoras3D.App.Persistencia.Migrations
                     b.Property<DateTime>("FechaNacimiento")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("PrimerApellido")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -149,7 +153,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int?>("EstadoID")
+                    b.Property<int>("EstadoID")
                         .HasColumnType("int");
 
                     b.Property<string>("Marca")
@@ -247,6 +251,10 @@ namespace Impresoras3D.App.Persistencia.Migrations
                     b.Property<DateTime>("FechaNacimiento")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("PrimerApellido")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -298,6 +306,10 @@ namespace Impresoras3D.App.Persistencia.Migrations
 
                     b.Property<DateTime>("FechaNacimiento")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PrimerApellido")
                         .IsRequired()
@@ -368,7 +380,8 @@ namespace Impresoras3D.App.Persistencia.Migrations
                     b.Property<int>("ImpresoraId")
                         .HasColumnType("int");
 
-                    b.Property<int>("SoftwareId")
+                    b.Property<int?>("SoftwareId")
+                        .IsRequired()
                         .HasColumnType("int");
 
                     b.Property<int>("TecnicoId")
@@ -398,6 +411,10 @@ namespace Impresoras3D.App.Persistencia.Migrations
 
                     b.Property<DateTime>("FechaNacimiento")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PrimerApellido")
                         .IsRequired()
@@ -471,6 +488,10 @@ namespace Impresoras3D.App.Persistencia.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("NivelEstudios")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -560,7 +581,9 @@ namespace Impresoras3D.App.Persistencia.Migrations
                 {
                     b.HasOne("Impresoras3D.App.Dominio.Estado", "Estado")
                         .WithMany("Impresoras")
-                        .HasForeignKey("EstadoID");
+                        .HasForeignKey("EstadoID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Impresoras3D.App.Dominio.Operario", "Operario")
                         .WithMany("Impresoras")

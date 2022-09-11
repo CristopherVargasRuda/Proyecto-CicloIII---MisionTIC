@@ -16,6 +16,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Documento = table.Column<int>(type: "int", nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PrimerNombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     SegundoNombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PrimerApellido = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -62,6 +63,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Documento = table.Column<int>(type: "int", nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PrimerNombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     SegundoNombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PrimerApellido = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -81,6 +83,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Documento = table.Column<int>(type: "int", nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PrimerNombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     SegundoNombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PrimerApellido = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -113,6 +116,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Documento = table.Column<int>(type: "int", nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PrimerNombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     SegundoNombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PrimerApellido = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -134,6 +138,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
                     Direccion = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     NivelEstudios = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Documento = table.Column<int>(type: "int", nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PrimerNombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     SegundoNombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PrimerApellido = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -220,7 +225,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
                     VolumenImpresionY = table.Column<int>(type: "int", nullable: false),
                     VolumenImpresionZ = table.Column<int>(type: "int", nullable: false),
                     PaisOrigen = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    EstadoID = table.Column<int>(type: "int", nullable: true),
+                    EstadoID = table.Column<int>(type: "int", nullable: false),
                     OperarioId = table.Column<int>(type: "int", nullable: true),
                     TecnicoId = table.Column<int>(type: "int", nullable: true),
                     SoftwareId = table.Column<int>(type: "int", nullable: true)
@@ -232,7 +237,8 @@ namespace Impresoras3D.App.Persistencia.Migrations
                         name: "FK_Impresora_Estado_EstadoID",
                         column: x => x.EstadoID,
                         principalTable: "Estado",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Impresora_Operario_OperarioId",
                         column: x => x.OperarioId,

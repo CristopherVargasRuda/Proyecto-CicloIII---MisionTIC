@@ -12,5 +12,6 @@ namespace Impresoras3D.App.Persistencia
         public IEnumerable<SocioEmpresa> GetAllSocioEmpresa();
         public SocioEmpresa UpdateSocioEmpresa(SocioEmpresa SocioEmpresa);
         public SocioEmpresa getByDocument(int document);
+        public SocioEmpresa getByLogin(int document, string pass);
     }
 }

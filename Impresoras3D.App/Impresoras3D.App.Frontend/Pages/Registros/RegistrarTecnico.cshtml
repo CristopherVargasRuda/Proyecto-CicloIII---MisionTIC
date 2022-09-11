@@ -11,24 +11,34 @@
         <div asp-validation-summary="ModelOnly" class=text-danger></div>
         <br>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <label asp-for="Tecnico.Documento">Documento</label>
                 <input asp-for="Tecnico.Documento" type="number" class="form-control" id="Documento"
                     placeholder="Documento">
                 <span asp-validation-for="Tecnico.Documento" class="text-danger"></span>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <label asp-for="Tecnico.FechaNacimiento">Fecha de Nacimiento</label>
                 <input asp-for="Tecnico.FechaNacimiento" type="date" class="form-control" id="FechaNacimiento">
                 <span asp-validation-for="Tecnico.FechaNacimiento" class="text-danger"></span>
             </div>
-            <div class="col-md-4">
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
                 <label asp-for="Tecnico.telefono">Telefono</label>
                 <input asp-for="Tecnico.telefono" type="number" class="form-control" id="telefono"
                     placeholder="Telefono">
                 <span asp-validation-for="Tecnico.telefono" class="text-danger"></span>
             </div>
+            <div class="col-md-6">
+                <label asp-for="Tecnico.Password">Password</label>
+                <input asp-for="Tecnico.Password" type="password" class="form-control" id="Password"
+                    placeholder="Password">
+                <span asp-validation-for="Tecnico.Password" class="text-danger"></span>
+            </div>
         </div>
+        <br>
         <div class="row">
             <div class="col-md-6">
                 <label asp-for="Tecnico.PrimerNombre">Primer Nombre</label>
@@ -43,6 +53,7 @@
                 <span asp-validation-for="Tecnico.SegundoNombre" class="text-danger"></span>
             </div>
         </div>
+        <br>
         <div class="row">
             <div class="col-md-6">
                 <label asp-for="Tecnico.PrimerApellido">Primer Appelido</label>
@@ -57,6 +68,7 @@
                 <span asp-validation-for="Tecnico.SegundoApellido" class="text-danger"></span>
             </div>
         </div>
+        <br>
         <div class="row">
             <div class="col-md-6">
                 <label asp-for="Tecnico.Direccion">Direccion</label>

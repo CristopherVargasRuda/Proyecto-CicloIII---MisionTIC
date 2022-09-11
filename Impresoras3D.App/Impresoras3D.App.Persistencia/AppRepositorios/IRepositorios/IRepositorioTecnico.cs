@@ -11,6 +11,7 @@ namespace Impresoras3D.App.Persistencia
         public Tecnico getTecnico(int idTecnico);
         public IEnumerable<Tecnico> GetAllTecnico();
         public Tecnico UpdateTecnico(Tecnico Tecnico);
-        public Tecnico getByDocument(int document);
+        public Tecnico getByDocument(int document); 
+        public Tecnico getByLogin(int document, string pass); 
     }
 }
