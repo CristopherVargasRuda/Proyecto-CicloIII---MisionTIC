@@ -23,8 +23,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXNpZ25hY2lvbmVzXEFzaWduYXJUZWNuaWNvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Consultas/ConsultarCambioComponentes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uc3VsdGFzXENvbnN1bHRhckNhbWJpb0NvbXBvbmVudGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Consultas/ConsultarDetallesImpresora.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uc3VsdGFzXENvbnN1bHRhckRldGFsbGVzSW1wcmVzb3JhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Consultas/ConsultarDetallesRevisión.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uc3VsdGFzXENvbnN1bHRhckRldGFsbGVzUmV2aXNpw7NuLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Consultas/ConsultarFechasSeguro.cshtml]
@@ -45,6 +53,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Consultas/ConsultarImpresorasAuxiliar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uc3VsdGFzXENvbnN1bHRhckltcHJlc29yYXNBdXhpbGlhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Consultas/ConsultarMantenimientos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uc3VsdGFzXENvbnN1bHRhck1hbnRlbmltaWVudG9zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Consultas/ConsultarRevisiones.cshtml]
