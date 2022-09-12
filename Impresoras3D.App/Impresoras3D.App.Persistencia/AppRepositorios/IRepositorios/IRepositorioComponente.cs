@@ -16,5 +16,7 @@ namespace Impresoras3D.App.Persistencia
         public IEnumerable<Componente> getCamaComponentes();
         public IEnumerable<Componente> getFuenteComponentes();
         public IEnumerable<Componente> getComponentesByImpresoraId(int impresoraId);
+        public IEnumerable<Componente> getComponentesMantenimientoByServicioId(int servicioId);
+        public IEnumerable<Componente> getComponentesCambioByServicioId(int servicioId);
     }
 }

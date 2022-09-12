@@ -5,9 +5,11 @@
 }
 
 <div class="text-center">
-    <h1>Revisiones de la impresora: <span class="font-italic text-info">@Model.Impresora.PlacaInventario</span></h1>
-    <h3>@ViewData["Error"]</h3>
     <br>
+    <h1>Revisiones de la impresora: <span class="font-italic text-info">@Model.Impresora.PlacaInventario</span></h1>
+    <br>
+    <h3>@ViewData["Error"]</h3>
+    <br><br>
     @if (@Model.ServiciosTecnicos.Any())
     {
         <table class="table table-striped">

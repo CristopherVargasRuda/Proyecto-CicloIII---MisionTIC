@@ -12,9 +12,9 @@ namespace Impresoras3D.App.Frontend.Pages
         public IEnumerable<Impresora> Impresoras { get; set; }
         public ConsultarImpresorasAsignadasOperarioModel()
         { }
-        public ActionResult OnGet()
+        public ActionResult OnGet(int id)
         {
-            this.Impresoras = _repositorioImpresora.getImpresorasByOperario(1);
+            this.Impresoras = _repositorioImpresora.getImpresorasByOperario(id);
             return Page();
         }
     }

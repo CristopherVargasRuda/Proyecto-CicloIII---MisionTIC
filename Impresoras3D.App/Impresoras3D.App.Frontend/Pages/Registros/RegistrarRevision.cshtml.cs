@@ -12,7 +12,6 @@ namespace Impresoras3D.App.Frontend.Pages
         public Impresora Impresora { get; set; }
         public ActionResult OnGet(int id)
         {
-
             return Page();
         }
     }
