@@ -23,7 +23,7 @@ namespace Impresoras3D.App.Persistencia
             return impresoraAdicionada.Entity;
         }
 
-        public void DeleteImpresora(int idImpresora)
+        public void DeleteImpresora(int? idImpresora)
         {
             var impresora = this._appContext.Impresoras.FirstOrDefault(i => i.Id == idImpresora);
 
@@ -37,7 +37,7 @@ namespace Impresoras3D.App.Persistencia
             this._appContext.SaveChanges();
         }
 
-        public Impresora getImpresora(int idImpresora)
+        public Impresora getImpresora(int? idImpresora)
         {
             var impresora = this._appContext.Impresoras.FirstOrDefault(i => i.Id == idImpresora);
 

@@ -7,8 +7,63 @@ namespace Impresoras3D.App.Frontend.Pages
 {
     public class ConsultarDetallesImpresoraModel : PageModel
     {
-        public void OnGet()
+        private static IRepositorioImpresora _repositorioImpresora = new RepositorioImpresora(
+            new Impresoras3D.App.Persistencia.AppContext()
+        );
+
+        private static IRepositorioSoftware _repositorioSoftware = new RepositorioSoftware(
+            new Impresoras3D.App.Persistencia.AppContext()
+        );
+
+        private static IRepositorioEstado _repositorioEstado = new RepositorioEstado(
+            new Impresoras3D.App.Persistencia.AppContext()
+        );
+
+        private static IRepositorioComponente _repositorioComponente = new RepositorioComponente(
+            new Impresoras3D.App.Persistencia.AppContext()
+        );
+
+        public Impresora impresoraObtenida { get; set; }
+
+        public Software softwareObtenido { get; set; }
+
+        public Estado estadoSoftwareObtenido { get; set; }
+
+        public Estado estadoImpresoraObtenida { get; set; }
+
+        public IEnumerable<Componente> componentesObtenidos { get; set; }
+
+        public ConsultarDetallesImpresoraModel() { }
+
+        public ActionResult OnGet(int idImpresora)
         {
+            try
+            {
+                this.impresoraObtenida = _repositorioImpresora.getImpresora(1);
+
+                this.softwareObtenido = _repositorioSoftware.getSoftware(
+                    this.impresoraObtenida.SoftwareId
+                );
+
+                this.estadoImpresoraObtenida = _repositorioEstado.getEstado(
+                    this.impresoraObtenida.EstadoID
+                );
+
+                this.estadoSoftwareObtenido = _repositorioEstado.getEstado(
+                    this.softwareObtenido.EstadoId
+                );
+
+                this.componentesObtenidos = _repositorioComponente.getComponentesByImpresoraId(
+                    impresoraObtenida.Id
+                );
+
+                return Page();
+            }
+            catch (System.Exception e) { }
+
+            @ViewData["Error"] = "Impresora no encontrada";
+
+            return Page();
         }
     }
 }

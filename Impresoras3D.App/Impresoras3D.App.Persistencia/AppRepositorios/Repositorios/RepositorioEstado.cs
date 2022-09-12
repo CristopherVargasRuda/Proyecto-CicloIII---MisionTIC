@@ -23,7 +23,7 @@ namespace Impresoras3D.App.Persistencia
             return estadoAdicionado.Entity;
         }
 
-        public void DeleteEstado(int idEstado)
+        public void DeleteEstado(int? idEstado)
         {
             var estado = this._appContext.Estados.FirstOrDefault(e => e.Id == idEstado);
             if (estado == null)
@@ -34,7 +34,7 @@ namespace Impresoras3D.App.Persistencia
             this._appContext.SaveChanges();
         }
 
-        public Estado getEstado(int idEstado)
+        public Estado getEstado(int? idEstado)
         {
             var estado = this._appContext.Estados.FirstOrDefault(s => s.Id == idEstado);
             return estado;

@@ -86,10 +86,10 @@
                             <h5 class="card-title">Componentes</h5>
                         </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Nombre Software: @Model.softwareObtenido.Nombre </li>
-                            <li class="list-group-item">Version Software: @Model.softwareObtenido.Version </li>
-                            <li class="list-group-item">Licencia Software: @Model.softwareObtenido.Licencia </li>
-                            <li class="list-group-item">Estado: @Model.estadoSoftwareObtenido.Nombre </li>
+                            @foreach (var componente in Model.componentesObtenidos)
+                            {
+                            <li class="list-group-item">@componente.Nombre </li>
+                            }
                         </ul>
                     </div>
                 </div>
