@@ -12,5 +12,6 @@ namespace Impresoras3D.App.Persistencia
         public IEnumerable<Auxiliar> GetAllAuxiliar();
         public Auxiliar UpdateAuxiliar(Auxiliar Auxiliar);
         public Auxiliar getByDocument(int document);
+        public Auxiliar getByLogin(int document, string pass);
     }
 }

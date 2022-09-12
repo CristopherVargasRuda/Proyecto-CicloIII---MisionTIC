@@ -22,7 +22,7 @@ namespace Impresoras3D.App.Frontend.Pages
             try
             {
                 SocioEmpresa socioEmpresaRegistrado = _repositorioSocioEmpresa.AddSocioEmpresa(this.SocioEmpresa);
-                return Page();
+                return RedirectToPage("../Index");
             }
             catch (System.Exception e)
             {

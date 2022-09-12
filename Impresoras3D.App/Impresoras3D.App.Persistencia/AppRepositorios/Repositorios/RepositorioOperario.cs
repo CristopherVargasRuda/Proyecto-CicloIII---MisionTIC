@@ -67,6 +67,13 @@ namespace Impresoras3D.App.Persistencia
                 ).FirstOrDefault();
             return auxiliarOperario;
         }
+        public Operario getByLogin(int document, string pass)
+        {
+            var auxiliarOperario = this._appContext.Operarios.FromSqlRaw(
+                @"SELECT * FROM dbo.Operario WHERE Password = '" + pass + "' AND Documento = {0}", document
+                ).FirstOrDefault();
+            return auxiliarOperario;
+        }
     }
 
 }

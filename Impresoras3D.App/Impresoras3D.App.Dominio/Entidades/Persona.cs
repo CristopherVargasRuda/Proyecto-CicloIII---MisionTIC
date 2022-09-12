@@ -8,8 +8,10 @@ namespace Impresoras3D.App.Dominio
     {
         [Key]
         public int Id { get; set; }
-        [Required]        
+        [Required]   
         public int Documento { get; set; }
+        [Required]
+        public string Password { get; set; }
         [Required]
         public string PrimerNombre { get; set; }
         public string? SegundoNombre { get; set; }

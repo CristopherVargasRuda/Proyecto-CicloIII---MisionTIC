@@ -67,5 +67,12 @@ namespace Impresoras3D.App.Persistencia
                 ).FirstOrDefault();
             return socioEmpresaEncontrado;
         }
+        public SocioEmpresa getByLogin(int document, string pass)
+        {
+            var socioEmpresaEncontrado = this._appContext.SocioEmpresas.FromSqlRaw(
+                @"SELECT * FROM dbo.Socio_empresa WHERE Password = '" + pass + "' AND Documento = {0}", document
+                ).FirstOrDefault();
+            return socioEmpresaEncontrado;
+        }
     }
 }

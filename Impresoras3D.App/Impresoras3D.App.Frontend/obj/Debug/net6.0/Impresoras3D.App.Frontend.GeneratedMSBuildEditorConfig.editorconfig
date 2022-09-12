@@ -24,11 +24,19 @@ build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXNpZ25hY2lvbmVzXEFzaWduYXJU
 build_metadata.AdditionalFiles.CssScope = 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> feature/login
 [C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Consultas/ConsultarDetallesImpresora.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uc3VsdGFzXENvbnN1bHRhckRldGFsbGVzSW1wcmVzb3JhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Consultas/ConsultarDetallesRevision.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uc3VsdGFzXENvbnN1bHRhckRldGFsbGVzUmV2aXNpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Consultas/ConsultarFechasSeguro.cshtml]
+<<<<<<< HEAD
 =======
 [C:/Users/lozan/Desktop/Mintic ciclo 3/Impresoras/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Consultas/ConsultarDetallesImpresora.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uc3VsdGFzXENvbnN1bHRhckRldGFsbGVzSW1wcmVzb3JhLmNzaHRtbA==
@@ -36,6 +44,8 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/lozan/Desktop/Mintic ciclo 3/Impresoras/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Consultas/ConsultarFechasSeguro.cshtml]
 >>>>>>> 5b53ee51c68a49f116467220793f3f19d5f277f1
+=======
+>>>>>>> feature/login
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uc3VsdGFzXENvbnN1bHRhckZlY2hhc1NlZ3Vyby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
@@ -44,6 +54,9 @@ build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uc3VsdGFzXENvbnN1bHRhcklt
 build_metadata.AdditionalFiles.CssScope = 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> feature/login
 [C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Consultas/ConsultarImpresorasAsignadasOperario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uc3VsdGFzXENvbnN1bHRhckltcHJlc29yYXNBc2lnbmFkYXNPcGVyYXJpby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -60,6 +73,7 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uc3VsdGFzXENvbnN1bHRhclJldmlzaW9uZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+<<<<<<< HEAD
 [C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Consultas/ConsultarRevisionesImpresoraTecnico.cshtml]
 =======
 [C:/Users/lozan/Desktop/Mintic ciclo 3/Impresoras/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Consultas/ConsultarImpresorasAsignadasOperario.cshtml]
@@ -84,14 +98,20 @@ build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uc3VsdGFzXENvbnN1bHRhclJl
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/lozan/Desktop/Mintic ciclo 3/Impresoras/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Consultas/ConsultarSeguroImpresora.cshtml]
+=======
+[C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Consultas/ConsultarSeguroImpresora.cshtml]
+>>>>>>> feature/login
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uc3VsdGFzXENvbnN1bHRhclNlZ3Vyb0ltcHJlc29yYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 <<<<<<< HEAD
 [C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Error.cshtml]
+<<<<<<< HEAD
 =======
 [C:/Users/lozan/Desktop/Mintic ciclo 3/Impresoras/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Error.cshtml]
 >>>>>>> 5b53ee51c68a49f116467220793f3f19d5f277f1
+=======
+>>>>>>> feature/login
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
@@ -124,11 +144,15 @@ build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> feature/login
 [C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Registros/RegistrarCompraSeguro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0cm9zXFJlZ2lzdHJhckNvbXByYVNlZ3Vyby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/PC/Desktop/Misión Tic/Ciclo III/Programación/Proyecto/Código/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Registros/RegistrarImpresora.cshtml]
+<<<<<<< HEAD
 =======
 [C:/Users/lozan/Desktop/Mintic ciclo 3/Impresoras/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Registros/RegistrarCompraSeguro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0cm9zXFJlZ2lzdHJhckNvbXByYVNlZ3Vyby5jc2h0bWw=
@@ -136,6 +160,8 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/lozan/Desktop/Mintic ciclo 3/Impresoras/Proyecto-CicloIII---MisionTIC/Impresoras3D.App/Impresoras3D.App.Frontend/Pages/Registros/RegistrarImpresora.cshtml]
 >>>>>>> 5b53ee51c68a49f116467220793f3f19d5f277f1
+=======
+>>>>>>> feature/login
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0cm9zXFJlZ2lzdHJhckltcHJlc29yYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 

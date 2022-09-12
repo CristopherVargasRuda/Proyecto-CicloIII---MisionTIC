@@ -2,32 +2,44 @@
 @model Impresoras3D.App.Frontend.Pages.RegistrarOperarioModel
 @{
 }
-<h1>Registrar Operario</h1>
-<br>
-<h3>@ViewData["Error"]</h3>
 <div class="text-center">
+    <br>
+    <h1>Registrar Operario</h1>
+    <h3>@ViewData["Error"]</h3>
+    <br>
+    <br><br>
     <form method="POST">
         <div asp-validation-summary="ModelOnly" class=text-danger></div>
         <br>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <label asp-for="Operario.Documento">Documento</label>
                 <input asp-for="Operario.Documento" type="number" class="form-control" id="Documento"
                     placeholder="Documento">
                 <span asp-validation-for="Operario.Documento" class="text-danger"></span>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <label asp-for="Operario.FechaNacimiento">Fecha de Nacimiento</label>
                 <input asp-for="Operario.FechaNacimiento" type="date" class="form-control" id="FechaNacimiento">
                 <span asp-validation-for="Operario.FechaNacimiento" class="text-danger"></span>
             </div>
-            <div class="col-md-4">
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
                 <label asp-for="Operario.telefono">Telefono</label>
                 <input asp-for="Operario.telefono" type="number" class="form-control" id="telefono"
                     placeholder="Telefono">
                 <span asp-validation-for="Operario.telefono" class="text-danger"></span>
             </div>
+            <div class="col-md-6">
+                <label asp-for="Operario.Password">Password</label>
+                <input asp-for="Operario.Password" type="password" class="form-control" id="Password"
+                    placeholder="Password">
+                <span asp-validation-for="Operario.Password" class="text-danger"></span>
+            </div>
         </div>
+        <br>
         <div class="row">
             <div class="col-md-6">
                 <label asp-for="Operario.PrimerNombre">Primer Nombre</label>
@@ -42,6 +54,7 @@
                 <span asp-validation-for="Operario.SegundoNombre" class="text-danger"></span>
             </div>
         </div>
+        <br>
         <div class="row">
             <div class="col-md-6">
                 <label asp-for="Operario.PrimerApellido">Primer Appelido</label>

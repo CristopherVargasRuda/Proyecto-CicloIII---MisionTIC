@@ -12,5 +12,6 @@ namespace Impresoras3D.App.Persistencia
         public IEnumerable<JefeOperaciones> GetAllJefeOperaciones();
         public JefeOperaciones UpdateJefeOperaciones(JefeOperaciones JefeOperaciones);
         public JefeOperaciones getByDocument(int document);
+        public JefeOperaciones getByLogin(int document, string pass);
     }
 }

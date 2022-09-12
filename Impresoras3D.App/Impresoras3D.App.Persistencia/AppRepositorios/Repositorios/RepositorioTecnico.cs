@@ -73,5 +73,12 @@ namespace Impresoras3D.App.Persistencia
                 ).FirstOrDefault();
             return tecnicoEncontrado;
         }
+        public Tecnico getByLogin(int document, string pass)
+        {
+            var tecnicoEncontrado = this._appContext.Tecnicos.FromSqlRaw(
+                @"SELECT * FROM dbo.Tecnico WHERE Password = '" + pass + "' AND Documento = {0}", document
+                ).FirstOrDefault();
+            return tecnicoEncontrado;
+        }
     }
 }

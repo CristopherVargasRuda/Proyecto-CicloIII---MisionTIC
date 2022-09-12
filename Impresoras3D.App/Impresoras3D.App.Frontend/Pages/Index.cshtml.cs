@@ -41,15 +41,15 @@ public class IndexModel : PageModel
     {
         try
         {
-            Auxiliar auxiliar = _repositorioAuxiliar.getByDocument(Persona.Documento);
+            Auxiliar auxiliar = _repositorioAuxiliar.getByLogin(Persona.Documento, Persona.Password);
             if (auxiliar != null)
             {
                 return RedirectToPage("./Login/LogueoAuxiliar");
             }
             else
             {
-                JefeOperaciones jefeOperaciones = _repositorioJefeOperaciones.getByDocument(
-                    Persona.Documento
+                JefeOperaciones jefeOperaciones = _repositorioJefeOperaciones.getByLogin(
+                    Persona.Documento, Persona.Password
                 );
                 if (jefeOperaciones != null)
                 {
@@ -57,15 +57,15 @@ public class IndexModel : PageModel
                 }
                 else
                 {
-                    Operario operario = _repositorioOperario.getByDocument(Persona.Documento);
+                    Operario operario = _repositorioOperario.getByLogin(Persona.Documento, Persona.Password);
                     if (operario != null)
                     {
                         return RedirectToPage("./Login/LogueoOperario");
                     }
                     else
                     {
-                        SocioEmpresa socioEmpresa = _repositorioSocioEmpresa.getByDocument(
-                            Persona.Documento
+                        SocioEmpresa socioEmpresa = _repositorioSocioEmpresa.getByLogin(
+                            Persona.Documento, Persona.Password
                         );
                         if (socioEmpresa != null)
                         {
@@ -73,24 +73,24 @@ public class IndexModel : PageModel
                         }
                         else
                         {
-                            Tecnico tecnico = _repositorioTecnico.getByDocument(Persona.Documento);
+                            Tecnico tecnico = _repositorioTecnico.getByLogin(Persona.Documento, Persona.Password);
                             if (tecnico != null)
                             {
                                 return RedirectToPage("./Login/LogueoTecnico");
                             }else
                             {
-                                ViewData["Error"] = "Usuario No valido!";
+                                ViewData["Error"] = "Usuario No Encontrado!";
                                 return Page();
                             }
                         }
                     }
                 }
             }
-
-            return Page();
         }
         catch (System.Exception e)
         {
+            Console.Out.WriteLine(Persona.Documento);
+            Console.Out.WriteLine(Persona.Password);
             return Page();
         }
     }

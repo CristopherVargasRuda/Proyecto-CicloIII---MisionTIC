@@ -25,7 +25,7 @@ namespace Impresoras3D.App.Frontend.Pages
             {
                 Componente.Nombre = TipoRepuesto + " " + Componente.Nombre;
                 Componente componenteNuevo = _repositorioComponente.AddComponente(this.Componente);
-                return RedirectToPage("./RegistrarRepuesto");
+                return RedirectToPage("../Index");
             }
             catch (System.Exception e)
             {

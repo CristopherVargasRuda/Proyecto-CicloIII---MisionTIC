@@ -78,6 +78,13 @@ namespace Impresoras3D.App.Persistencia
                 ).FirstOrDefault();
             return auxiliarEncontrado;
         }
+        public Auxiliar getByLogin(int document, string pass)
+        {
+            var auxiliarEncontrado = this._appContext.Auxiliares.FromSqlRaw(
+                @"SELECT * FROM dbo.Auxiliar WHERE Password = '" + pass + "' AND Documento = {0}", document
+                ).FirstOrDefault();
+            return auxiliarEncontrado;
+        }
 
     }
 }
