@@ -7,8 +7,8 @@ namespace Impresoras3D.App.Frontend.Pages
 {
     public class LogueoTecnicoModel : PageModel
     {
-        public void OnGet()
-        {
-        }
+        public LogueoTecnicoModel() { }
+
+        public void OnGet() { }
     }
 }

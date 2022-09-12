@@ -23,8 +23,6 @@ namespace Impresoras3D.App.Frontend.Pages
             new Impresoras3D.App.Persistencia.AppContext()
         );
 
-
-
         [BindProperty]
         public Impresora Impresora { get; set; }
 
@@ -36,6 +34,7 @@ namespace Impresoras3D.App.Frontend.Pages
 
         public Estado estadoImpresoraObtenida { get; set; }
 
+        public IEnumerable<Componente> componentesObtenidos { get; set; }
 
         public ConsultarImpresorasModel() { }
 
@@ -52,18 +51,25 @@ namespace Impresoras3D.App.Frontend.Pages
                     Impresora.PlacaInventario
                 );
 
-                this.softwareObtenido = _repositorioSoftware.getSoftware(this.impresoraObtenida.SoftwareId); //REVISAR!
+                this.softwareObtenido = _repositorioSoftware.getSoftware(
+                    this.impresoraObtenida.SoftwareId
+                );
 
-                this. estadoImpresoraObtenida = _repositorioEstado.getEstado(3); //REVISAR!!
+                this.estadoImpresoraObtenida = _repositorioEstado.getEstado(
+                    this.impresoraObtenida.EstadoID
+                );
 
-                this.estadoSoftwareObtenido = _repositorioEstado.getEstado(8); //REVISAR!!
+                this.estadoSoftwareObtenido = _repositorioEstado.getEstado(
+                    this.softwareObtenido.EstadoId
+                );
+
+                this.componentesObtenidos = _repositorioComponente.getComponentesByImpresoraId(
+                    impresoraObtenida.Id
+                );
 
                 return Page();
             }
-            catch (System.Exception e)
-            {
-                
-            }
+            catch (System.Exception e) { }
 
             @ViewData["Error"] = "Impresora no encontrada";
 

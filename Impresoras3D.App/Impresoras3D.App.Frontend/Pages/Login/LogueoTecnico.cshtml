@@ -1,6 +1,50 @@
 ﻿@page
 @model Impresoras3D.App.Frontend.Pages.LogueoTecnicoModel
 @{
+    ViewData["Title"] = "Tecnico";
 }
 
-<h1>Técnico</h1>
+<div class = "text-center">
+    <br>
+    <h1>Tecnico</h1>
+    <br>
+    <h4>Bienvenido nuevamente</h4>
+    <br>
+    <br>
+
+    <div class = "row">
+        
+        <div class = "col-sm-4">
+            <div class="card" style="width: 33 %; height:30 %; float: left; margin-right: 10px; margin-bottom: 10px;">
+                <div class="card-body">
+                    <h5 class="card-title">Mis impresoras</h5>
+                    <p class="card-text">Consultar las impresoras que tengo asignadas a mi labor</p>
+                    <a asp-page="../Consultas/ConsultarImpresorasAsignadasTecnico" class="btn btn-primary" style="height:40px; width:100px;" >Ir</a>
+                </div>
+            </div>
+        </div>
+
+        <div class = "col-sm-4">
+            <div class="card" style="width: 33 %; height:30 %; float: left; margin-right: 10px; margin-bottom: 10px;">
+                <div class="card-body">
+                    <h5 class="card-title">Revisiones Impresoras</h5>
+                    <p class="card-text">Consultar las ultimas revisiones que se le han hecho a las impresoras</p>
+                    <a asp-page="../Consultas/ConsultarRevisionesImpresoraTecnico" class="btn btn-primary" style="height:40px; width:100px;" >Ir</a>
+                </div>
+            </div>
+        </div>
+
+        <div class = "col-sm-4">
+            <div class="card" style="width: 33 %; height:30 %; float: left; margin-right: 10px; margin-bottom: 10px;">
+                <div class="card-body">
+                    <h5 class="card-title">Nueva Compra Repuesto</h5>
+                    <p class="card-text">Registrar una nueva compra de repuesto para impresora</p>
+                    <a asp-page="../Consultas/ConsultarImpresorasAsignadasTecnico" class="btn btn-primary" style="height:40px; width:100px;" >Ir</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <a asp-page="../Index" class="btn btn-primary" style="height:50px; width:200px; position: absolute; top: 70%; left: 17.2%" >Cerrar Sesion</a>
+    </div>
+</div>
