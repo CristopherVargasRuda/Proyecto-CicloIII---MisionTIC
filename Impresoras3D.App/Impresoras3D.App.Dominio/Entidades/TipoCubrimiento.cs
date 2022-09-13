@@ -8,9 +8,9 @@ namespace Impresoras3D.App.Dominio
     {
         [Key]
         public int Id { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Se requiere el Nombre")]
         public string Nombre { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Se requiere la Descripcion")]
         public string Descripcion { get; set; }
         
         public List<SeguroYTipoCubrimiento> SeguroYTipoCubrimiento { get; set; }

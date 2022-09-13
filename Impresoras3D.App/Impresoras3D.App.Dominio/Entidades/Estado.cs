@@ -9,7 +9,7 @@ namespace Impresoras3D.App.Dominio
     {
         [Key]
         public int Id { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Se requiere el Nombre")]
         public string Nombre { get; set; }
         public List<Impresora> Impresoras { get; set; }
         public List<ImpresoraComponente> ImpresoraComponentes { get; set; }

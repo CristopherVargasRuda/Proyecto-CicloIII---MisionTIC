@@ -8,9 +8,9 @@ namespace Impresoras3D.App.Dominio
     {
         [Key]
         public int Id { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Se requiere Id de la Impresora")]
         public int ImpresoraId { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Se requiere Id del Componente")]
         public int ComponenteId { get; set; }
         public Componente Componente { get; set; }
         public Impresora Impresora { get; set; }
