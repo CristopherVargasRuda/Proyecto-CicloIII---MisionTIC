@@ -8,7 +8,7 @@ namespace Impresoras3D.App.Persistencia
     {
         public Tecnico AddTecnico(Tecnico Tecnico);
         public void DeleteTecnico(int idTecnico);
-        public Tecnico getTecnico(int idTecnico);
+        public Tecnico getTecnico(int? idTecnico);
         public IEnumerable<Tecnico> GetAllTecnico();
         public Tecnico UpdateTecnico(Tecnico Tecnico);
         public Tecnico getByDocument(int document); 

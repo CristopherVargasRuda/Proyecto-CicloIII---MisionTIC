@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col-md-6">
                 <label asp-for="TipoRepuesto">TipoRepuesto</label>
-                <select asp-for="TipoRepuesto" id="TipoRepuesto" class="form-control">
+                <select asp-for="TipoRepuesto" id="TipoRepuesto" class="form-control text-center">
                     <option selected value="Cabezal">Cabezal</option>
                     <option value="Extrusor">Extrusor</option>
                     <option value="Fuente de Alimentación">Fuente de Alimentación</option>
@@ -24,7 +24,7 @@
             </div>
             <div class="col-md-6">
                 <label asp-for="Componente.Nombre">Nombre Componente</label>
-                <input asp-for="Componente.Nombre" type="text" class="form-control" id="Nombre"
+                <input asp-for="Componente.Nombre" type="text" class="form-control text-center" id="Nombre"
                     placeholder="Nombre Componente">
                 <span asp-validation-for="Componente.Nombre" class="text-danger"></span>
             </div>            
@@ -33,7 +33,7 @@
         <div class="row">
             <div class="col-md-12">
                 <label asp-for="Componente.Descripcion">Descripcion Componente</label>
-                <input asp-for="Componente.Descripcion" type="text" class="form-control" id="Descripcion"
+                <input asp-for="Componente.Descripcion" type="text" class="form-control text-center" id="Descripcion"
                     placeholder="Descripcion Componente">
                 <span asp-validation-for="Componente.Descripcion" class="text-danger"></span>
             </div>            

@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col-md-6">
                 <label asp-for="Impresora.Id">Impresora</label>
-                <select asp-for="Impresora.Id" id="Impresora" class="form-control">
+                <select asp-for="Impresora.Id" id="Impresora" class="form-control text-center">
                     @foreach (var impresora in Model.Impresoras)
                     {
                         <option value="@impresora.Id">@impresora.PlacaInventario - @impresora.Tipo</option>
@@ -24,7 +24,7 @@
             </div>
             <div class="col-md-6">
                 <label asp-for="Tecnico.Id">Tecnico</label>
-                <select asp-for="Tecnico.Id" id="Tecnico" class="form-control">
+                <select asp-for="Tecnico.Id" id="Tecnico" class="form-control text-center">
                     @foreach (var tecnico in Model.Tecnicos)
                     {
                         <option value="@tecnico.Id">@tecnico.Documento - @tecnico.PrimerNombre @tecnico.PrimerApellido

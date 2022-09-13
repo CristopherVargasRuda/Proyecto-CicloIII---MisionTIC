@@ -15,13 +15,13 @@
         <div class="row">
             <div class="col-md-6">
                 <label asp-for="Impresora.PlacaInventario">Placa Inventario</label>
-                <input asp-for="Impresora.PlacaInventario" type="text" class="form-control" id="PlacaInventario"
+                <input asp-for="Impresora.PlacaInventario" type="text" class="form-control text-center" id="PlacaInventario"
                     placeholder="Placa Inventario">
                 <span asp-validation-for="Impresora.PlacaInventario" class="text-danger"></span>
             </div>
             <div class="col-md-6">
                 <label asp-for="Impresora.Tipo">Tipo de Impresora</label>
-                <select asp-for="Impresora.Tipo" id="Impresora.Tipo" class="form-control">
+                <select asp-for="Impresora.Tipo" id="Impresora.Tipo" class="form-control text-center">
                     <option selected value="Cartesina">Cartesina</option>
                     <option value="Polar">Polar</option>
                     <option value="Delta">Delta</option>
@@ -32,12 +32,12 @@
         <div class="row">
             <div class="col-md-6">
                 <label asp-for="Impresora.Marca">Marca</label>
-                <input asp-for="Impresora.Marca" type="text" class="form-control" id="Marca" placeholder="Marca">
+                <input asp-for="Impresora.Marca" type="text" class="form-control text-center" id="Marca" placeholder="Marca">
                 <span asp-validation-for="Impresora.Marca" class="text-danger"></span>
             </div>
             <div class="col-md-6">
                 <label asp-for="Impresora.Modelo">Modelo / (Año)</label>
-                <input asp-for="Impresora.Modelo" type="number" class="form-control" id="Modelo"
+                <input asp-for="Impresora.Modelo" type="number" class="form-control text-center" id="Modelo"
                     placeholder="Modelo / (Año)">
                 <span asp-validation-for="Impresora.Modelo" class="text-danger"></span>
             </div>
@@ -46,13 +46,13 @@
         <div class="row">
             <div class="col-md-6">
                 <label asp-for="Impresora.PaisOrigen">Pais de Origen</label>
-                <input asp-for="Impresora.PaisOrigen" type="text" class="form-control" id="PaisOrigen"
+                <input asp-for="Impresora.PaisOrigen" type="text" class="form-control text-center" id="PaisOrigen"
                     placeholder="Pais de Origen">
                 <span asp-validation-for="Impresora.PaisOrigen" class="text-danger"></span>
             </div>
             <div class="col-md-6">
                 <label asp-for="Impresora.VelocidaImpresion">Velocidad Impresion</label>
-                <input asp-for="Impresora.VelocidaImpresion" type="number" class="form-control" id="VelocidaImpresion"
+                <input asp-for="Impresora.VelocidaImpresion" type="number" class="form-control text-center" id="VelocidaImpresion"
                     placeholder="Velocidad Impresion">
                 <span asp-validation-for="Impresora.VelocidaImpresion" class="text-danger"></span>
             </div>
@@ -61,19 +61,19 @@
         <div class="row">
             <div class="col-md-4">
                 <label asp-for="Impresora.VolumenImpresionX">Volumen Impresion X</label>
-                <input asp-for="Impresora.VolumenImpresionX" type="number" class="form-control" id="VolumenImpresionX"
+                <input asp-for="Impresora.VolumenImpresionX" type="number" class="form-control text-center" id="VolumenImpresionX"
                     placeholder="Velocidad Impresion X">
                 <span asp-validation-for="Impresora.VolumenImpresionX" class="text-danger"></span>
             </div>
             <div class="col-md-4">
                 <label asp-for="Impresora.VolumenImpresionY">Volumen Impresion Y</label>
-                <input asp-for="Impresora.VolumenImpresionY" type="number" class="form-control" id="VolumenImpresionY"
+                <input asp-for="Impresora.VolumenImpresionY" type="number" class="form-control text-center" id="VolumenImpresionY"
                     placeholder="Velocidad Impresion Y">
                 <span asp-validation-for="Impresora.VolumenImpresionY" class="text-danger"></span>
             </div>
             <div class="col-md-4">
                 <label asp-for="Impresora.VolumenImpresionZ">Volumen Impresion Z</label>
-                <input asp-for="Impresora.VolumenImpresionZ" type="number" class="form-control" id="VolumenImpresionZ"
+                <input asp-for="Impresora.VolumenImpresionZ" type="number" class="form-control text-center" id="VolumenImpresionZ"
                     placeholder="Velocidad Impresion Z">
                 <span asp-validation-for="Impresora.VolumenImpresionZ" class="text-danger"></span>
             </div>
@@ -82,7 +82,7 @@
         <div class="row">
             <div class="col-md-4">
                 <label asp-for="Impresora.EstadoID">Estado de Impresora</label>
-                <select asp-for="Impresora.EstadoID" id="EstadoID" class="form-control">
+                <select asp-for="Impresora.EstadoID" id="EstadoID" class="form-control text-center">
                     @foreach (var estado in Model.Estados)
                     {
                         <option value="@estado.Id">@estado.Nombre</option>
@@ -90,8 +90,8 @@
                 </select>
             </div>
             <div class="col-md-4">
-                <label asp-for="Impresora.SoftwareId">Sfotware de Impresora</label>
-                <select asp-for="Impresora.SoftwareId" id="SoftwareId" class="form-control">
+                <label asp-for="Impresora.SoftwareId">Software de Impresora</label>
+                <select asp-for="Impresora.SoftwareId" id="SoftwareId" class="form-control text-center">
                     @foreach (var software in Model.Softwares)
                     {
                         <option value="@software.Id">@software.Nombre</option>
@@ -100,7 +100,7 @@
             </div>
             <div class="col-md-4">
                 <label asp-for="Cabecera.Id">Cabecera</label>
-                <select asp-for="Cabecera.Id" id="Cabecera" class="form-control">
+                <select asp-for="Cabecera.Id" id="Cabecera" class="form-control text-center">
                     @foreach (var cabecera in Model.Cabeceras)
                     {
                         <option value="@cabecera.Id">@cabecera.Nombre</option>
@@ -112,7 +112,7 @@
         <div class="row">
             <div class="col-md-4">
                 <label asp-for="Cama.Id">Alineación de la cama</label>
-                <select asp-for="Cama.Id" id="Cama" class="form-control">
+                <select asp-for="Cama.Id" id="Cama" class="form-control text-center">
                     @foreach (var cama in Model.Camas)
                     {
                         <option value="@cama.Id">@cama.Nombre</option>
@@ -121,7 +121,7 @@
             </div>
             <div class="col-md-4">
                 <label asp-for="Extrusor.Id">Extrusor</label>
-                <select asp-for="Extrusor.Id" id="Extrusor" class="form-control">
+                <select asp-for="Extrusor.Id" id="Extrusor" class="form-control text-center">
                     @foreach (var extrusor in Model.Extrusores)
                     {
                         <option value="@extrusor.Id">@extrusor.Nombre</option>
@@ -130,7 +130,7 @@
             </div>
             <div class="col-md-4">
                 <label asp-for="Fuente.Id">Fuente</label>
-                <select asp-for="Fuente.Id" id="Fuente" class="form-control">
+                <select asp-for="Fuente.Id" id="Fuente" class="form-control text-center">
                     @foreach (var fuente in Model.Fuentes)
                     {
                         <option value="@fuente.Id">@fuente.Nombre</option>

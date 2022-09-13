@@ -12,11 +12,11 @@
 <br>
 <br>
 <div>
-    @if(Model.impresoraObtenida != null)
+    @if (Model.impresoraObtenida != null)
     {
-        
-        <div class = "text-center; row">
-            <div class = "col-sm-4">
+
+        <div class="text-center; row">
+            <div class="col-sm-4">
                 <div class="card" style="width: 100%;">
                     <div class="card-header">
                         <h5 class="card-title">Informacion Impresora</h5>
@@ -37,8 +37,8 @@
                     </ul>
                 </div>
             </div>
-            <div class = "col-sm-4">
-                <div class = "text-center">
+            <div class="col-sm-4">
+                <div class="text-center">
                     <div class="card" style="width: 100%;">
                         <div class="card-header">
                             <h5 class="card-title">Software Impresora</h5>
@@ -53,8 +53,8 @@
                 </div>
             </div>
 
-            <div class = "col-sm-4">
-                <div class = "text-center">
+            <div class="col-sm-4">
+                <div class="text-center">
                     <div class="card" style="width: 100%;">
                         <div class="card-header">
                             <h5 class="card-title">Componentes</h5>
@@ -62,7 +62,7 @@
                         <ul class="list-group list-group-flush">
                             @foreach (var componente in Model.componentesObtenidos)
                             {
-                            <li class="list-group-item">@componente.Nombre </li>
+                                <li class="list-group-item">@componente.Nombre </li>
                             }
                         </ul>
                     </div>
@@ -72,4 +72,3 @@
         </div>
     }
 </div>
-

@@ -29,7 +29,8 @@
                     <td>@impresora.PlacaInventario</td>
                     <td>@impresora.Tipo</td>
                     <td><a asp-page="ConsultarDetallesImpresora" asp-route-id="@impresora.Id">Detalles</a></td>
-                    <td><a asp-page="../Registros/RegistrarRevision" asp-route-id="@impresora.Id">Registrar Revision</a></td>
+                    <td><a asp-page="../Registros/RegistrarRevision" asp-route-id="@impresora.Id">Registrar Revision</a>
+                    </td>
                     <td><a asp-page="./ConsultarRevisiones" asp-route-id="@impresora.Id">Consultar Revisiones</a></td>
                 </tr>
             }

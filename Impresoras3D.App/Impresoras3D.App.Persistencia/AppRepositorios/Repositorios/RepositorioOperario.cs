@@ -30,7 +30,7 @@ namespace Impresoras3D.App.Persistencia
             this._appContext.SaveChanges();
         }
 
-        public Operario getOperario(int idOperario)
+        public Operario getOperario(int? idOperario)
         {
             var operario = this._appContext.Operarios.FirstOrDefault(o => o.Id == idOperario);
             return operario;
