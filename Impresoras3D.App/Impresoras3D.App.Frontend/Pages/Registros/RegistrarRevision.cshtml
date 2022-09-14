@@ -20,9 +20,9 @@
         </div>
         <br>
         <div class="row">
-            <input asp-for="ServicioTecnico.TecnicoId" type="hidden" disabled class="form-control" id="TecnicoId"
+            <input asp-for="ServicioTecnico.TecnicoId" type="hidden" class="form-control" id="TecnicoId"
                 value="@Model.Tecnico.Id">
-            <input asp-for="ServicioTecnico.ImpresoraId" type="hidden" disabled class="form-control" id="ImpresoraId"
+            <input asp-for="ServicioTecnico.ImpresoraId" type="hidden" class="form-control" id="ImpresoraId"
                 value="@Model.Impresora.Id">
         </div>
         <div class="text-center">
@@ -57,7 +57,7 @@
                 <label class="form-check-label" asp-for="seActualizaSoftware">Actualizar</label>
             </div>
             <div class="col-md-3">
-                <select asp-for="ServicioTecnico.SoftwareId" id="SoftwareId" class="form-control  text-center">
+                <select asp-for="Software.Id" id="SoftwareId" class="form-control  text-center">
                     @foreach (var software in Model.Softwares)
                     {
                         <option value="@software.Id">@software.Nombre</option>

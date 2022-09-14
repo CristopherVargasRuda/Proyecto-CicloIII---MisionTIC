@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PC\\Desktop\\Misión Tic\\Ciclo III\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Dominio\\Impresoras3D.App.Dominio.csproj": {}
+    "C:\\Users\\Asus N551J\\Desktop\\Misión Tic\\Ciclo 3\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Dominio\\Impresoras3D.App.Dominio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PC\\Desktop\\Misión Tic\\Ciclo III\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Dominio\\Impresoras3D.App.Dominio.csproj": {
+    "C:\\Users\\Asus N551J\\Desktop\\Misión Tic\\Ciclo 3\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Dominio\\Impresoras3D.App.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Misión Tic\\Ciclo III\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Dominio\\Impresoras3D.App.Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\Asus N551J\\Desktop\\Misión Tic\\Ciclo 3\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Dominio\\Impresoras3D.App.Dominio.csproj",
         "projectName": "Impresoras3D.App.Dominio",
-        "projectPath": "C:\\Users\\PC\\Desktop\\Misión Tic\\Ciclo III\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Dominio\\Impresoras3D.App.Dominio.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\Misión Tic\\Ciclo III\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Dominio\\obj\\",
+        "projectPath": "C:\\Users\\Asus N551J\\Desktop\\Misión Tic\\Ciclo 3\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Dominio\\Impresoras3D.App.Dominio.csproj",
+        "packagesPath": "C:\\Users\\Asus N551J\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Asus N551J\\Desktop\\Misión Tic\\Ciclo 3\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Asus N551J\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"

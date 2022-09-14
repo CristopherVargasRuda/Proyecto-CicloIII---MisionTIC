@@ -12,5 +12,6 @@ namespace Impresoras3D.App.Persistencia
         public IEnumerable<ServicioTecnico> GetAllServicioTecnico();
         public ServicioTecnico UpdateServicioTecnico(ServicioTecnico ServicioTecnico);
         public IEnumerable<ServicioTecnico> GetServiciosTecnicosByImpresoraId(int impresoraId);
+        public ServicioTecnico getLastServicioTecnico();
     }
 }

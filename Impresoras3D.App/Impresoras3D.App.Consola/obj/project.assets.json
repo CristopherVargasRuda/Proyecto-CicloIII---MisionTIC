@@ -2006,19 +2006,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PC\\.nuget\\packages\\": {}
+    "C:\\Users\\Asus N551J\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PC\\Desktop\\Misión Tic\\Ciclo III\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Consola\\Impresoras3D.App.Consola.csproj",
+      "projectUniqueName": "C:\\Users\\Asus N551J\\Desktop\\Misión Tic\\Ciclo 3\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Consola\\Impresoras3D.App.Consola.csproj",
       "projectName": "Impresoras3D.App.Consola",
-      "projectPath": "C:\\Users\\PC\\Desktop\\Misión Tic\\Ciclo III\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Consola\\Impresoras3D.App.Consola.csproj",
-      "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PC\\Desktop\\Misión Tic\\Ciclo III\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Consola\\obj\\",
+      "projectPath": "C:\\Users\\Asus N551J\\Desktop\\Misión Tic\\Ciclo 3\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Consola\\Impresoras3D.App.Consola.csproj",
+      "packagesPath": "C:\\Users\\Asus N551J\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Asus N551J\\Desktop\\Misión Tic\\Ciclo 3\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Consola\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Asus N551J\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -2030,8 +2030,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\PC\\Desktop\\Misión Tic\\Ciclo III\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Persistencia\\Impresoras3D.App.Persistencia.csproj": {
-              "projectPath": "C:\\Users\\PC\\Desktop\\Misión Tic\\Ciclo III\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Persistencia\\Impresoras3D.App.Persistencia.csproj"
+            "C:\\Users\\Asus N551J\\Desktop\\Misión Tic\\Ciclo 3\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Persistencia\\Impresoras3D.App.Persistencia.csproj": {
+              "projectPath": "C:\\Users\\Asus N551J\\Desktop\\Misión Tic\\Ciclo 3\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Persistencia\\Impresoras3D.App.Persistencia.csproj"
             }
           }
         }
