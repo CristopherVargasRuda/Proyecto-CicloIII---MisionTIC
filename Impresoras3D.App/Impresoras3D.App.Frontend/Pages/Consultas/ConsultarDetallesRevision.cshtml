@@ -10,7 +10,7 @@
         <h1>Impresoras Detalles Del Servicio</h1>
         <br>
         <h3>@ViewData["Error"]</h3>
-        <br><br>
+        <br>
         @if (Model.ComponentesMantenimientos.Any() && Model.ComponentesCambios.Any())
         {
             @if (Model.ComponentesMantenimientos.Any())
@@ -24,9 +24,9 @@
                     {
                         <div class="col-sm-3">
                             <div class="card">
+                                <h5 class="card-header bg-primary" style="height: 60px;">@componente.Nombre</h5>
                                 <div class="card-body">
-                                    <h5 class="card-title">@componente.Nombre</h5>
-                                    <p class="card-text">@componente.Descripcion</p>
+                                    <p class="card-text" style="height: 70px">@componente.Descripcion</p>
                                 </div>
                             </div>
                         </div>
@@ -45,9 +45,9 @@
                     {
                         <div class="col-sm-3">
                             <div class="card">
+                                <h5 class="card-header bg-primary" style="height: 60px">@componente.Nombre</h5>
                                 <div class="card-body">
-                                    <h5 class="card-title">@componente.Nombre</h5>
-                                    <p class="card-text">@componente.Descripcion</p>
+                                    <p class="card-text" style="height: 70px">@componente.Descripcion</p>
                                 </div>
                             </div>
                         </div>
