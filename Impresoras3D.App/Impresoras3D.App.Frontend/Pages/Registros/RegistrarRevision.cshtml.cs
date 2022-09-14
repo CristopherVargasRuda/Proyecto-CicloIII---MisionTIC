@@ -37,31 +37,33 @@ namespace Impresoras3D.App.Frontend.Pages
         [BindProperty]
         public Operario Operario { get; set; }
         [BindProperty]
-        public Componente MantenimientoComponenteCabezal { get; set; }
-        [BindProperty]
-        public Componente MantenimientoComponenteExtrusor { get; set; }
-        [BindProperty]
-        public Componente MantenimientoComponenteCama { get; set; }
-        [BindProperty]
-        public Componente MantenimientoComponenteFuente { get; set; }
-        [BindProperty]
         public Componente CambioComponenteCabezal { get; set; }
         [BindProperty]
         public Componente CambioComponenteExtrusor { get; set; }
         [BindProperty]
         public Componente CambioComponenteCama { get; set; }
         [BindProperty]
-        public Componente CambioComponenteFuente { get; set; }
+        public Componente CambioComponenteFuente { get; set; } 
         [BindProperty]
-        public Componente ComponenteImpresoraCabecera { get; set; }
-        [BindProperty]
-        public Componente ComponenteImpresoraExtrusor { get; set; }
-        [BindProperty]
-        public Componente ComponenteImpresoraCama { get; set; }
-        [BindProperty]
-        public Componente ComponenteImpresoraFuente { get; set; }
-        [BindProperty]
+        public Software Software { get; set; }  
+        [BindProperty]     
         public bool seActualizaSoftware { get; set; }
+        [BindProperty]
+        public bool seHaceMantenimientoCabezal { get; set; }
+        [BindProperty]
+        public bool seHaceMantenimientoExtrusor { get; set; }
+        [BindProperty]
+        public bool seHaceMantenimientoCama { get; set; }
+        [BindProperty]
+        public bool seHaceMantenimientoFuente { get; set; }
+        [BindProperty]
+        public bool seHaceCambioCabezal { get; set; }
+        [BindProperty]
+        public bool seHaceCambioExtrusor { get; set; }
+        [BindProperty]
+        public bool seHaceCambioCama { get; set; }
+        [BindProperty]
+        public bool seHaceCambioFuente { get; set; }
         public ActionResult OnGet(int id)
         {
             this.Estados = _repositorioEstado.GetImpresoraEstados();
@@ -75,10 +77,9 @@ namespace Impresoras3D.App.Frontend.Pages
             this.Operario = _repositorioOperario.getOperario(Impresora.OperarioId);
             return Page();
         }
-
         public ActionResult OnPost() {
-            Console.Out.WriteLine("Hola Mundo");
-            Console.Out.WriteLine(seActualizaSoftware);
+
+            
             return Page();
         }
     }

@@ -3,149 +3,159 @@
 @{
     ViewData["Title"] = "Registrar Revision";
 }
-<body style="background-color: #D6FDFE">
-<div class="text-center">
-    <br>
-    <h1>Registrar Revision - Impresora: <span class="font-italic text-info">@Model.Impresora.PlacaInventario</span></h1>
-    <br>
-    <h3>@ViewData["Error"]</h3>
-    <br>
-</div>
-<form method="POST">
-    <div asp-validation-summary="ModelOnly" class=text-danger></div>
-    <div>
-        <h3>Servicio</h3>
-    </div>
-    <br>
-    <div class="row">
-        <input asp-for="ServicioTecnico.TecnicoId" type="hidden" disabled class="form-control" id="TecnicoId"
-            value="@Model.Tecnico.Id">
-        <input asp-for="ServicioTecnico.ImpresoraId" type="hidden" disabled class="form-control" id="ImpresoraId"
-            value="@Model.Impresora.Id">
-    </div>
+
+<body style="background-color: #D9E7FC">
     <div class="text-center">
+        <br>
+        <h1>Registrar Revision - Impresora: <span class="font-italic text-info">@Model.Impresora.PlacaInventario</span>
+        </h1>
+        <br>
+        <h3>@ViewData["Error"]</h3>
+        <br>
+    </div>
+    <form method="POST">
+        <div asp-validation-summary="ModelOnly" class=text-danger></div>
+        <div>
+            <h3>Servicio</h3>
+        </div>
+        <br>
         <div class="row">
-            <div class="col-md-4">
-                <label class="form-lable">Técnico</label>
-                <input type="text" disabled class="form-control text-center"
-                    value="@Model.Tecnico.PrimerNombre @Model.Tecnico.SegundoNombre @Model.Tecnico.PrimerApellido @Model.Tecnico.SegundoApellido">
+            <input asp-for="ServicioTecnico.TecnicoId" type="hidden" disabled class="form-control" id="TecnicoId"
+                value="@Model.Tecnico.Id">
+            <input asp-for="ServicioTecnico.ImpresoraId" type="hidden" disabled class="form-control" id="ImpresoraId"
+                value="@Model.Impresora.Id">
+        </div>
+        <div class="text-center">
+            <div class="row">
+                <div class="col-md-4">
+                    <label class="form-lable">Técnico</label>
+                    <input type="text" disabled class="form-control text-center"
+                        value="@Model.Tecnico.PrimerNombre @Model.Tecnico.SegundoNombre @Model.Tecnico.PrimerApellido @Model.Tecnico.SegundoApellido">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-lable">Operario</label>
+                    <input type="text" disabled class="form-control text-center"
+                        value="@Model.Operario.PrimerNombre @Model.Operario.SegundoNombre @Model.Operario.PrimerApellido @Model.Operario.SegundoApellido">
+                </div>
+                <div class="col-md-4">
+                    <label asp-for="ServicioTecnico.Fecha">Fecha</label>
+                    <input asp-for="ServicioTecnico.Fecha" type="date" class="form-control  text-center" id="Fecha">
+                    <span asp-validation-for="ServicioTecnico.Fecha" class="text-danger"></span>
+                </div>
             </div>
-            <div class="col-md-4">
-                <label class="form-lable">Operario</label>
-                <input type="text" disabled class="form-control text-center"
-                    value="@Model.Operario.PrimerNombre @Model.Operario.SegundoNombre @Model.Operario.PrimerApellido @Model.Operario.SegundoApellido">
+        </div>
+        <br><br>
+        <div>
+            <h3>Actualizar Software</h3>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="form-check form-switch col-md-2">
+                <input class="form-check-input" asp-for="seActualizaSoftware" type="checkbox"
+                    id="flexSwitchCheckDefault">
+                <label class="form-check-label" asp-for="seActualizaSoftware">Actualizar</label>
             </div>
-            <div class="col-md-4">
-                <label asp-for="ServicioTecnico.Fecha">Fecha</label>
-                <input asp-for="ServicioTecnico.Fecha" type="date" class="form-control  text-center" id="Fecha">
-                <span asp-validation-for="ServicioTecnico.Fecha" class="text-danger"></span>
+            <div class="col-md-3">
+                <select asp-for="ServicioTecnico.SoftwareId" id="SoftwareId" class="form-control  text-center">
+                    @foreach (var software in Model.Softwares)
+                    {
+                        <option value="@software.Id">@software.Nombre</option>
+                    }
+                </select>
             </div>
         </div>
-    </div>
-    <br><br>
-    <div>
-        <h3>Actualizar Software</h3>
-    </div>
-    <br>
-    <div class="row">
-        <div class="col-md-3"></div>
-        <div class="form-check form-switch col-md-2">
-            <input class="form-check-input" asp-for="seActualizaSoftware" type="checkbox" id="flexSwitchCheckDefault">
-            <label class="form-check-label" asp-for="seActualizaSoftware">Actualizar</label>
+        <br><br>
+        <div>
+            <h3>Mantenimiento de Componentes</h3>
         </div>
-        <div class="col-md-3">
-            <select asp-for="ServicioTecnico.SoftwareId" id="SoftwareId" class="form-control  text-center">
-                @foreach (var software in Model.Softwares)
-                {
-                    <option value="@software.Id">@software.Nombre</option>
-                }
-            </select>
+        <br>
+        <div class="row">
+            <div class="form-check form-switch col-md-3">
+                <input class="form-check-input" asp-for="seHaceMantenimientoCabezal" type="checkbox"
+                    id="flexSwitchCheckDefault">
+                <label class="form-check-label" asp-for="seHaceMantenimientoCabezal">Cabecera</label>
+            </div>
+            <div class="form-check form-switch col-md-3">
+                <input class="form-check-input" asp-for="seHaceMantenimientoExtrusor" type="checkbox"
+                    id="flexSwitchCheckDefault">
+                <label class="form-check-label" asp-for="seHaceMantenimientoExtrusor">Extrusor</label>
+            </div>
+            <div class="form-check form-switch col-md-3">
+                <input class="form-check-input" asp-for="seHaceMantenimientoCama" type="checkbox"
+                    id="flexSwitchCheckDefault">
+                <label class="form-check-label" asp-for="seHaceMantenimientoCama">Cama</label>
+            </div>
+            <div class="form-check form-switch col-md-3">
+                <input class="form-check-input" asp-for="seHaceMantenimientoFuente" type="checkbox"
+                    id="flexSwitchCheckDefault">
+                <label class="form-check-label" asp-for="seHaceMantenimientoFuente">Fuente</label>
+            </div>
         </div>
-    </div>
-    <br><br>
-    <div>
-        <h3>Mantenimiento de Componentes</h3>
-    </div>
-    <br>
-    <div class="row">
-        <div class="form-check form-switch col-md-3">
-            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-            <label class="form-check-label" for="flexSwitchCheckDefault">Cabecera</label>
+        <br><br>
+        <div>
+            <h3>Cambio de Componentes</h3>
         </div>
-        <div class="form-check form-switch col-md-3">
-            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-            <label class="form-check-label" for="flexSwitchCheckDefault">Extrusor</label>
+        <br>
+        <div class="row">
+            <div class="form-check form-switch col-md-2">
+                <input class="form-check-input" asp-for="seHaceCambioCabezal" type="checkbox"
+                    id="flexSwitchCheckDefault">
+                <label class="form-check-label" asp-for="seHaceCambioCabezal">Cabecera</label>
+            </div>
+            <div class="col-md-3">
+                <select asp-for="CambioComponenteCabezal.Id" id="Cabecera" class="form-control text-center">
+                    @foreach (var cabecera in Model.Cabeceras)
+                    {
+                        <option value="@cabecera.Id">@cabecera.Nombre</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="form-check form-switch col-md-2">
+                <input class="form-check-input" asp-for="seHaceCambioExtrusor" type="checkbox"
+                    id="flexSwitchCheckDefault">
+                <label class="form-check-label" asp-for="seHaceCambioExtrusor">Extrusor</label>
+            </div>
+            <div class="col-md-3">
+                <select asp-for="CambioComponenteExtrusor.Id" id="Extrusor" class="form-control  text-center">
+                    @foreach (var extrusor in Model.Extrusores)
+                    {
+                        <option value="@extrusor.Id">@extrusor.Nombre</option>
+                    }
+                </select>
+            </div>
         </div>
-        <div class="form-check form-switch col-md-3">
-            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-            <label class="form-check-label" for="flexSwitchCheckDefault">Cama</label>
+        <br>
+        <div class="row">
+            <div class="form-check form-switch col-md-2">
+                <input class="form-check-input" asp-for="seHaceCambioCama" type="checkbox" id="flexSwitchCheckDefault">
+                <label class="form-check-label" asp-for="seHaceCambioCama">Cama</label>
+            </div>
+            <div class="col-md-3">
+                <select asp-for="CambioComponenteCama.Id" id="Cama" class="form-control  text-center">
+                    @foreach (var cama in Model.Camas)
+                    {
+                        <option value="@cama.Id">@cama.Nombre</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="form-check form-switch col-md-2">
+                <input class="form-check-input" asp-for="seHaceCambioFuente" type="checkbox"
+                    id="flexSwitchCheckDefault">
+                <label class="form-check-label" asp-for="seHaceCambioFuente">Fuente</label>
+            </div>
+            <div class="col-md-3">
+                <select asp-for="CambioComponenteFuente.Id" id="Fuente" class="form-control  text-center">
+                    @foreach (var Fuente in Model.Fuentes)
+                    {
+                        <option value="@Fuente.Id">@Fuente.Nombre</option>
+                    }
+                </select>
+            </div>
         </div>
-        <div class="form-check form-switch col-md-3">
-            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-            <label class="form-check-label" for="flexSwitchCheckDefault">Fuente</label>
-        </div>
-    </div>
-    <br><br>
-    <div>
-        <h3>Cambio de Componentes</h3>
-    </div>
-    <br>
-    <div class="row">
-        <div class="form-check form-switch col-md-2">
-            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-            <label class="form-check-label" for="flexSwitchCheckDefault">Cabecera</label>
-        </div>
-        <div class="col-md-3">
-            <select asp-for="MantenimientoComponenteCabezal.Id" id="Cabecera" class="form-control text-center">
-                @foreach (var cabecera in Model.Cabeceras)
-                {
-                    <option value="@cabecera.Id">@cabecera.Nombre</option>
-                }
-            </select>
-        </div>
-        <div class="col-md-1"></div>
-        <div class="form-check form-switch col-md-2">
-            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-            <label class="form-check-label" for="flexSwitchCheckDefault">Extrusor</label>
-        </div>
-        <div class="col-md-3">
-            <select asp-for="MantenimientoComponenteExtrusor.Id" id="Extrusor" class="form-control  text-center">
-                @foreach (var extrusor in Model.Extrusores)
-                {
-                    <option value="@extrusor.Id">@extrusor.Nombre</option>
-                }
-            </select>
-        </div>
-    </div>
-    <br>
-    <div class="row">
-        <div class="form-check form-switch col-md-2">
-            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-            <label class="form-check-label" for="flexSwitchCheckDefault">Cama</label>
-        </div>
-        <div class="col-md-3">
-            <select asp-for="MantenimientoComponenteCama.Id" id="Cama" class="form-control  text-center">
-                @foreach (var cama in Model.Camas)
-                {
-                    <option value="@cama.Id">@cama.Nombre</option>
-                }
-            </select>
-        </div>
-        <div class="col-md-1"></div>
-        <div class="form-check form-switch col-md-2">
-            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-            <label class="form-check-label" for="flexSwitchCheckDefault">Fuente</label>
-        </div>
-        <div class="col-md-3">
-            <select asp-for="MantenimientoComponenteFuente.Id" id="Fuente" class="form-control  text-center">
-                @foreach (var Fuente in Model.Fuentes)
-                {
-                    <option value="@Fuente.Id">@Fuente.Nombre</option>
-                }
-            </select>
-        </div>
-    </div>
-    <br>
+        <br>
         <button type="submit" class="btn btn-primary">Registrar</button>
-</form>
+    </form>
 </body>

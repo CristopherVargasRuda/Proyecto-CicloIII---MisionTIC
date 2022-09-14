@@ -3,39 +3,40 @@
 @{
     ViewData["Title"] = "Asignar Tecnico - Impresora";
 }
-<body style="background-color: #D6FDFE">
-<div class="text-center">
-    <br>
-    <h1>Asignar Tecnico</h1>
-    <br>
-    <h3>@ViewData["Error"]</h3>
-    <br><br>
-    <form method="POST">
-        <div asp-validation-summary="ModelOnly" class=text-danger></div>
+
+<body style="background-color: #D9E7FC">
+    <div class="text-center">
         <br>
-        <div class="row">
-            <div class="col-md-6">
-                <label asp-for="Impresora.Id">Impresora</label>
-                <select asp-for="Impresora.Id" id="Impresora" class="form-control text-center">
-                    @foreach (var impresora in Model.Impresoras)
-                    {
-                        <option value="@impresora.Id">@impresora.PlacaInventario - @impresora.Tipo</option>
-                    }
-                </select>
-            </div>
-            <div class="col-md-6">
-                <label asp-for="Tecnico.Id">Tecnico</label>
-                <select asp-for="Tecnico.Id" id="Tecnico" class="form-control text-center">
-                    @foreach (var tecnico in Model.Tecnicos)
-                    {
-                        <option value="@tecnico.Id">@tecnico.Documento - @tecnico.PrimerNombre @tecnico.PrimerApellido
-                        </option>
-                    }
-                </select>
-            </div>
-        </div>
+        <h1>Asignar Tecnico</h1>
         <br>
-        <button type="submit" class="btn btn-primary">Confirmar</button>
-    </form>
-</div>
+        <h3>@ViewData["Error"]</h3>
+        <br><br>
+        <form method="POST">
+            <div asp-validation-summary="ModelOnly" class=text-danger></div>
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+                    <label asp-for="Impresora.Id">Impresora</label>
+                    <select asp-for="Impresora.Id" id="Impresora" class="form-control text-center">
+                        @foreach (var impresora in Model.Impresoras)
+                        {
+                            <option value="@impresora.Id">@impresora.PlacaInventario - @impresora.Tipo</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="Tecnico.Id">Tecnico</label>
+                    <select asp-for="Tecnico.Id" id="Tecnico" class="form-control text-center">
+                        @foreach (var tecnico in Model.Tecnicos)
+                        {
+                            <option value="@tecnico.Id">@tecnico.Documento - @tecnico.PrimerNombre @tecnico.PrimerApellido
+                            </option>
+                        }
+                    </select>
+                </div>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary">Confirmar</button>
+        </form>
+    </div>
 </body>

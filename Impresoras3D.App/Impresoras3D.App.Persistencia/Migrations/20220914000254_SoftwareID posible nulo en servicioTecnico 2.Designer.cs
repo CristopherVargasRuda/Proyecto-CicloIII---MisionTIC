@@ -4,6 +4,7 @@ using Impresoras3D.App.Persistencia;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Impresoras3D.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    partial class AppContextModelSnapshot : ModelSnapshot
+    [Migration("20220914000254_SoftwareID posible nulo en servicioTecnico 2")]
+    partial class SoftwareIDposiblenuloenservicioTecnico2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -381,6 +383,7 @@ namespace Impresoras3D.App.Persistencia.Migrations
                         .HasColumnType("int");
 
                     b.Property<int?>("SoftwareId")
+                        .IsRequired()
                         .HasColumnType("int");
 
                     b.Property<int>("TecnicoId")
@@ -680,7 +683,8 @@ namespace Impresoras3D.App.Persistencia.Migrations
                     b.HasOne("Impresoras3D.App.Dominio.Software", "Software")
                         .WithMany("ServiciosTecnicos")
                         .HasForeignKey("SoftwareId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
                     b.HasOne("Impresoras3D.App.Dominio.Tecnico", "Tecnico")
                         .WithMany("ServiciosTecnicos")
