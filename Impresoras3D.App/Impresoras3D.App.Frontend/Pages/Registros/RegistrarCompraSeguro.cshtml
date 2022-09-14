@@ -4,83 +4,87 @@
     ViewData["Title"] = "Compra Seguro";
 }
 
-<div class="text-center">
-    <br>
-    <h1>Registrar Compra Seguro</h1>
-    <br>
-    <h3>@ViewData["Error"]</h3>
-    <br><br>
-    <form method="POST">
-        <div asp-validation-summary="ModelOnly" class=text-danger></div>
+<body style="background-color: #D9E7FC">
+    <div class="text-center">
         <br>
-        <div class="row">
-            <div class="col-md-6">
-                <label asp-for="CompraSeguro.ImpresoraId">Impresora</label>
-                <select asp-for="CompraSeguro.ImpresoraId" id="ImpresoraId" class="form-control">
-                    @foreach (var impresora in Model.Impresoras)
-                    {
-                        <option value="@impresora.Id">@impresora.PlacaInventario - @impresora.Tipo</option>
-                    }
-                </select>
-            </div>
-            <div class="col-md-6">
-                <label asp-for="CompraSeguro.SeguroId">Seguro</label>
-                <select asp-for="CompraSeguro.SeguroId" id="SeguroId" class="form-control">
-                    @foreach (var seguro in Model.Seguros)
-                    {
-                        <option value="@seguro.Id">@seguro.Aseguradora</option>
-                    }
-                </select>
-            </div>
-        </div>
+        <h1>Registrar Compra Seguro</h1>
         <br>
-        <div class="row">
-            <div class="col-md-6">
-                <label asp-for="CompraSeguro.FechaCompra">Fecha de Compra</label>
-                <input asp-for="CompraSeguro.FechaCompra" type="date" class="form-control" id="FechaCompra">
-                <span asp-validation-for="CompraSeguro.FechaCompra" class="text-danger"></span>
-            </div>
-            <div class="col-md-6">
-                <label asp-for="CompraSeguro.FechaVencimiento">Fecha de Vencimiento</label>
-                <input asp-for="CompraSeguro.FechaVencimiento" type="date" class="form-control" id="FechaVencimiento">
-                <span asp-validation-for="CompraSeguro.FechaVencimiento" class="text-danger"></span>
-            </div>
-        </div>
+        <h3 class=text-danger>@ViewData["Error"]</h3>
         <br>
-        <br>
-        <button type="submit" class="btn btn-primary">Confirmar</button>
-    </form>
-    <br><br><br><br>
-    <h3>Cubrimientos de cada seguro</h3>
-    <br><br>
-    <table class="table table-striped">
-        <thead class="thead-dark">
-            <tr class="bg-primary">
-                <th scope="col">Id</th>
-                <th scope="col">Seguro</th>
-                <th scope="col">Cubrimientos</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var seguro in Model.Seguros)
-            {
-                <tr>
-                    <th scope="row">@seguro.Id</th>
-                    <td>@seguro.Aseguradora</td>  
-                    <td>                  
-                        @foreach (var seguroYTipoCubrimiento in Model.SeguroYTipoCubrimientos)
+        <form method="POST">
+            <div asp-validation-summary="ModelOnly" class=text-danger></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label asp-for="CompraSeguro.ImpresoraId">Impresora</label>
+                    <select asp-for="CompraSeguro.ImpresoraId" id="ImpresoraId" class="form-control text-center">
+                        @foreach (var impresora in Model.Impresoras)
                         {
-                            @foreach (var tipoCubrimiento in Model.TipoCubrimientos)
+                            <option value="@impresora.Id">@impresora.PlacaInventario - @impresora.Tipo</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="CompraSeguro.SeguroId">Seguro</label>
+                    <select asp-for="CompraSeguro.SeguroId" id="SeguroId" class="form-control text-center">
+                        @foreach (var seguro in Model.Seguros)
+                        {
+                            <option value="@seguro.Id">@seguro.Aseguradora</option>
+                        }
+                    </select>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+                    <label asp-for="CompraSeguro.FechaCompra">Fecha de Compra</label>
+                    <input asp-for="CompraSeguro.FechaCompra" type="date" class="form-control text-center"
+                        id="FechaCompra">
+                    <span asp-validation-for="CompraSeguro.FechaCompra" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="CompraSeguro.FechaVencimiento">Fecha de Vencimiento</label>
+                    <input asp-for="CompraSeguro.FechaVencimiento" type="date" class="form-control text-center"
+                        id="FechaVencimiento">
+                    <span asp-validation-for="CompraSeguro.FechaVencimiento" class="text-danger"></span>
+                </div>
+            </div>
+            <br>
+            <br>
+            <button type="submit" class="btn btn-primary">Confirmar</button>
+        </form>
+        <br><br>
+        <h3>Cubrimientos de cada seguro</h3>
+        <br><br>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr class="bg-primary">
+                    <th scope="col">Id</th>
+                    <th scope="col">Seguro</th>
+                    <th scope="col">Cubrimientos</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var seguro in Model.Seguros)
+                {
+                    <tr>
+                        <th scope="row">@seguro.Id</th>
+                        <td>@seguro.Aseguradora</td>
+                        <td>
+                            @foreach (var seguroYTipoCubrimiento in Model.SeguroYTipoCubrimientos)
                             {
-                                @if (tipoCubrimiento.Id == seguroYTipoCubrimiento.TipoCubrimientoId && seguro.Id == seguroYTipoCubrimiento.SeguroId)
-                                {                                       
-                                    @Model.espacio  @tipoCubrimiento.Nombre                                   
+                                @foreach (var tipoCubrimiento in Model.TipoCubrimientos)
+                                {
+                                    @if (tipoCubrimiento.Id == seguroYTipoCubrimiento.TipoCubrimientoId && seguro.Id ==
+                                   seguroYTipoCubrimiento.SeguroId)
+                                    {
+                                        @Model.espacio @tipoCubrimiento.Nombre
+                                    }
                                 }
                             }
-                        }
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
-</div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>

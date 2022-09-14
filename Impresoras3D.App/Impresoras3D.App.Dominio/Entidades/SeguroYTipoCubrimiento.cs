@@ -6,9 +6,9 @@ namespace Impresoras3D.App.Dominio
     [Table("Seguro_tipoCubrimiento")]
     public class SeguroYTipoCubrimiento
     {
-        [Required]
+        [Required(ErrorMessage = "Se requiere Id del Seguro")]
         public int SeguroId { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Se requiere el Tipo de Cubrimiento")]
         public int TipoCubrimientoId { get; set; }
         public Seguro Seguro { get; set; }
         public TipoCubrimiento TipoCubrimiento { get; set; }

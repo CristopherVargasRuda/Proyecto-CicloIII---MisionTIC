@@ -11,7 +11,7 @@ namespace Impresoras3D.App.Dominio
     {
         [Key]
         public int Id { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Se requiere Nombre de la Aseguradora")]
         public string Aseguradora { get; set; }
         public List<CompraSeguro> CompraSeguros { get; set; }
         public List<SeguroYTipoCubrimiento> SegurosYTipoCubrimiento { get; set; }

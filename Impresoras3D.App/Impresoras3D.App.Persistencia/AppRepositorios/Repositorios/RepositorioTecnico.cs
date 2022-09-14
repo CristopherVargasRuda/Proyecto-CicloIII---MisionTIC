@@ -32,7 +32,7 @@ namespace Impresoras3D.App.Persistencia
             this._appContext.SaveChanges();
         }
 
-        public Tecnico getTecnico(int idTecnico)
+        public Tecnico getTecnico(int? idTecnico)
         {
             var tecnico = this._appContext.Tecnicos.FirstOrDefault(t => t.Id == idTecnico);
             return tecnico;

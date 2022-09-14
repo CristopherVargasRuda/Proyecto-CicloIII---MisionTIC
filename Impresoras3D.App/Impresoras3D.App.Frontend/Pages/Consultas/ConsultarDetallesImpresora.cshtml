@@ -4,72 +4,73 @@
     ViewData["Title"] = "Consultar Detalles Impresora";
 }
 
-<div class="text-center">
-    <h1>Impresoras Detalles Impresora</h1>
-    <h3>@ViewData["Error"]</h3>
+<body style="background-color: #D9E7FC">
+    <div class="text-center">
+        <h1>Impresoras Detalles Impresora</h1>
+        <h3>@ViewData["Error"]</h3>
+        <br>
+    </div>
     <br>
-</div>
-<br>
-<br>
-<div>
-    @if(Model.impresoraObtenida != null)
-    {
-        
-        <div class = "text-center; row">
-            <div class = "col-sm-4">
-                <div class="card" style="width: 100%;">
-                    <div class="card-header">
-                        <h5 class="card-title">Informacion Impresora</h5>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Placa Inventario: @Model.impresoraObtenida.PlacaInventario </li>
-                        <li class="list-group-item">Tipo: @Model.impresoraObtenida.Tipo </li>
-                        <li class="list-group-item">Marca: @Model.impresoraObtenida.Marca </li>
-                        <li class="list-group-item">Modelo: @Model.impresoraObtenida.Modelo</li>
-                        <li class="list-group-item">Pais de origen: @Model.impresoraObtenida.PaisOrigen </li>
-                        <li class="list-group-item">Estado: @Model.estadoImpresoraObtenida.Nombre </li>
-                        <li class="list-group-item">Documento Operario: @Model.impresoraObtenida.OperarioId </li>
-                        <li class="list-group-item">Documento Tecnico: @Model.impresoraObtenida.TecnicoId </li>
-                        <li class="list-group-item">Velocidad Impresion: @Model.impresoraObtenida.VelocidaImpresion </li>
-                        <li class="list-group-item">Volumen Impresion X: @Model.impresoraObtenida.VolumenImpresionX </li>
-                        <li class="list-group-item">Volumen Impresion Y: @Model.impresoraObtenida.VolumenImpresionY</li>
-                        <li class="list-group-item">Volumen Impresion Z: @Model.impresoraObtenida.VolumenImpresionZ</li>
-                    </ul>
-                </div>
-            </div>
-            <div class = "col-sm-4">
-                <div class = "text-center">
+    <br>
+    <div>
+        @if (Model.impresoraObtenida != null)
+        {
+
+            <div class="text-center; row">
+                <div class="col-sm-4">
                     <div class="card" style="width: 100%;">
                         <div class="card-header">
-                            <h5 class="card-title">Software Impresora</h5>
+                            <h5 class="card-title">Informacion Impresora</h5>
                         </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Nombre Software: @Model.softwareObtenido.Nombre </li>
-                            <li class="list-group-item">Version Software: @Model.softwareObtenido.Version </li>
-                            <li class="list-group-item">Licencia Software: @Model.softwareObtenido.Licencia </li>
-                            <li class="list-group-item">Estado: @Model.estadoSoftwareObtenido.Nombre </li>
+                            <li class="list-group-item">Placa Inventario: @Model.impresoraObtenida.PlacaInventario </li>
+                            <li class="list-group-item">Tipo: @Model.impresoraObtenida.Tipo </li>
+                            <li class="list-group-item">Marca: @Model.impresoraObtenida.Marca </li>
+                            <li class="list-group-item">Modelo: @Model.impresoraObtenida.Modelo</li>
+                            <li class="list-group-item">Pais de origen: @Model.impresoraObtenida.PaisOrigen </li>
+                            <li class="list-group-item">Estado: @Model.estadoImpresoraObtenida.Nombre </li>
+                            <li class="list-group-item">Documento Operario: @Model.impresoraObtenida.OperarioId </li>
+                            <li class="list-group-item">Documento Tecnico: @Model.impresoraObtenida.TecnicoId </li>
+                            <li class="list-group-item">Velocidad Impresion: @Model.impresoraObtenida.VelocidaImpresion
+                            </li>
+                            <li class="list-group-item">Volumen Impresion X: @Model.impresoraObtenida.VolumenImpresionX
+                            </li>
+                            <li class="list-group-item">Volumen Impresion Y: @Model.impresoraObtenida.VolumenImpresionY</li>
+                            <li class="list-group-item">Volumen Impresion Z: @Model.impresoraObtenida.VolumenImpresionZ</li>
                         </ul>
                     </div>
                 </div>
-            </div>
-
-            <div class = "col-sm-4">
-                <div class = "text-center">
-                    <div class="card" style="width: 100%;">
-                        <div class="card-header">
-                            <h5 class="card-title">Componentes</h5>
+                <div class="col-sm-4">
+                    <div class="text-center">
+                        <div class="card" style="width: 100%;">
+                            <div class="card-header">
+                                <h5 class="card-title">Software Impresora</h5>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Nombre Software: @Model.softwareObtenido.Nombre </li>
+                                <li class="list-group-item">Version Software: @Model.softwareObtenido.Version </li>
+                                <li class="list-group-item">Licencia Software: @Model.softwareObtenido.Licencia </li>
+                                <li class="list-group-item">Estado: @Model.estadoSoftwareObtenido.Nombre </li>
+                            </ul>
                         </div>
-                        <ul class="list-group list-group-flush">
-                            @foreach (var componente in Model.componentesObtenidos)
-                            {
-                            <li class="list-group-item">@componente.Nombre </li>
-                            }
-                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="text-center">
+                        <div class="card" style="width: 100%;">
+                            <div class="card-header">
+                                <h5 class="card-title">Componentes</h5>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                @foreach (var componente in Model.componentesObtenidos)
+                                {
+                                    <li class="list-group-item">@componente.Nombre </li>
+                                }
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-
-        </div>
-    }
-</div>
-
+        }
+    </div>
+</body>

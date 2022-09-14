@@ -7,9 +7,9 @@ namespace Impresoras3D.App.Dominio
     [Table("Mantenimiento_componente")]
     public class MantenimientoComponente
     {
-        [Required]
+        [Required(ErrorMessage = "Se requiere Id del Servicio Tecnico")]
         public int ServicioTecnicoId { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Se requiere Id del Componente de Impresora")]
         public int ImpresoraComponenteId { get; set; }
         public ServicioTecnico ServicioTecnico { get; set; }
         public ImpresoraComponente ImpresoraComponente { get; set; }

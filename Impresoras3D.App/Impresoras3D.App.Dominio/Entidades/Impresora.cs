@@ -9,23 +9,23 @@ namespace Impresoras3D.App.Dominio
 
         [Key]
         public int Id { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Se requiere la Placa de Inventario")]
         public string PlacaInventario { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Se requiere el Tipo")]
         public string Tipo { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Se requiere Id la Marca")]
         public string Marca { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Se requiere el Modelo")]
         public int Modelo { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Se requiere la Velocidad de Impresion")]
         public int VelocidaImpresion { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Se requiere la Velocidad de Impresion X")]
         public int VolumenImpresionX { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Se requiere la Velocidad de Impresion Y")]
         public int VolumenImpresionY { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Se requiere la Velocidad de Impresion Z")]
         public int VolumenImpresionZ { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Se requiere el Pais de Origen")]
         public string PaisOrigen { get; set; }
         public List<ServicioTecnico> ServiciosTecnicos { get; set; }
         public int EstadoID { get; set; }

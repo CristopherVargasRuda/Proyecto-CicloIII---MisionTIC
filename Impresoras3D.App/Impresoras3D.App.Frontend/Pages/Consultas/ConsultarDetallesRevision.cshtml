@@ -3,59 +3,62 @@
 @{
     ViewData["Title"] = "Consultar Detalles Servicio";
 }
-<div class="text-center">
-    <br>
-    <h1>Impresoras Detalles Del Servicio</h1>
-    <br>
-    <h3>@ViewData["Error"]</h3>
-    <br><br>
-    @if (Model.ComponentesMantenimientos.Any() && Model.ComponentesCambios.Any())
-    {
-        @if (Model.ComponentesMantenimientos.Any())
+
+<body style="background-color: #D9E7FC">
+    <div class="text-center">
+        <br>
+        <h1>Impresoras Detalles Del Servicio</h1>
+        <br>
+        <h3>@ViewData["Error"]</h3>
+        <br><br>
+        @if (Model.ComponentesMantenimientos.Any() && Model.ComponentesCambios.Any())
         {
-            <div class="text-justify">
-                <h3>Componentes a los que se les presto mantenimiento</h3>
-                <br>
-            </div>
-            <div class="row">
-                @foreach (var componente in Model.ComponentesMantenimientos)
-                {
-                    <div class="col-sm-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">@componente.Nombre</h5>
-                                <p class="card-text">@componente.Descripcion</p>
+            @if (Model.ComponentesMantenimientos.Any())
+            {
+                <div class="text-justify">
+                    <h3>Componentes a los que se les presto mantenimiento</h3>
+                    <br>
+                </div>
+                <div class="row">
+                    @foreach (var componente in Model.ComponentesMantenimientos)
+                    {
+                        <div class="col-sm-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">@componente.Nombre</h5>
+                                    <p class="card-text">@componente.Descripcion</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                }
-            </div>
-        }
-        @if (Model.ComponentesCambios.Any())
-        {
-            <div class="text-justify">
-                <br><br>
-                <h3>Componentes Instalados</h3>
-                <br>
-            </div>
-            <div class="row">
-                @foreach (var componente in Model.ComponentesCambios)
-                {
-                    <div class="col-sm-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">@componente.Nombre</h5>
-                                <p class="card-text">@componente.Descripcion</p>
+                    }
+                </div>
+            }
+            @if (Model.ComponentesCambios.Any())
+            {
+                <div class="text-justify">
+                    <br><br>
+                    <h3>Componentes Instalados</h3>
+                    <br>
+                </div>
+                <div class="row">
+                    @foreach (var componente in Model.ComponentesCambios)
+                    {
+                        <div class="col-sm-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">@componente.Nombre</h5>
+                                    <p class="card-text">@componente.Descripcion</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                }
-            </div>
+                    }
+                </div>
+            }
         }
-    }
-    else
-    {
-        <h5 class="text-danger">En el servicio no hubo ni cambios ni mantenimiento, todo en orden con la impresora</h5>
-    }
-    <br>
-</div>
+        else
+        {
+            <h5 class="text-danger">En el servicio no hubo ni cambios ni mantenimiento, todo en orden con la impresora</h5>
+        }
+        <br>
+    </div>
+</body>

@@ -4,35 +4,38 @@
     ViewData["Title"] = "Consultar Impresoras Asignadas Tecnico";
 }
 
-<div class="text-center">
-    <br>
-    <h1>Impresoras Asignadas al Tecnico</h1>
-    <br>
-    <h3>@ViewData["Error"]</h3>
-    <br><br>
-    <table class="table table-striped">
-        <thead class="thead-dark">
-            <tr class="bg-primary">
-                <th scope="col">Id</th>
-                <th scope="col">Placa Inventario</th>
-                <th scope="col">Tipo</th>
-                <th scope="col">Detalles</th>
-                <th scope="col">Registrar Revision</th>
-                <th scope="col">Consultar Revisiones</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var impresora in Model.Impresoras)
-            {
-                <tr>
-                    <th scope="row">@impresora.Id</th>
-                    <td>@impresora.PlacaInventario</td>
-                    <td>@impresora.Tipo</td>
-                    <td><a asp-page="ConsultarDetallesImpresora" asp-route-id="@impresora.Id">Detalles</a></td>
-                    <td><a asp-page="../Registros/RegistrarRevision" asp-route-id="@impresora.Id">Registrar Revision</a></td>
-                    <td><a asp-page="./ConsultarRevisiones" asp-route-id="@impresora.Id">Consultar Revisiones</a></td>
+<body style="background-color: #D9E7FC">
+    <div class="text-center">
+        <br>
+        <h1>Impresoras Asignadas al Tecnico</h1>
+        <br>
+        <h3>@ViewData["Error"]</h3>
+        <br><br>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr class="bg-primary">
+                    <th scope="col">Id</th>
+                    <th scope="col">Placa Inventario</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Detalles</th>
+                    <th scope="col">Registrar Revision</th>
+                    <th scope="col">Consultar Revisiones</th>
                 </tr>
-            }
-        </tbody>
-    </table>
-</div>
+            </thead>
+            <tbody>
+                @foreach (var impresora in Model.Impresoras)
+                {
+                    <tr>
+                        <th scope="row">@impresora.Id</th>
+                        <td>@impresora.PlacaInventario</td>
+                        <td>@impresora.Tipo</td>
+                        <td><a asp-page="ConsultarDetallesImpresora" asp-route-id="@impresora.Id">Detalles</a></td>
+                        <td><a asp-page="../Registros/RegistrarRevision" asp-route-id="@impresora.Id">Registrar Revision</a>
+                        </td>
+                        <td><a asp-page="./ConsultarRevisiones" asp-route-id="@impresora.Id">Consultar Revisiones</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>

@@ -1,3 +1,4 @@
+using System.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Impresoras3D.App.Dominio;
@@ -23,7 +24,7 @@ namespace Impresoras3D.App.Frontend.Pages
         [BindProperty]
         public CompraSeguro CompraSeguro { get; set; }
         [BindProperty]
-        public String espacio {get; set;}
+        public String espacio { get; set; }
         public RegistrarCompraSeguroModel()
         { }
         public ActionResult OnGet()
@@ -33,12 +34,23 @@ namespace Impresoras3D.App.Frontend.Pages
             TipoCubrimientos = _repositorioTipoCubrimiento.GetAllTipoCubrimiento();
             SeguroYTipoCubrimientos = _repositorioSeguroYTipoCubrimiento.GetAllSeguroYTipoCubrimiento();
             espacio = " - ";
+
             return Page();
         }
         public ActionResult OnPost()
         {
             try
             {
+                if (DateTime.Compare(CompraSeguro.FechaCompra, CompraSeguro.FechaVencimiento) > 0)
+                {
+                    @ViewData["Error"] = "La fecha de vencimiento tiene que ser mayor a la de compra";
+                    Impresoras = _repositorioImpresora.GetAllImpresora();
+                    Seguros = _repositorioSeguro.GetAllSeguro();
+                    TipoCubrimientos = _repositorioTipoCubrimiento.GetAllTipoCubrimiento();
+                    SeguroYTipoCubrimientos = _repositorioSeguroYTipoCubrimiento.GetAllSeguroYTipoCubrimiento();
+                    espacio = " - ";
+                    return Page();
+                }
                 CompraSeguro CompraSeguroAgregado = _repositorioCompraSeguro.AddCompraSeguro(this.CompraSeguro);
                 return RedirectToPage("../Index");
             }

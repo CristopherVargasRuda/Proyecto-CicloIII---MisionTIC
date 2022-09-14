@@ -8,11 +8,11 @@ namespace Impresoras3D.App.Dominio
     {
         [Key]
         public int Id { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Se requiere el Nombre")]
         public string Nombre { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Se requiere la Version")]
         public string Version { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Se requiere la Licencia")]
         public string Licencia { get; set; }      
         public int? EstadoId { get; set; }
         public Estado Estado { get; set; }

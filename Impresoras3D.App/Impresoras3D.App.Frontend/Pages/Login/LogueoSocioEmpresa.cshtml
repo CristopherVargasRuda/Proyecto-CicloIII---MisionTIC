@@ -4,54 +4,72 @@
     ViewData["Title"] = "Socio Empresa";
 }
 
-<div class = "text-center">
-    <br>
-    <h1>Socio Empresa</h1>
-    <br>
-    <h4>Bienvenido Nuevamente</h4>
-    <br>
-    <div class = "row">
-        <div class = "col-sm-4">
-            <div class="card" style="width: 420px; height:300 px; float: left; margin-right: 10px; margin-bottom: 10px;">
-                <div class="card-body">
-                    <h5 class="card-title">Compra de Seguro</h5>
-                    <p class="card-text">registrar la compra de un seguro, para tener el dato de la fecha de compra y vencimiento.</p>
-                    <a asp-page="../Registros/RegistrarCompraSeguro" class="btn btn-primary" style="height:40px; width:100px;" >Ir</a>
+<body style="background-color: #D9E7FC">
+    <div class="text-center">
+        <br>
+        <h1>Socio Empresa</h1>
+        <br>
+        <h4>Bienvenido Nuevamente</h4>
+        <br>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card"
+                    style="width: 420px; height:300 px; float: left; margin-right: 10px; margin-bottom: 10px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Compra de Seguro</h5>
+                        <p class="card-text">registrar la compra de un seguro, para tener el dato de la fecha de compra
+                            y vencimiento.</p>
+                        <a asp-page="../Registros/RegistrarCompraSeguro" class="btn btn-primary"
+                            style="height:40px; width:100px;">Ir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card"
+                    style="width: 420px; height:300 px; float: left; margin-right: 10px; margin-bottom: 10px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Revisiones</h5>
+                        <p class="card-text">Consultar la historia de revisiones hechas a las impresoras.</p>
+                        <a asp-page="../Consultas/ConsultarRevisiones" class="btn btn-primary"
+                            style="height:40px; width:100px;">Ir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card"
+                    style="width: 420px; height:300 px; float: left; margin-right: 10px; margin-bottom: 10px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Seguros</h5>
+                        <p class="card-text">Consultar las fechas de vencimiento de los seguros de las impresoras.</p>
+                        <a asp-page="../Consultas/ConsultarFechasSeguro" class="btn btn-primary"
+                            style="height:40px; width:100px;">Ir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <div class="card"
+                    style="width: 420px; height:300 px; float: left; margin-right: 10px; margin-bottom: 10px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Impresoras</h5>
+                        <p class="card-text">Consultar y Actualizar los datos de las impresoras.</p>
+                        <a asp-page="../Consultas/ConsultarImpresoras" class="btn btn-primary"
+                            style="height:40px; width:100px;">Ir</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class = "col-sm-4">
-            <div class="card" style="width: 420px; height:300 px; float: left; margin-right: 10px; margin-bottom: 10px;">
-                <div class="card-body">
-                    <h5 class="card-title">Revisiones</h5>
-                    <p class="card-text">Consultar la historia de revisiones hechas a las impresoras.</p>
-                    <a asp-page="../Consultas/ConsultarRevisiones" class="btn btn-primary" style="height:40px; width:100px;" >Ir</a>
-                </div>
-            </div>
-        </div>
-
-        <div class = "col-sm-4">
-            <div class="card" style="width: 420px; height:300 px; float: left; margin-right: 10px; margin-bottom: 10px;">
-                <div class="card-body">
-                    <h5 class="card-title">Seguros</h5>
-                    <p class="card-text">Consultar las fechas de vencimiento de los seguros de las impresoras.</p>
-                    <a asp-page="../Consultas/ConsultarFechasSeguro" class="btn btn-primary" style="height:40px; width:100px;" >Ir</a>
-                </div>
-            </div>
-        </div>
-        <div class = "col-sm-4"></div>
-        <div class = "col-sm-4">
-            <div class="card" style="width: 420px; height:300 px; float: left; margin-right: 10px; margin-bottom: 10px;">
-                <div class="card-body">
-                    <h5 class="card-title">Impresoras</h5>
-                    <p class="card-text">Consultar y Actualizar los datos de las impresoras.</p>
-                    <a asp-page="../Consultas/ConsultarImpresoras" class="btn btn-primary" style="height:40px; width:100px;" >Ir</a>
-                </div>
-            </div>
+        <div>
+            <a asp-page="../Index" class="btn btn-primary"
+                style="height:50px; width:200px; position: absolute; top: 70%; left: 17.2%">Cerrar Sesion</a>
         </div>
     </div>
+<<<<<<< HEAD
     <div>
         <a asp-page="../Index" class="btn btn-primary" style="margin-top: 30px; width:200px; top: 70%;" >Cerrar Sesion</a>
     </div>
     
 </div>
+=======
+</body>
+>>>>>>> f6acc185cb8fe553219ec75b5568a5f9e39f1854

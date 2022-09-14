@@ -10,10 +10,13 @@ namespace Impresoras3D.App.Frontend.Pages
         private static IRepositorioImpresora _repositorioImpresora = new RepositorioImpresora(new Impresoras3D.App.Persistencia.AppContext());
         [BindProperty]
         public IEnumerable<Impresora> Impresoras { get; set; }
+        [BindProperty]
+        public int idTecnico { get; set; }
         public ConsultarImpresorasAsignadasTecnicoModel()
         { }
         public ActionResult OnGet(int id)
         {
+            idTecnico = id;
             this.Impresoras = _repositorioImpresora.getImpresorasByTecnico(id);
             return Page();
         }
