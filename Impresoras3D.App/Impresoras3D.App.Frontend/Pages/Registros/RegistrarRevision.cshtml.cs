@@ -16,6 +16,7 @@ namespace Impresoras3D.App.Frontend.Pages
         private static IRepositorioTecnico _repositorioTecnico = new RepositorioTecnico(new Impresoras3D.App.Persistencia.AppContext());
         private static IRepositorioOperario _repositorioOperario = new RepositorioOperario(new Impresoras3D.App.Persistencia.AppContext());
         private static IRepositorioEstado _repositorioEstado = new RepositorioEstado(new Impresoras3D.App.Persistencia.AppContext());
+        private static IRepositorioImpresoraComponente _repositorioImpresoraComponente = new RepositorioImpresoraComponente(new Impresoras3D.App.Persistencia.AppContext());
         [BindProperty]
         public Impresora Impresora { get; set; }
         [BindProperty]
@@ -43,10 +44,10 @@ namespace Impresoras3D.App.Frontend.Pages
         [BindProperty]
         public Componente CambioComponenteCama { get; set; }
         [BindProperty]
-        public Componente CambioComponenteFuente { get; set; } 
+        public Componente CambioComponenteFuente { get; set; }
         [BindProperty]
-        public Software Software { get; set; }  
-        [BindProperty]     
+        public Software Software { get; set; }
+        [BindProperty]
         public bool seActualizaSoftware { get; set; }
         [BindProperty]
         public bool seHaceMantenimientoCabezal { get; set; }
@@ -77,9 +78,100 @@ namespace Impresoras3D.App.Frontend.Pages
             this.Operario = _repositorioOperario.getOperario(Impresora.OperarioId);
             return Page();
         }
-        public ActionResult OnPost() {
-
-            
+        public ActionResult OnPost()
+        {
+            Impresora impresoraActualizar = _repositorioImpresora.getImpresora(ServicioTecnico.ImpresoraId);
+            if (seActualizaSoftware)
+            {
+                ServicioTecnico.SoftwareId = Software.Id;
+                impresoraActualizar.SoftwareId = Software.Id;
+            }
+            _repositorioServicioTecnico.AddServicioTecnico(ServicioTecnico);
+            if (seHaceMantenimientoCabezal)
+            {
+                ImpresoraComponente ImpresoraComponente = _repositorioImpresoraComponente.GetImpresoraComponenteByImpresoraIdTipoCabezal(ServicioTecnico.ImpresoraId);
+                MantenimientoComponente mantenimientoComponenteNuevo = new MantenimientoComponente();
+                mantenimientoComponenteNuevo.ServicioTecnicoId = ServicioTecnico.Id;
+                mantenimientoComponenteNuevo.ImpresoraComponenteId = ImpresoraComponente.Id;
+                _repositorioMantenimientoComponente.AddMantenimientoComponente(mantenimientoComponenteNuevo);
+            }
+            if (seHaceMantenimientoExtrusor)
+            {
+                ImpresoraComponente ImpresoraComponente = _repositorioImpresoraComponente.GetImpresoraComponenteByImpresoraIdTipoExtrusor(ServicioTecnico.ImpresoraId);
+                MantenimientoComponente mantenimientoComponenteNuevo = new MantenimientoComponente();
+                mantenimientoComponenteNuevo.ServicioTecnicoId = ServicioTecnico.Id;
+                mantenimientoComponenteNuevo.ImpresoraComponenteId = ImpresoraComponente.Id;
+                _repositorioMantenimientoComponente.AddMantenimientoComponente(mantenimientoComponenteNuevo);
+            }
+            if (seHaceMantenimientoCama)
+            {
+                ImpresoraComponente ImpresoraComponente = _repositorioImpresoraComponente.GetImpresoraComponenteByImpresoraIdTipoCama(ServicioTecnico.ImpresoraId);
+                MantenimientoComponente mantenimientoComponenteNuevo = new MantenimientoComponente();
+                mantenimientoComponenteNuevo.ServicioTecnicoId = ServicioTecnico.Id;
+                mantenimientoComponenteNuevo.ImpresoraComponenteId = ImpresoraComponente.Id;
+                _repositorioMantenimientoComponente.AddMantenimientoComponente(mantenimientoComponenteNuevo);
+            }
+            if (seHaceMantenimientoFuente)
+            {
+                ImpresoraComponente ImpresoraComponente = _repositorioImpresoraComponente.GetImpresoraComponenteByImpresoraIdTipoFuente(ServicioTecnico.ImpresoraId);
+                MantenimientoComponente mantenimientoComponenteNuevo = new MantenimientoComponente();
+                mantenimientoComponenteNuevo.ServicioTecnicoId = ServicioTecnico.Id;
+                mantenimientoComponenteNuevo.ImpresoraComponenteId = ImpresoraComponente.Id;
+                _repositorioMantenimientoComponente.AddMantenimientoComponente(mantenimientoComponenteNuevo);
+            }
+            if (seHaceCambioCabezal)
+            {
+                ImpresoraComponente impresoraComponenteCabecera = new ImpresoraComponente();
+                impresoraComponenteCabecera.ImpresoraId = impresoraActualizar.Id;
+                impresoraComponenteCabecera.ComponenteId = CambioComponenteCabezal.Id;
+                impresoraComponenteCabecera.EstadoId = 10;
+                _repositorioImpresoraComponente.AddImpresoraComponente(impresoraComponenteCabecera);                
+                ImpresoraComponente ImpresoraComponente = _repositorioImpresoraComponente.GetImpresoraComponenteByImpresoraIdTipoCabezal(ServicioTecnico.ImpresoraId);
+                CambioComponente cambioComponente = new CambioComponente();
+                cambioComponente.ServicioTecnicoId = ServicioTecnico.Id;
+                cambioComponente.ImpresoraComponenteId = ImpresoraComponente.Id;
+                _repositorioCambioComponente.AddCambioComponente(cambioComponente);
+            }
+            if (seHaceCambioExtrusor)
+            {
+                ImpresoraComponente impresoraComponenteExtrusor = new ImpresoraComponente();
+                impresoraComponenteExtrusor.ImpresoraId = impresoraActualizar.Id;
+                impresoraComponenteExtrusor.ComponenteId = CambioComponenteExtrusor.Id;
+                impresoraComponenteExtrusor.EstadoId = 13;
+                _repositorioImpresoraComponente.AddImpresoraComponente(impresoraComponenteExtrusor);                
+                ImpresoraComponente ImpresoraComponente = _repositorioImpresoraComponente.GetImpresoraComponenteByImpresoraIdTipoExtrusor(ServicioTecnico.ImpresoraId);
+                CambioComponente cambioComponente = new CambioComponente();
+                cambioComponente.ServicioTecnicoId = ServicioTecnico.Id;
+                cambioComponente.ImpresoraComponenteId = ImpresoraComponente.Id;
+                _repositorioCambioComponente.AddCambioComponente(cambioComponente);
+            }
+            if (seHaceCambioCama)
+            {
+                ImpresoraComponente impresoraComponenteCama = new ImpresoraComponente();
+                impresoraComponenteCama.ImpresoraId = impresoraActualizar.Id;
+                impresoraComponenteCama.ComponenteId = CambioComponenteCama.Id;
+                impresoraComponenteCama.EstadoId = 16;
+                _repositorioImpresoraComponente.AddImpresoraComponente(impresoraComponenteCama);                
+                ImpresoraComponente ImpresoraComponente = _repositorioImpresoraComponente.GetImpresoraComponenteByImpresoraIdTipoCama(ServicioTecnico.ImpresoraId);
+                CambioComponente cambioComponente = new CambioComponente();
+                cambioComponente.ServicioTecnicoId = ServicioTecnico.Id;
+                cambioComponente.ImpresoraComponenteId = ImpresoraComponente.Id;
+                _repositorioCambioComponente.AddCambioComponente(cambioComponente);
+            }
+            if (seHaceCambioFuente)
+            {
+                ImpresoraComponente impresoraComponenteFuente = new ImpresoraComponente();
+                impresoraComponenteFuente.ImpresoraId = impresoraActualizar.Id;
+                impresoraComponenteFuente.ComponenteId = CambioComponenteFuente.Id;
+                impresoraComponenteFuente.EstadoId = 1;
+                _repositorioImpresoraComponente.AddImpresoraComponente(impresoraComponenteFuente);                
+                ImpresoraComponente ImpresoraComponente = _repositorioImpresoraComponente.GetImpresoraComponenteByImpresoraIdTipoFuente(ServicioTecnico.ImpresoraId);
+                CambioComponente cambioComponente = new CambioComponente();
+                cambioComponente.ServicioTecnicoId = ServicioTecnico.Id;
+                cambioComponente.ImpresoraComponenteId = ImpresoraComponente.Id;
+                _repositorioCambioComponente.AddCambioComponente(cambioComponente);
+            }
+            _repositorioImpresora.UpdateImpresora(impresoraActualizar);
             return Page();
         }
     }

@@ -72,5 +72,14 @@ namespace Impresoras3D.App.Persistencia
                 @"SELECT Id, Fecha, ImpresoraID, SoftwareId, TecnicoId FROM dbo.Servicio_Tecnico WHERE ImpresoraId = {0}", impresoraId).ToList();
             return serviciosTecnicosEncontrados;
         }
+
+        public ServicioTecnico getLastServicioTecnico()
+        {
+            var serviciosTecnicosEncontrado = this._appContext.ServiciosTecnicos
+                .FromSqlRaw(
+                    @"SELECT TOP(1) Id, Fecha, ImpresoraId, SoftwareId, TecnicoId FROM dbo.Servicio_Tecnico ORDER BY Id DESC")
+                .FirstOrDefault();
+            return serviciosTecnicosEncontrado;
+        }
     }
 }
