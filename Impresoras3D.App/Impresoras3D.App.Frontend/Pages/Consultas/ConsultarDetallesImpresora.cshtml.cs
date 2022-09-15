@@ -36,6 +36,16 @@ namespace Impresoras3D.App.Frontend.Pages
 
         public ActionResult OnGet(int id)
         {
+            if (
+                TempData.ContainsKey("Id")
+                && TempData.ContainsKey("Nombre")
+                && TempData.ContainsKey("TipoUsuario")
+            )
+            {
+                TempData.Keep("Id");
+                TempData.Keep("Nombre");
+                TempData.Keep("TipoUsuario");
+            }
             try
             {
                 this.impresoraObtenida = _repositorioImpresora.getImpresora(id);

@@ -17,7 +17,9 @@ namespace Impresoras3D.App.Frontend.Pages
                 && TempData.ContainsKey("TipoUsuario")
             )
             {
-                TempData.Keep();
+                TempData.Keep("Id");
+                TempData.Keep("Nombre");
+                TempData.Keep("TipoUsuario");
             }
         }
     }

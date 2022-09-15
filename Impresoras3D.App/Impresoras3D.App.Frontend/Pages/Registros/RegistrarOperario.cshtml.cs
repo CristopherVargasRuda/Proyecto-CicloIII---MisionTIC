@@ -14,6 +14,16 @@ namespace Impresoras3D.App.Frontend.Pages
         { }
         public ActionResult OnGet()
         {
+            if (
+                TempData.ContainsKey("Id")
+                && TempData.ContainsKey("Nombre")
+                && TempData.ContainsKey("TipoUsuario")
+            )
+            {
+                TempData.Keep("Id");
+                TempData.Keep("Nombre");
+                TempData.Keep("TipoUsuario");
+            }
             return Page();
         }
 

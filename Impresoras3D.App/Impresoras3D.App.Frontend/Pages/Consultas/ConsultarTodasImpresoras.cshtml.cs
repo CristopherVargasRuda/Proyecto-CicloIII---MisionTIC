@@ -1,18 +1,18 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Impresoras3D.App.Persistencia;
 using Impresoras3D.App.Dominio;
+using Impresoras3D.App.Persistencia;
 
 namespace Impresoras3D.App.Frontend.Pages
 {
-    public class ConsultarImpresorasAsignadasTecnicoModel : PageModel
+    public class ConsultarTodasImpresorasModel : PageModel
     {
         private static IRepositorioImpresora _repositorioImpresora = new RepositorioImpresora(new Impresoras3D.App.Persistencia.AppContext());
         [BindProperty]
         public IEnumerable<Impresora> Impresoras { get; set; }
         [BindProperty]
         public int idTecnico { get; set; }
-        public ConsultarImpresorasAsignadasTecnicoModel()
+        public ConsultarTodasImpresorasModel()
         { }
         public ActionResult OnGet()
         {
@@ -30,7 +30,7 @@ namespace Impresoras3D.App.Frontend.Pages
             {
                 TempData["Id"] = 0;
             }
-            this.Impresoras = _repositorioImpresora.getImpresorasByTecnico(Convert.ToInt32(TempData["Id"]));
+            this.Impresoras = _repositorioImpresora.GetAllImpresora();
             return Page();
         }
 

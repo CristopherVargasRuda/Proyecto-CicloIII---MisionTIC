@@ -12,7 +12,7 @@
         <h4>Bienvenido Nuevamente @TempData["Nombre"]</h4>
         <br>
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-6">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Compra de Seguro</h5>
@@ -23,36 +23,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-6">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Revisiones</h5>
                         <p class="card-text">Consultar la historia de revisiones hechas a las impresoras.</p>
-                        <a asp-page="../Consultas/ConsultarRevisiones" class="btn btn-primary"
-                            style="height:40px; width:100px;">Ir</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Seguros</h5>
-                        <p class="card-text">Consultar las fechas de vencimiento de los seguros de las impresoras.</p>
-                        <a asp-page="../Consultas/ConsultarFechasSeguro" class="btn btn-primary"
-                            style="height:40px; width:100px;">Ir</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-sm-4"></div>
-            <div class="col-sm-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Impresoras</h5>
-                        <p class="card-text">Consultar y Actualizar los datos de las impresoras.</p>
-                        <a asp-page="../Consultas/ConsultarImpresoras" class="btn btn-primary"
+                        <a asp-page="../Consultas/ConsultarTodasImpresoras" class="btn btn-primary"
                             style="height:40px; width:100px;">Ir</a>
                     </div>
                 </div>

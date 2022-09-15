@@ -67,6 +67,16 @@ namespace Impresoras3D.App.Frontend.Pages
         public bool seHaceCambioFuente { get; set; }
         public ActionResult OnGet(int id)
         {
+            if (
+                TempData.ContainsKey("Id")
+                && TempData.ContainsKey("Nombre")
+                && TempData.ContainsKey("TipoUsuario")
+            )
+            {
+                TempData.Keep("Id");
+                TempData.Keep("Nombre");
+                TempData.Keep("TipoUsuario");
+            }
             this.Estados = _repositorioEstado.GetImpresoraEstados();
             this.Softwares = _repositorioSoftware.GetAllSoftware();
             this.Cabeceras = _repositorioComponente.getCabezarComponentes();
@@ -82,12 +92,9 @@ namespace Impresoras3D.App.Frontend.Pages
         {
             try
             {
-
-
                 Impresora impresoraActualizar = _repositorioImpresora.getImpresora(ServicioTecnico.ImpresoraId);
                 if (seActualizaSoftware)
                 {
-                    Console.Out.WriteLine(Software.Id);
                     ServicioTecnico.SoftwareId = Software.Id;
                     impresoraActualizar.SoftwareId = Software.Id;
                 }

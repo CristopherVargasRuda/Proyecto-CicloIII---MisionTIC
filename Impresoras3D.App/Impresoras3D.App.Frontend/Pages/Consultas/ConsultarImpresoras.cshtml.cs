@@ -40,11 +40,31 @@ namespace Impresoras3D.App.Frontend.Pages
 
         public ActionResult OnGet()
         {
+            if (
+                TempData.ContainsKey("Id")
+                && TempData.ContainsKey("Nombre")
+                && TempData.ContainsKey("TipoUsuario")
+            )
+            {
+                TempData.Keep("Id");
+                TempData.Keep("Nombre");
+                TempData.Keep("TipoUsuario");
+            }
             return Page();
         }
 
         public ActionResult OnPost()
         {
+            if (
+                TempData.ContainsKey("Id")
+                && TempData.ContainsKey("Nombre")
+                && TempData.ContainsKey("TipoUsuario")
+            )
+            {
+                TempData.Keep("Id");
+                TempData.Keep("Nombre");
+                TempData.Keep("TipoUsuario");
+            }
             try
             {
                 this.impresoraObtenida = _repositorioImpresora.getByPlaca(

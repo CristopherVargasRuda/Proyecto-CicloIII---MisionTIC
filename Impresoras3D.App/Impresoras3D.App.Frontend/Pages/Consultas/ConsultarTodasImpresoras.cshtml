@@ -1,0 +1,44 @@
+﻿@page
+@model Impresoras3D.App.Frontend.Pages.ConsultarTodasImpresorasModel
+@{
+    ViewData["Title"] = "Impresoras";
+}
+
+<body style="background-color: #D9E7FC">
+    <div class="text-center">
+        <br>
+        <h1>Impresoras</h1>
+        <br>
+        <h3>@ViewData["Error"]</h3>
+        <br><br>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr class="bg-primary">
+                    <th scope="col">Id</th>
+                    <th scope="col">Placa Inventario</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Detalles</th>
+                    <th scope="col">Seguro</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var impresora in Model.Impresoras)
+                {
+                    <tr>
+                        <th scope="row">@impresora.Id</th>
+                        <td>@impresora.PlacaInventario</td>
+                        <td>@impresora.Tipo</td>
+                        <td><a asp-page="ConsultarDetallesImpresora" asp-route-id="@impresora.Id"><i class="fa-solid fa-key fa-2x"></i></a></td>
+                        <td><a asp-page="ConsultarSeguroImpresora" asp-route-id="@impresora.Id">Seguro</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <br><br>
+    <div class="text-center">
+        <form method="POST">
+            <button type="submit" class="btn btn-primary">Salir</button>
+        </form>
+    </div>
+</body>

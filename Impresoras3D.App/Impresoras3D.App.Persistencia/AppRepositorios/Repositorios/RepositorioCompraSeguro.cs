@@ -65,12 +65,11 @@ namespace Impresoras3D.App.Persistencia
             return compraSeguroEncontrado;
         }
 
-        public CompraSeguro getCompraSeguroByImpresoraId(int ImpresoraId)
+        public IEnumerable<CompraSeguro> getCompraSeguroByImpresoraId(int impresoraId)
         {
-                var compraSegurosObtenidos = this._appContext.CompraSeguros.FromSqlRaw(
-                    @"SELECT cs.Id, cs.FechaCompra, cs.FechaVencimiento, cs.ImpresoraId, cs.SeguroId FROM dbo.Compra_seguro cs WHERE ImpresoraId = {0} Order By Id desc", ImpresoraId
-                    ).FirstOrDefault();
-
+            var compraSegurosObtenidos = this._appContext.CompraSeguros.FromSqlRaw(
+                @"SELECT cs.Id, cs.FechaCompra, cs.FechaVencimiento, cs.ImpresoraId, cs.SeguroId FROM dbo.Compra_seguro cs WHERE cs.ImpresoraId = {0}", impresoraId
+                ).ToList();
             return compraSegurosObtenidos;
         }
     }

@@ -19,6 +19,16 @@ namespace Impresoras3D.App.Frontend.Pages
         public IEnumerable<Tecnico> Tecnicos { get; set; }
         public ActionResult OnGet(int id)
         {
+            if (
+                TempData.ContainsKey("Id")
+                && TempData.ContainsKey("Nombre")
+                && TempData.ContainsKey("TipoUsuario")
+            )
+            {
+                TempData.Keep("Id");
+                TempData.Keep("Nombre");
+                TempData.Keep("TipoUsuario");
+            }
             Impresora = _repositorioImpresora.getImpresora(id);
             Tecnicos = _repositorioTecnico.GetAllTecnico();
             ServiciosTecnicos = _repositorioServicioTecnico.GetServiciosTecnicosByImpresoraId(id);
@@ -27,6 +37,16 @@ namespace Impresoras3D.App.Frontend.Pages
 
         public ActionResult OnPost()
         {
+            if (
+                TempData.ContainsKey("Id")
+                && TempData.ContainsKey("Nombre")
+                && TempData.ContainsKey("TipoUsuario")
+            )
+            {
+                TempData.Keep("Id");
+                TempData.Keep("Nombre");
+                TempData.Keep("TipoUsuario");
+            }
             try
             {
                 switch (TempData["TipoUsuario"])

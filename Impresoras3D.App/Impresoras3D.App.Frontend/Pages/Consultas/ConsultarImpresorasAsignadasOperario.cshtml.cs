@@ -1,3 +1,4 @@
+using System;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Impresoras3D.App.Persistencia;
@@ -14,15 +15,38 @@ namespace Impresoras3D.App.Frontend.Pages
         public int idOperario { get; set; }
         public ConsultarImpresorasAsignadasOperarioModel()
         { }
-        public ActionResult OnGet(int id)
+        public ActionResult OnGet()
         {
-            idOperario = id;
-            this.Impresoras = _repositorioImpresora.getImpresorasByOperario(id);
+            if (
+                TempData.ContainsKey("Id")
+                && TempData.ContainsKey("Nombre")
+                && TempData.ContainsKey("TipoUsuario")
+            )
+            {
+                TempData.Keep("Id");
+                TempData.Keep("Nombre");
+                TempData.Keep("TipoUsuario");
+            }
+            else
+            {
+                TempData["Id"] = 0;
+            }
+            this.Impresoras = _repositorioImpresora.getImpresorasByOperario(Convert.ToInt32(TempData["Id"]));
             return Page();
         }
 
         public ActionResult OnPost()
         {
+            if (
+                TempData.ContainsKey("Id")
+                && TempData.ContainsKey("Nombre")
+                && TempData.ContainsKey("TipoUsuario")
+            )
+            {
+                TempData.Keep("Id");
+                TempData.Keep("Nombre");
+                TempData.Keep("TipoUsuario");
+            }
             try
             {
                 switch (TempData["TipoUsuario"])

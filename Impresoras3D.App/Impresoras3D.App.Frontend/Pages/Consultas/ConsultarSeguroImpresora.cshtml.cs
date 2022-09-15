@@ -18,11 +18,22 @@ namespace Impresoras3D.App.Frontend.Pages
         public Seguro seguro { get; set; }
 
         [BindProperty]
-        public CompraSeguro CompraSeguros { get; set; }
+        public CompraSeguro CompraSeguro { get; set; }
 
-        public void OnGet(int ImpresoraId)
+        public void OnGet(int id)
         {
-            CompraSeguros = _repositorioCompraSeguro.getCompraSeguroByImpresoraId(ImpresoraId);
+            if (
+                TempData.ContainsKey("Id")
+                && TempData.ContainsKey("Nombre")
+                && TempData.ContainsKey("TipoUsuario")
+            )
+            {
+                TempData.Keep("Id");
+                TempData.Keep("Nombre");
+                TempData.Keep("TipoUsuario");
+            }
+            IEnumerable<CompraSeguro> ComprasSeguros = _repositorioCompraSeguro.getCompraSeguroByImpresoraId(id);
+            this.CompraSeguro = ComprasSeguros.Last();
         }
     }
 }

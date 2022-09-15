@@ -29,6 +29,16 @@ namespace Impresoras3D.App.Frontend.Pages
         { }
         public ActionResult OnGet()
         {
+            if (
+                TempData.ContainsKey("Id")
+                && TempData.ContainsKey("Nombre")
+                && TempData.ContainsKey("TipoUsuario")
+            )
+            {
+                TempData.Keep("Id");
+                TempData.Keep("Nombre");
+                TempData.Keep("TipoUsuario");
+            }
             Impresoras = _repositorioImpresora.GetAllImpresora();
             Seguros = _repositorioSeguro.GetAllSeguro();
             TipoCubrimientos = _repositorioTipoCubrimiento.GetAllTipoCubrimiento();
@@ -39,9 +49,19 @@ namespace Impresoras3D.App.Frontend.Pages
         }
         public ActionResult OnPost()
         {
+            if (
+                TempData.ContainsKey("Id")
+                && TempData.ContainsKey("Nombre")
+                && TempData.ContainsKey("TipoUsuario")
+            )
+            {
+                TempData.Keep("Id");
+                TempData.Keep("Nombre");
+                TempData.Keep("TipoUsuario");
+            }
             try
             {
-                if (DateTime.Compare(CompraSeguro.FechaCompra, CompraSeguro.FechaVencimiento) > 0)
+                if (DateTime.Compare(CompraSeguro.FechaCompra, CompraSeguro.FechaVencimiento) >= 0)
                 {
                     @ViewData["Error"] = "La fecha de vencimiento tiene que ser mayor a la de compra";
                     Impresoras = _repositorioImpresora.GetAllImpresora();

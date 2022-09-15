@@ -17,12 +17,32 @@ namespace Impresoras3D.App.Frontend.Pages
         { }
         public ActionResult OnGet(int id)
         {
+            if (
+                TempData.ContainsKey("Id")
+                && TempData.ContainsKey("Nombre")
+                && TempData.ContainsKey("TipoUsuario")
+            )
+            {
+                TempData.Keep("Id");
+                TempData.Keep("Nombre");
+                TempData.Keep("TipoUsuario");
+            }
             this.ComponentesMantenimientos = _repositorioComponente.getComponentesMantenimientoByServicioId(id);
             this.ComponentesCambios = _repositorioComponente.getComponentesCambioByServicioId(id);
             return Page();
         }
         public ActionResult OnPost()
         {
+            if (
+                TempData.ContainsKey("Id")
+                && TempData.ContainsKey("Nombre")
+                && TempData.ContainsKey("TipoUsuario")
+            )
+            {
+                TempData.Keep("Id");
+                TempData.Keep("Nombre");
+                TempData.Keep("TipoUsuario");
+            }
             try
             {
                 switch (TempData["TipoUsuario"])
