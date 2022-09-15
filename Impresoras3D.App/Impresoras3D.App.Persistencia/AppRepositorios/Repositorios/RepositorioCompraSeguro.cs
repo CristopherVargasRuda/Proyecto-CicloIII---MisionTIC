@@ -1,5 +1,7 @@
 using System;
 using Impresoras3D.App.Dominio;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 
 namespace Impresoras3D.App.Persistencia
 {
@@ -61,6 +63,15 @@ namespace Impresoras3D.App.Persistencia
                 this._appContext.SaveChanges();
             }
             return compraSeguroEncontrado;
+        }
+
+        public CompraSeguro getCompraSeguroByImpresoraId(int ImpresoraId)
+        {
+                var compraSegurosObtenidos = this._appContext.CompraSeguros.FromSqlRaw(
+                    @"SELECT cs.Id, cs.FechaCompra, cs.FechaVencimiento, cs.ImpresoraId, cs.SeguroId FROM dbo.Compra_seguro cs WHERE ImpresoraId = {0} Order By Id desc", ImpresoraId
+                    ).FirstOrDefault();
+
+            return compraSegurosObtenidos;
         }
     }
 }

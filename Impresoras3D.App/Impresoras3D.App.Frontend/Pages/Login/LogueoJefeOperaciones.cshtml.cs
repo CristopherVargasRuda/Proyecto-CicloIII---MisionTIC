@@ -11,8 +11,14 @@ namespace Impresoras3D.App.Frontend.Pages
 
         public void OnGet()
         {
-            TempData["TipoUsuario"] = "JefeOperaciones";
-            TempData.Keep();
+            if (
+                TempData.ContainsKey("Id")
+                && TempData.ContainsKey("Nombre")
+                && TempData.ContainsKey("TipoUsuario")
+            )
+            {
+                TempData.Keep();
+            }
         }
     }
 }
