@@ -11,7 +11,7 @@
         <br>
         <h3>@ViewData["Error"]</h3>
         <br>
-        @if (Model.ComponentesMantenimientos.Any() && Model.ComponentesCambios.Any())
+        @if (Model.ComponentesMantenimientos.Any() || Model.ComponentesCambios.Any())
         {
             @if (Model.ComponentesMantenimientos.Any())
             {

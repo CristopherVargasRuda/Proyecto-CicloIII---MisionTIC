@@ -9,6 +9,8 @@ namespace Impresoras3D.App.Frontend.Pages
     {
         public void OnGet()
         {
+            TempData["TipoUsuario"] = "SocioEmpresa";
+            TempData.Keep();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,32 +9,60 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Impresoras3D.App.Frontend.styles.css" asp-append-version="true" />
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-dark bg-primary navbar-expand-sm">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">Impresoras3D</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" asp-area="" asp-page="#">Impresoras3D</a>
+                <button class="navbar-toggler" type="button" Disabled data-bs-toggle="collapse"
+                    data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-page="/Registros/RegistrarCompraSeguro">Seguro</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-page="/Consultas/ConsultarImpresorasAsignadasOperario" asp-route-id="1">Operario</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-page="/Consultas/ConsultarImpresorasAsignadasTecnico" asp-route-id="1">Tecnico</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-page="/Registros/RegistrarRevision" asp-route-id="1">Revisión</a>
-                        </li> 
+                        @{
+                            if (TempData.ContainsKey("TipoUsuario"))
+                            {
+                                switch (TempData["TipoUsuario"])
+                                {
+                                    case "Tecnico":
+                                        <li class="nav-item">
+                                            <a class="nav-link" asp-area="" asp-page="/Login/LogueoTecnico">Home</a>
+                                        </li>
+                                        break;
+                                    case "Operario":
+                                        <li class="nav-item">
+                                            <a class="nav-link" asp-area="" asp-page="/Login/LogueoOperario">Home</a>
+                                        </li>
+                                        break;
+                                    case "SocioEmpresa":
+                                        <li class="nav-item">
+                                            <a class="nav-link" asp-area="" asp-page="/Login/LogueoSocioEmpresa">Home</a>
+                                        </li>
+                                        break;
+                                    case "Auxiliar":
+                                        <li class="nav-item">
+                                            <a class="nav-link" asp-area="" asp-page="/Login/LogueoAuxiliar">Home</a>
+                                        </li>
+                                        break;
+                                    case "JefeOperaciones":
+                                        <li class="nav-item">
+                                            <a class="nav-link" asp-area="" asp-page="/Login/LogueoJefeOperaciones">Home</a>
+                                        </li>
+                                        break;
+                                    default:
+                                        <li class="nav-item">
+                                            <a class="nav-link" asp-area="" asp-page="/Index">Home</a>
+                                        </li>
+                                        break;    
+                                }
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-area="" asp-page="/Index">Cerrar sesión</a>
+                                </li>
+                            }
+                        }
                     </ul>
                 </div>
             </div>
@@ -57,4 +86,5 @@
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>

@@ -12,9 +12,9 @@ namespace Impresoras3D.App.Persistencia
         public ImpresoraComponente UpdateImpresoraComponente(
             ImpresoraComponente ImpresoraComponente
         );        
-        public ImpresoraComponente GetImpresoraComponenteByImpresoraIdTipoCabezal(int impresoraId);
-        public ImpresoraComponente GetImpresoraComponenteByImpresoraIdTipoExtrusor(int impresoraId);
-        public ImpresoraComponente GetImpresoraComponenteByImpresoraIdTipoCama(int impresoraId);
-        public ImpresoraComponente GetImpresoraComponenteByImpresoraIdTipoFuente(int impresoraId);
+        public IEnumerable<ImpresoraComponente> GetImpresoraComponenteByImpresoraIdTipoCabezal(int impresoraId);
+        public IEnumerable<ImpresoraComponente> GetImpresoraComponenteByImpresoraIdTipoExtrusor(int impresoraId);
+        public IEnumerable<ImpresoraComponente> GetImpresoraComponenteByImpresoraIdTipoCama(int impresoraId);
+        public IEnumerable<ImpresoraComponente> GetImpresoraComponenteByImpresoraIdTipoFuente(int impresoraId);
     }
 }

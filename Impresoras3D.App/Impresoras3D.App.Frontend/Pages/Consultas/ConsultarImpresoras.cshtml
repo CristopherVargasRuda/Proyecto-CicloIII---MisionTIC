@@ -48,8 +48,8 @@
                         <li class="list-group-item">Modelo: @Model.impresoraObtenida.Modelo</li>
                         <li class="list-group-item">Pais de origen: @Model.impresoraObtenida.PaisOrigen </li>
                         <li class="list-group-item">Estado: @Model.estadoImpresoraObtenida.Nombre </li>
-                        <li class="list-group-item">Documento Operario: @Model.impresoraObtenida.OperarioId </li>
-                        <li class="list-group-item">Documento Tecnico: @Model.impresoraObtenida.TecnicoId </li>
+                        <li class="list-group-item">ID Operario: @Model.impresoraObtenida.OperarioId </li>
+                        <li class="list-group-item">ID Tecnico: @Model.impresoraObtenida.TecnicoId </li>
                         <li class="list-group-item">Velocidad Impresion: @Model.impresoraObtenida.VelocidaImpresion </li>
                         <li class="list-group-item">Volumen Impresion X: @Model.impresoraObtenida.VolumenImpresionX </li>
                         <li class="list-group-item">Volumen Impresion Y: @Model.impresoraObtenida.VolumenImpresionY</li>
@@ -73,18 +73,16 @@
                 </div>
             </div>
             <div class="col-sm-4">
-                <div class="text-center">
-                    <div class="card" style="width: 100%;">
-                        <div class="card-header">
-                            <h5 class="card-title">Componentes</h5>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            @foreach (var componente in Model.componentesObtenidos)
-                            {
-                                <li class="list-group-item">@componente.Nombre </li>
-                            }
-                        </ul>
+                <div class="card" style="width: 100%;">
+                    <div class="card-header">
+                        <h5 class="card-title">Componentes</h5>
                     </div>
+                    <ul class="list-group list-group-flush">
+                        @foreach (var componente in Model.componentesObtenidos)
+                        {
+                            <li class="list-group-item"><b>@componente.Nombre: </b> @componente.Descripcion</li>
+                        }
+                    </ul>
                 </div>
             </div>
         </div>

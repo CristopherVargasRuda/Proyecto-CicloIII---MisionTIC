@@ -54,45 +54,26 @@ namespace Impresoras3D.App.Persistencia
             var impresoraEncontrada = this._appContext.Impresoras.FirstOrDefault(
                 c => c.Id == impresora.Id
             );
-
             if (impresoraEncontrada != null)
             {
                 impresoraEncontrada.PlacaInventario = impresora.PlacaInventario;
-
                 impresoraEncontrada.Tipo = impresora.Tipo;
-
                 impresoraEncontrada.Marca = impresora.Marca;
-
                 impresoraEncontrada.Modelo = impresora.Modelo;
-
                 impresoraEncontrada.VelocidaImpresion = impresora.VelocidaImpresion;
-
                 impresoraEncontrada.VolumenImpresionX = impresora.VolumenImpresionX;
-
                 impresoraEncontrada.VolumenImpresionY = impresora.VolumenImpresionY;
-
                 impresoraEncontrada.VolumenImpresionZ = impresora.VolumenImpresionZ;
-
                 impresoraEncontrada.PaisOrigen = impresora.PaisOrigen;
-
                 impresoraEncontrada.ServiciosTecnicos = impresora.ServiciosTecnicos;
-
                 impresoraEncontrada.EstadoID = impresora.EstadoID;
-
                 impresoraEncontrada.CompraSeguros = impresora.CompraSeguros;
-
                 impresoraEncontrada.OperarioId = impresora.OperarioId;
-
                 impresoraEncontrada.Operario = impresora.Operario;
-
                 impresoraEncontrada.TecnicoId = impresora.TecnicoId;
-
                 impresoraEncontrada.Tecnico = impresora.Tecnico;
-
                 impresoraEncontrada.SoftwareId = impresora.SoftwareId;
-
                 impresoraEncontrada.Software = impresora.Software;
-
                 this._appContext.SaveChanges();
             }
             return impresoraEncontrada;

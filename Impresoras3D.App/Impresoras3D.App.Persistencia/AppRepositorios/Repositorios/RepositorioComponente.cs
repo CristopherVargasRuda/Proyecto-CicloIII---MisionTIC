@@ -87,7 +87,8 @@ namespace Impresoras3D.App.Persistencia
             return componentesObtenidos;
         }
 
-        public IEnumerable<Componente> getComponentesByImpresoraId(int impresoraId) {
+        public IEnumerable<Componente> getComponentesByImpresoraId(int impresoraId)
+        {
             var componentesObtenidos = this._appContext.Componentes.FromSqlRaw(
                     @"SELECT c.Id, c.Nombre, c.Descripcion FROM dbo.Componente c, dbo.Impresora i, dbo.Impresora_componente ic WHERE c.Id = ic.ComponenteId AND i.Id = ic.ImpresoraId AND i.Id = {0} ORDER BY ic.Id DESC;", impresoraId
                     ).ToList();
@@ -106,6 +107,30 @@ namespace Impresoras3D.App.Persistencia
             var componentesObtenidos = this._appContext.Componentes.FromSqlRaw(
                     @"SELECT c.Id, c.Nombre, c.Descripcion FROM dbo.Componente c, dbo.Impresora_componente ic, dbo.Cambio_componente cc WHERE c.id = ic.ComponenteId AND ic.Id = cc.ImpresoraComponenteId AND cc.ServicioTecnicoId = {0}", servicioId
                     ).ToList();
+            return componentesObtenidos;
+        }
+        public IEnumerable<Componente> getCabezarComponentesByImpresoraID(int impresoraId)
+        {
+            var componentesObtenidos = this._appContext.Componentes.FromSqlRaw(
+                @"SELECT c.Id, c.Nombre, c.Descripcion FROM dbo.Impresora_componente ic, dbo.Componente c WHERE ic.ComponenteId = c.Id AND LOWER(c.Nombre) like '%cabezal%' AND ic.ImpresoraId = {0}", impresoraId).ToList();
+            return componentesObtenidos;
+        }
+        public IEnumerable<Componente> getExtrusorComponentesByImpresoraID(int impresoraId)
+        {
+            var componentesObtenidos = this._appContext.Componentes.FromSqlRaw(
+                @"SELECT c.Id, c.Nombre, c.Descripcion FROM dbo.Impresora_componente ic, dbo.Componente c WHERE ic.ComponenteId = c.Id AND LOWER(c.Nombre) like '%extrusor%' AND ic.ImpresoraId = {0}", impresoraId).ToList();
+            return componentesObtenidos;
+        }
+        public IEnumerable<Componente> getCamaComponentesByImpresoraID(int impresoraId)
+        {
+            var componentesObtenidos = this._appContext.Componentes.FromSqlRaw(
+                @"SELECT c.Id, c.Nombre, c.Descripcion FROM dbo.Impresora_componente ic, dbo.Componente c WHERE ic.ComponenteId = c.Id AND LOWER(c.Nombre) like '%cama%' AND ic.ImpresoraId = {0}", impresoraId).ToList();
+            return componentesObtenidos;
+        }
+        public IEnumerable<Componente> getFuenteComponentesByImpresoraID(int impresoraId)
+        {
+            var componentesObtenidos = this._appContext.Componentes.FromSqlRaw(
+                @"SELECT c.Id, c.Nombre, c.Descripcion FROM dbo.Impresora_componente ic, dbo.Componente c WHERE ic.ComponenteId = c.Id AND LOWER(c.Nombre) like '%fuente%' AND ic.ImpresoraId = {0}", impresoraId).ToList();
             return componentesObtenidos;
         }
     }

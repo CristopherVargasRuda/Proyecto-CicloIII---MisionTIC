@@ -34,6 +34,9 @@ public class IndexModel : PageModel
 
     public ActionResult OnGet() // el ActionResult ayuda a devolver la información si hay un error
     {
+        TempData.Remove("TipoUsuario");
+        TempData.Remove("Nombre");
+        TempData.Remove("Id");
         return Page();
     }
 

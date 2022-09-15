@@ -9,6 +9,10 @@ namespace Impresoras3D.App.Frontend.Pages
     {
         public LogueoTecnicoModel() { }
 
-        public void OnGet() { }
+        public void OnGet()
+        {
+            TempData["TipoUsuario"] = "Tecnico";
+            TempData.Keep();
+        }
     }
 }

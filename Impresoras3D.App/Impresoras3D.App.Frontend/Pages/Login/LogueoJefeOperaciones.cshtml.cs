@@ -9,6 +9,10 @@ namespace Impresoras3D.App.Frontend.Pages
     {
         public LogueoJefeOperacionesModel() { }
 
-        public void OnGet() { }
+        public void OnGet()
+        {
+            TempData["TipoUsuario"] = "JefeOperaciones";
+            TempData.Keep();
+        }
     }
 }
