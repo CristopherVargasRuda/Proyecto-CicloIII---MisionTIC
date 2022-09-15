@@ -41,43 +41,75 @@ public class IndexModel : PageModel
     {
         try
         {
-            Auxiliar auxiliar = _repositorioAuxiliar.getByLogin(Persona.Documento, Persona.Password);
+            Auxiliar auxiliar = _repositorioAuxiliar.getByLogin(
+                Persona.Documento,
+                Persona.Password
+            );
             if (auxiliar != null)
             {
+                TempData["Nombre"] = auxiliar.PrimerNombre;
+                TempData["Id"] = auxiliar.Id.ToString();
+                TempData["TipoUsuario"] = "Auxiliar";
+                TempData.Keep();
                 return RedirectToPage("./Login/LogueoAuxiliar");
             }
             else
             {
                 JefeOperaciones jefeOperaciones = _repositorioJefeOperaciones.getByLogin(
-                    Persona.Documento, Persona.Password
+                    Persona.Documento,
+                    Persona.Password
                 );
                 if (jefeOperaciones != null)
                 {
+                    TempData["Nombre"] = jefeOperaciones.PrimerNombre;
+                    TempData["Id"] = jefeOperaciones.Id.ToString();
+                    TempData["TipoUsuario"] = "JefeOperaciones";
+                    TempData.Keep();
                     return RedirectToPage("./Login/LogueoJefeOperaciones");
                 }
                 else
                 {
-                    Operario operario = _repositorioOperario.getByLogin(Persona.Documento, Persona.Password);
+                    Operario operario = _repositorioOperario.getByLogin(
+                        Persona.Documento,
+                        Persona.Password
+                    );
                     if (operario != null)
                     {
+                        TempData["Nombre"] = operario.PrimerNombre;
+                        TempData["Id"] = operario.Id.ToString();
+                        TempData["TipoUsuario"] = "Operario";
+                        TempData.Keep();
                         return RedirectToPage("./Login/LogueoOperario");
                     }
                     else
                     {
                         SocioEmpresa socioEmpresa = _repositorioSocioEmpresa.getByLogin(
-                            Persona.Documento, Persona.Password
+                            Persona.Documento,
+                            Persona.Password
                         );
                         if (socioEmpresa != null)
                         {
+                            TempData["Nombre"] = socioEmpresa.PrimerNombre;
+                            TempData["Id"] = socioEmpresa.Id.ToString();
+                            TempData["TipoUsuario"] = "SocioEmpresa";
+                            TempData.Keep();
                             return RedirectToPage("./Login/LogueoSocioEmpresa");
                         }
                         else
                         {
-                            Tecnico tecnico = _repositorioTecnico.getByLogin(Persona.Documento, Persona.Password);
+                            Tecnico tecnico = _repositorioTecnico.getByLogin(
+                                Persona.Documento,
+                                Persona.Password
+                            );
                             if (tecnico != null)
                             {
+                                TempData["Nombre"] = tecnico.PrimerNombre;
+                                TempData["Id"] = tecnico.Id.ToString();
+                                TempData["TipoUsuario"] = "Tecnico";
+                                TempData.Keep();
                                 return RedirectToPage("./Login/LogueoTecnico");
-                            }else
+                            }
+                            else
                             {
                                 ViewData["Error"] = "Usuario No Encontrado!";
                                 return Page();

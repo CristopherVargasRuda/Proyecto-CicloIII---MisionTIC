@@ -11,5 +11,6 @@ namespace Impresoras3D.App.Persistencia
         public CompraSeguro getCompraSeguro(int idCompraSeguro);
         public IEnumerable<CompraSeguro> GetAllCompraSeguro();
         public CompraSeguro UpdateCompraSeguro(CompraSeguro CompraSeguro);
+        public CompraSeguro getCompraSeguroByImpresoraId(int ImpresoraId);
     }
 }

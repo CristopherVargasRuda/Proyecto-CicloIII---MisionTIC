@@ -9,6 +9,16 @@ namespace Impresoras3D.App.Frontend.Pages
     {
         public LogueoTecnicoModel() { }
 
-        public void OnGet() { }
+        public void OnGet()
+        {
+            if (
+                TempData.ContainsKey("Id")
+                && TempData.ContainsKey("Nombre")
+                && TempData.ContainsKey("TipoUsuario")
+            )
+            {
+                TempData.Keep();
+            }
+        }
     }
 }
