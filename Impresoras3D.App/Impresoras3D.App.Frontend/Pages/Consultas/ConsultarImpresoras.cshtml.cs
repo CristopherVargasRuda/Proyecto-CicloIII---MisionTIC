@@ -72,7 +72,7 @@ namespace Impresoras3D.App.Frontend.Pages
                 Componente extrusor = extrusores.Last();
                 Componente cama = camas.Last();
                 Componente fuente = fuentes.Last();
-                
+
                 this.componentesObtenidos = new List<Componente>();
                 this.componentesObtenidos.Add(cabezal);
                 this.componentesObtenidos.Add(extrusor);

@@ -80,7 +80,8 @@ public class IndexModel : PageModel
                             if (tecnico != null)
                             {
                                 return RedirectToPage("./Login/LogueoTecnico");
-                            }else
+                            }
+                            else
                             {
                                 ViewData["Error"] = "Usuario No Encontrado!";
                                 return Page();

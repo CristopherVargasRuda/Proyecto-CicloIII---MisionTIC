@@ -46,7 +46,7 @@ namespace Impresoras3D.App.Frontend.Pages
                 this.estadoImpresoraObtenida = _repositorioEstado.getEstado(
                     this.impresoraObtenida.EstadoID
                 );
-                
+
                 this.estadoSoftwareObtenido = _repositorioEstado.getEstado(
                     this.softwareObtenido.EstadoId
                 );
@@ -74,6 +74,38 @@ namespace Impresoras3D.App.Frontend.Pages
                 @ViewData["Error"] = e.Message;
             }
             return Page();
+        }
+
+        public ActionResult OnPost()
+        {
+            try
+            {
+                switch (TempData["TipoUsuario"])
+                {
+                    case "Tecnico":
+                        return RedirectToPage("../Login/LogueoTecnico");
+                        break;
+                    case "Operario":
+                        return RedirectToPage("../Login/LogueoOperario");
+                        break;
+                    case "SocioEmpresa":
+                        return RedirectToPage("../Login/LogueoSocioEmpresa");
+                        break;
+                    case "Auxiliar":
+                        return RedirectToPage("../Login/LogueoAuxiliar");
+                        break;
+                    case "JefeOperaciones":
+                        return RedirectToPage("../Login/LogueoJefeOperaciones");
+                        break;
+                    default:
+                        return RedirectToPage("../Index");
+                        break;
+                }
+            }
+            catch (System.Exception e)
+            {
+                return Page();
+            }
         }
     }
 }

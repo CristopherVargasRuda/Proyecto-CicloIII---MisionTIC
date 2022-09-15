@@ -8,8 +8,6 @@ namespace Impresoras3D.App.Frontend.Pages
     public class ConsultarDetallesRevisionModel : PageModel
     {
         private static IRepositorioComponente _repositorioComponente = new RepositorioComponente(new Impresoras3D.App.Persistencia.AppContext());
-        // private static IRepositorioMantenimientoComponente _repositorioMantenimientoComponente = new RepositorioMantenimientoComponente(new Impresoras3D.App.Persistencia.AppContext());
-        // private static IRepositorioCambioComponente _repositorioCambioComponente = new RepositorioCambioComponente(new Impresoras3D.App.Persistencia.AppContext());
 
         [BindProperty]
         public IEnumerable<Componente> ComponentesMantenimientos { get; set; }
@@ -22,6 +20,37 @@ namespace Impresoras3D.App.Frontend.Pages
             this.ComponentesMantenimientos = _repositorioComponente.getComponentesMantenimientoByServicioId(id);
             this.ComponentesCambios = _repositorioComponente.getComponentesCambioByServicioId(id);
             return Page();
+        }
+        public ActionResult OnPost()
+        {
+            try
+            {
+                switch (TempData["TipoUsuario"])
+                {
+                    case "Tecnico":
+                        return RedirectToPage("../Login/LogueoTecnico");
+                        break;
+                    case "Operario":
+                        return RedirectToPage("../Login/LogueoOperario");
+                        break;
+                    case "SocioEmpresa":
+                        return RedirectToPage("../Login/LogueoSocioEmpresa");
+                        break;
+                    case "Auxiliar":
+                        return RedirectToPage("../Login/LogueoAuxiliar");
+                        break;
+                    case "JefeOperaciones":
+                        return RedirectToPage("../Login/LogueoJefeOperaciones");
+                        break;
+                    default:
+                        return RedirectToPage("../Index");
+                        break;
+                }
+            }
+            catch (System.Exception e)
+            {
+                return Page();
+            }
         }
     }
 }

@@ -52,6 +52,29 @@ namespace Impresoras3D.App.Frontend.Pages
                     return Page();
                 }
                 CompraSeguro CompraSeguroAgregado = _repositorioCompraSeguro.AddCompraSeguro(this.CompraSeguro);
+
+                switch (TempData["TipoUsuario"])
+                {
+                    case "Tecnico":
+                        return RedirectToPage("../Login/LogueoTecnico");
+                        break;
+                    case "Operario":
+                        return RedirectToPage("../Login/LogueoOperario");
+                        break;
+                    case "SocioEmpresa":
+                        return RedirectToPage("../Login/LogueoSocioEmpresa");
+                        break;
+                    case "Auxiliar":
+                        return RedirectToPage("../Login/LogueoAuxiliar");
+                        break;
+                    case "JefeOperaciones":
+                        return RedirectToPage("../Login/LogueoJefeOperaciones");
+                        break;
+                    default:
+                        return RedirectToPage("../Index");
+                        break;
+                }
+
                 return RedirectToPage("../Index");
             }
             catch (System.Exception e)

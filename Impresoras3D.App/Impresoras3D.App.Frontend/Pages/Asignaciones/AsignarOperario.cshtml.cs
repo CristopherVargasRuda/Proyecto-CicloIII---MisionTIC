@@ -32,7 +32,7 @@ namespace Impresoras3D.App.Frontend.Pages
                 this.Impresora = _repositorioImpresora.getImpresora(this.Impresora.Id);
                 Impresora.OperarioId = Operario.Id;
                 Impresora impresoraActualizada = _repositorioImpresora.UpdateImpresora(Impresora);
-                return RedirectToPage("./AsignarOperario");
+                return RedirectToPage("../Login/LogueoAuxiliar");
             }
             catch (System.Exception e)
             {

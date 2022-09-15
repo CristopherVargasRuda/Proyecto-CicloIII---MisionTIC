@@ -20,5 +20,37 @@ namespace Impresoras3D.App.Frontend.Pages
             this.Impresoras = _repositorioImpresora.getImpresorasByOperario(id);
             return Page();
         }
+
+        public ActionResult OnPost()
+        {
+            try
+            {
+                switch (TempData["TipoUsuario"])
+                {
+                    case "Tecnico":
+                        return RedirectToPage("../Login/LogueoTecnico");
+                        break;
+                    case "Operario":
+                        return RedirectToPage("../Login/LogueoOperario");
+                        break;
+                    case "SocioEmpresa":
+                        return RedirectToPage("../Login/LogueoSocioEmpresa");
+                        break;
+                    case "Auxiliar":
+                        return RedirectToPage("../Login/LogueoAuxiliar");
+                        break;
+                    case "JefeOperaciones":
+                        return RedirectToPage("../Login/LogueoJefeOperaciones");
+                        break;
+                    default:
+                        return RedirectToPage("../Index");
+                        break;
+                }
+            }
+            catch (System.Exception e)
+            {
+                return Page();
+            }
+        }
     }
 }

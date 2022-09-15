@@ -21,7 +21,6 @@
                 </div>
                 <div class="col-sm-3">
                     <button type="submit" class="btn btn-primary" style="height:40px; width:200px;">Buscar</button>
-
                 </div>
                 <br>
             </div>
@@ -87,4 +86,20 @@
             </div>
         </div>
     }
+    <br><br>
+    <div class="text-center">
+        <form method="POST">
+            @{
+                switch (TempData["TipoUsuario"])
+                {
+                    case "Auxiliar":
+                        <a class="btn btn-primary" asp-page="../Login/LogueoAuxiliar">Salir</a>
+                        break;
+                    default:
+                        <a class="btn btn-primary" asp-page="../Index">Salir</a>
+                        break;
+                }
+            }
+        </form>
+    </div>
 </body>
