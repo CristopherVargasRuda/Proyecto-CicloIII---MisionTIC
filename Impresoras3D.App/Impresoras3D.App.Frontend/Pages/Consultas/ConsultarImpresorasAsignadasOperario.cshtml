@@ -29,10 +29,10 @@
                         <th scope="row">@impresora.Id</th>
                         <td>@impresora.PlacaInventario</td>
                         <td>@impresora.Tipo</td>
-                        <td><a asp-page="ConsultarDetallesImpresora" asp-route-id="@impresora.Id">Detalles</a></td>
-                        <td><a asp-page="../Registros/RegistrarRevision" asp-route-id="@impresora.Id">Registrar Revision</a>
+                        <td><a asp-page="ConsultarDetallesImpresora" asp-route-id="@impresora.Id"><i class="fa-solid fa-circle-info fa-2x"></i></a></td>
+                        <td><a asp-page="../Registros/RegistrarRevision" asp-route-id="@impresora.Id"><i class="fa-solid fa-pen-to-square fa-2x"></i></a>
                         </td>
-                        <td><a asp-page="./ConsultarRevisiones" asp-route-id="@impresora.Id">Consultar Revisiones</a></td>
+                        <td><a asp-page="./ConsultarRevisiones" asp-route-id="@impresora.Id"><i class="fa-solid fa-eye fa-2x"></i></a></td>
                     </tr>
                 }
             </tbody>

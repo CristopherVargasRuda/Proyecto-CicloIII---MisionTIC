@@ -9,7 +9,46 @@
         <br>
         <h1>Seguro de la impresora</h1>
         <br>
-        <h3>@ViewData["Error"]</h3>
+
+        @if(ViewData["Seguro"] == "Esta Impresora no tiene seguro")
+        {<div class="alert alert-danger">
+            <h3>@ViewData["Seguro"]</h3>
+        </div>
+        }else
+        {
+            if(ViewData["Seguro"] == "El seguro está vencido!")
+            {
+                <div class="alert alert-danger">
+                <h3>@ViewData["Seguro"]</h3>
+                </div>
+            }
         <br><br>
+
+        <div class = "row">
+            <div class = "col-sm-3"></div>
+            <div class = "col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Impresora @Model.impresoraObtenida.PlacaInventario</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Aseguradora: @Model.seguroObtenido.Aseguradora </li>
+                        <li class="list-group-item">Cubrimiento: @Model.tipoCubrimientoObtenido.Nombre</li>
+                        <li class="list-group-item">Fecha de compra: @Model.compraSeguroObtenido.FechaCompra</li>
+                        <li class="list-group-item">Fecha de vencimiento: @Model.compraSeguroObtenido.FechaVencimiento</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        }
     </div>
+
+    <br><br>
+    <div class="text-center">
+        <form method="POST">
+            <button type="submit" class="btn btn-primary">Salir</button>
+        </form>
+    </div>
+
 </body>

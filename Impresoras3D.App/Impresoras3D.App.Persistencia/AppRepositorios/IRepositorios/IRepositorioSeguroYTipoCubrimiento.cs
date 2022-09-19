@@ -10,5 +10,6 @@ namespace Impresoras3D.App.Persistencia
         public void DeleteSeguroYTipoCubrimiento(int idSeguro, int idTipoCubrimiento);
         public SeguroYTipoCubrimiento getSeguroYTipoCubrimiento(int idSeguro, int idTipoCubrimiento);
         public IEnumerable<SeguroYTipoCubrimiento> GetAllSeguroYTipoCubrimiento();
+        public SeguroYTipoCubrimiento getSeguroYTipoCubrimientobySeguroId(int idSeguro);
     }
 }
