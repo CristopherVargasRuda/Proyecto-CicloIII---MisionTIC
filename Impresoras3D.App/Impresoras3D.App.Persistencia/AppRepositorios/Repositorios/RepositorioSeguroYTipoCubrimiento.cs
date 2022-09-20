@@ -12,16 +12,22 @@ namespace Impresoras3D.App.Persistencia
             this._appContext = appContext;
         }
 
-        public SeguroYTipoCubrimiento AddSeguroYTipoCubrimiento(SeguroYTipoCubrimiento seguroYTipoCubrimiento)
+        public SeguroYTipoCubrimiento AddSeguroYTipoCubrimiento(
+            SeguroYTipoCubrimiento seguroYTipoCubrimiento
+        )
         {
-            var seguroYTipoCubrimientoAdicionado = this._appContext.SeguroYTipoCubrimientos.Add(seguroYTipoCubrimiento);
+            var seguroYTipoCubrimientoAdicionado = this._appContext.SeguroYTipoCubrimientos.Add(
+                seguroYTipoCubrimiento
+            );
             this._appContext.SaveChanges();
             return seguroYTipoCubrimientoAdicionado.Entity;
         }
 
         public void DeleteSeguroYTipoCubrimiento(int idSeguro, int idTipoCubrimiento)
         {
-            var seguroYTipoCubrimiento = this._appContext.SeguroYTipoCubrimientos.FirstOrDefault(s => s.SeguroId == idSeguro && s.TipoCubrimientoId == idTipoCubrimiento);
+            var seguroYTipoCubrimiento = this._appContext.SeguroYTipoCubrimientos.FirstOrDefault(
+                s => s.SeguroId == idSeguro && s.TipoCubrimientoId == idTipoCubrimiento
+            );
             if (seguroYTipoCubrimiento == null)
             {
                 return;
@@ -32,13 +38,22 @@ namespace Impresoras3D.App.Persistencia
 
         public SeguroYTipoCubrimiento getSeguroYTipoCubrimiento(int idSeguro, int idTipoCubrimiento)
         {
-            var seguroYTipoCubrimiento = this._appContext.SeguroYTipoCubrimientos.FirstOrDefault(s => s.SeguroId == idSeguro && s.TipoCubrimientoId == idTipoCubrimiento);
+            var seguroYTipoCubrimiento = this._appContext.SeguroYTipoCubrimientos.FirstOrDefault(
+                s => s.SeguroId == idSeguro && s.TipoCubrimientoId == idTipoCubrimiento
+            );
             return seguroYTipoCubrimiento;
         }
 
         public IEnumerable<SeguroYTipoCubrimiento> GetAllSeguroYTipoCubrimiento()
         {
             return this._appContext.SeguroYTipoCubrimientos;
+        }
+
+        public SeguroYTipoCubrimiento getSeguroYTipoCubrimientobySeguroId(int idSeguro)
+        {
+            var seguroYTipoCubrimiento = this._appContext.SeguroYTipoCubrimientos.FirstOrDefault(s=> s.SeguroId == idSeguro);
+
+            return seguroYTipoCubrimiento;
         }
     }
 }

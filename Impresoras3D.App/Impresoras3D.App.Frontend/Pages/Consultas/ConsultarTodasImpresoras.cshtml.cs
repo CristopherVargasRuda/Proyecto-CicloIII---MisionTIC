@@ -36,7 +36,6 @@ namespace Impresoras3D.App.Frontend.Pages
 
         public ActionResult OnPost()
         {
-            Console.Out.WriteLine(TempData["TipoUsuario"]);
             try
             {
                 switch (TempData["TipoUsuario"])
