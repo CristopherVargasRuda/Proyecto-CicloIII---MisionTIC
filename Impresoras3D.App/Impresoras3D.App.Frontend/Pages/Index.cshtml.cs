@@ -124,8 +124,6 @@ public class IndexModel : PageModel
         }
         catch (System.Exception e)
         {
-            Console.Out.WriteLine(Persona.Documento);
-            Console.Out.WriteLine(Persona.Password);
             return Page();
         }
     }

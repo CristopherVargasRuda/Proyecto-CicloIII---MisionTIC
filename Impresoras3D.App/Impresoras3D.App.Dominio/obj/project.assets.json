@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\lozan\\.nuget\\packages\\": {}
+    "C:\\Users\\PC\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lozan\\Desktop\\Mintic ciclo 3\\Impresoras\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Dominio\\Impresoras3D.App.Dominio.csproj",
+      "projectUniqueName": "C:\\Users\\PC\\Desktop\\Misión Tic\\Ciclo III\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Dominio\\Impresoras3D.App.Dominio.csproj",
       "projectName": "Impresoras3D.App.Dominio",
-      "projectPath": "C:\\Users\\lozan\\Desktop\\Mintic ciclo 3\\Impresoras\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Dominio\\Impresoras3D.App.Dominio.csproj",
-      "packagesPath": "C:\\Users\\lozan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lozan\\Desktop\\Mintic ciclo 3\\Impresoras\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Dominio\\obj\\",
+      "projectPath": "C:\\Users\\PC\\Desktop\\Misión Tic\\Ciclo III\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Dominio\\Impresoras3D.App.Dominio.csproj",
+      "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\PC\\Desktop\\Misión Tic\\Ciclo III\\Programación\\Proyecto\\Código\\Proyecto-CicloIII---MisionTIC\\Impresoras3D.App\\Impresoras3D.App.Dominio\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\lozan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -59,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
